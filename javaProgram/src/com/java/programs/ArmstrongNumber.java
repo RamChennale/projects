@@ -15,7 +15,26 @@ Armstrong numbers
 
 public class ArmstrongNumber {
 
-	public static void findArmstrongNumber(int num) {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter number :");
+		int num = scanner.nextInt();
+		int temp = num;
+		int rem=0;
+		int sum = 0;
+		while (num > 0) {
+			rem = num % 10;
+			sum = sum + (rem * rem * rem);
+			num = num / 10;
+		}
+		if (sum == temp) {
+			System.out.println(temp + ": is a Armstrong Number");
+		} else {
+			System.out.println(temp + ": is not a Armstrong Number");
+		}
+	}
+	
+	/*public static void findArmstrongNumber(int num) {
 		int temp = num;
 		int rem=0;
 		int sum = 0;
@@ -36,5 +55,6 @@ public class ArmstrongNumber {
 		System.out.println("Enter number :");
 		int num = scanner.nextInt();
 		findArmstrongNumber(num);
-	}
+	}*/
+	
 }
