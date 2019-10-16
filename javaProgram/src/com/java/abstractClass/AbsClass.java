@@ -3,6 +3,7 @@ package com.java.abstractClass;
 public abstract class AbsClass {
 
 	public int add(int a, int b) {
+		System.out.println(a+b);
 		return a + b;
 	}
 	public abstract int add(int a, int b, int c);
