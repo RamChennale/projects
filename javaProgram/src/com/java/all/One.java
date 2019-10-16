@@ -24,5 +24,6 @@ public class One {
 		System.out.println("Enter Second Number");
 		int input2 = sc.nextInt();
 		System.out.println("The nearest number to 100 is : "+nearestTo100(input1, input2));
+		System.out.println("code modified");
 	}
 }
