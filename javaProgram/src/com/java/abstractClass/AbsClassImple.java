@@ -1,6 +1,6 @@
 package com.java.abstractClass;
 
-public class AbsClassImple extends AbsClass implements InterfaceInJava {
+public class AbsClassImple extends AbsClass {
 
 	public int sub(int a, int b) {
 		int sub = a - b;
@@ -27,20 +27,32 @@ public class AbsClassImple extends AbsClass implements InterfaceInJava {
 				// TODO Auto-generated method stub
 				return 0;
 			}
+
+			@Override
+			public void closeBrowser() {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void baseInterface() {
+				// TODO Auto-generated method stub
+
+			}
 		};
 		absClass3.add(1, 1);
-		// absClass3.add(1, 1, 1);
-	}
-
-	@Override
-	public void baseIterface() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void closeBrowser() {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	@Override
+	public void baseInterface() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

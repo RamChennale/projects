@@ -2,11 +2,11 @@ package com.java.abstractClass;
 
 public interface InterfaceInJava {
 
-	int MAX_MARKS=100;
+	int MAXIMUM_MARKS=100;
 	void closeBrowser();
 	
-	public static final float pi = 3.14f;
-	public abstract void baseIterface();
+	public static final float PI_CONSTANT_VALUE=3.142f;
+	public abstract void baseInterface();
 }
 
 /*The Java compiler adds public and abstract keywords before the interface method. Moreover, it adds 

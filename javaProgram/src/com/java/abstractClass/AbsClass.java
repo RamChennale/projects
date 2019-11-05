@@ -1,12 +1,14 @@
 package com.java.abstractClass;
 
-public abstract class AbsClass {
+public abstract class AbsClass implements InterfaceInJava {
 
 	public int add(int a, int b) {
-		System.out.println(a+b);
+		System.out.println(a + b);
 		return a + b;
 	}
+
 	public abstract int add(int a, int b, int c);
+
 }
 
 /*public abstract class AbsClass {
