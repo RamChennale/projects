@@ -1,12 +1,28 @@
 package com.java.all;
 //0,1  0+1=1   1+1=2   2+1=3   2+3=5   3+5=8 .......
+
 //0,1,1,2,3,5,8,13....
 
 public class FibonacciSeries {
 
 	public static void main(String[] args) {
+		int a = 0, b = 1;
+		int temp;
+		int n = 10;
+		System.out.print(a + "," + b);
+		while (n > 0) {
+			temp = a + b;
+			a = b;
+			b = temp;
+			n--;
+			System.out.print("," + temp);
+		}
+	}
+}
+	
+/*	public static void main(String[] args) {
 		
-		/*int a=0, b=1, n=10;
+		int a=0, b=1, n=10;
 		int temp;
 		System.out.print("Fibonacci series is : "+a+","+b+",");
 		for(int i=0; i<=n; i++) {
@@ -14,7 +30,7 @@ public class FibonacciSeries {
 			a=b;
 			b=temp;
 			System.out.print(temp+ ",");
-		}*/
+		}
 		
 		//0,1,1,2,3,5
 		int a=0, b=1, temp;
@@ -50,4 +66,3 @@ public class FibonacciSeries {
  }*/
 	
 	
-}

@@ -35,7 +35,7 @@ public class TestBase {
 
 		System.out.println("==================");
 		driver.navigate().to("http://epsserver.test.com/hes.admin/login.htm");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
 
 	}
 	

@@ -24,8 +24,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.thoughtworks.selenium.condition.Presence;
-
 public class HtmlTags extends TestBase{
 	
 	public static WebDriver driver = null;
@@ -45,16 +43,17 @@ public class HtmlTags extends TestBase{
 	}
 
 	public void login() {
-		webDriverWait= new WebDriverWait(driver, 10);
+		/*webDriverWait= new WebDriverWait(driver, 10);
 		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "")));
 		webDriverWait.until(ExpectedConditions.visibilityOf(username));
 		webDriverWait.until(ExpectedConditions.presenceOfElementLocated((By) username));// presenceOfElementLocated(By locator)
+		*/
 		username.clear();
 		username.sendKeys("TestAdmin");
-		webDriverWait.until(ExpectedConditions.visibilityOf(password));
+		//webDriverWait.until(ExpectedConditions.visibilityOf(password));
 		password.clear();
 		password.sendKeys("testAdmin");
-		webDriverWait.until(ExpectedConditions.visibilityOf(login));
+		//webDriverWait.until(ExpectedConditions.visibilityOf(login));
 		login.click(); //
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// OR login.submit();
@@ -97,6 +96,9 @@ public class HtmlTags extends TestBase{
 		try {
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(file, new File("d:/" + System.currentTimeMillis() + ".png"));
+			File file2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(file2, new File("d:/"+System.currentTimeMillis()+".png"));
+			
 		} catch (IOException ioe) {
 			System.out.println(ioe);
 		}

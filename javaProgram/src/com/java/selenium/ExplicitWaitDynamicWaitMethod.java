@@ -1,4 +1,4 @@
-package com.java.selenium;
+/*package com.java.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,8 +29,8 @@ public class ExplicitWaitDynamicWaitMethod {
 	}
 
 	public static void clickOn(WebDriver driver, WebElement element, int timeOut) {
-		new WebDriverWait(driver, timeOut).
-		until(ExpectedConditions.elementToBeClickable(element));
+		new WebDriverWait(driver, timeOut).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
 }
+*/

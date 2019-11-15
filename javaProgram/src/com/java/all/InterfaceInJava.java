@@ -5,7 +5,7 @@ public interface InterfaceInJava {
 	int MAX_MARKS=100;
 	public void closeBrowser();
 	
-	public static final float i = 3.14f;
+	public static final float PI_VALUE = 3.14f;
 	public abstract void baseIterface();
 }
 

@@ -13,5 +13,7 @@ public class JavaScriptExecutionInSelenium extends BaseClass{
 		JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
 		javascriptExecutor.executeScript("window.scrollBy(0,250)", ""); //scrolls down 
 		javascriptExecutor.executeScript("window.scrollBy(0,-250)", "");//scrolls up
+		javascriptExecutor.executeScript("windows.scrollBy(0,250)","");
+		javascriptExecutor.executeScript("windows.scrollBy(0,-250)", "");
 	}
 }

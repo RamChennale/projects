@@ -1,7 +1,5 @@
 package com.java.all;
 
-import bsh.This;
-
 public class AbsClassImple extends AbsClass implements InterfaceInJava {
 
 	public int sub(int a, int b) {
@@ -23,20 +21,18 @@ public class AbsClassImple extends AbsClass implements InterfaceInJava {
 		absClass2.add(11, 11);
 		absClass2.add(1, 1, 1);
 		((AbsClassImple) absClass2).sub(32, 3);
-
+		
 		AbsClass absClass3 = new AbsClass() {
 			public int add(int a, int b, int c) {
-				// TODO Auto-generated method stub
 				return 0;
 			}
 		};
 		absClass3.add(1, 1);
-		// absClass3.add(1, 1, 1);
+		absClass3.add(1, 1, 1);
 	}
 
 	@Override
 	public void baseIterface() {
-		// TODO Auto-generated method stub
 
 	}
 

@@ -22,12 +22,5 @@ public class TestThrow1 {
 		System.out.println("Do you want continue Yes/No.");
 		var=scanner.nextLine();
 		
-		if(var.equalsIgnoreCase("yes")) {
-			
-		}else if (var.equalsIgnoreCase("no")) {
-			
-		}else {
-			
-		}
 	}
 }

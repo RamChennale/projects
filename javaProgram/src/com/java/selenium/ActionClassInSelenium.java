@@ -11,6 +11,7 @@ public class ActionClassInSelenium {
 
 	@Test
 	public void test() {
+		
 		WebDriver driver = new ChromeDriver();
 		Actions actions = new Actions(driver);
 		//actions.click();  Clicks at the current mouse location.
@@ -20,7 +21,7 @@ public class ActionClassInSelenium {
 		WebElement toElement = null;
 		
 		actions.doubleClick();
-		actions.doubleClick(driver.findElement(By.id("id")));
+		actions.doubleClick(driver.findElement(By.id("id"))).build().perform();;
 
 		WebElement source = driver.findElement(By.id("id"));
 		WebElement target = driver.findElement(By.id("id"));
@@ -28,6 +29,7 @@ public class ActionClassInSelenium {
 		actions.dragAndDropBy(source, xOffset, yOffset);
 		actions.clickAndHold().release().build().perform();
 
+		//Action by Actions Class
 		actions.click();
 		actions.click(target);
 		actions.clickAndHold().moveToElement(source).dragAndDrop(source, target).release().build().perform();

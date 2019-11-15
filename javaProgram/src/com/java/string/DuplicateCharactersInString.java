@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import stringsExamples.DuplicateCharactersInString;
-
 public class DuplicateCharactersInString {
 	public void countDuplicateChar(String str) {
 		// Create a HashMap

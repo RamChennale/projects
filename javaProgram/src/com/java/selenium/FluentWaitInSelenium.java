@@ -23,11 +23,11 @@ public class FluentWaitInSelenium {
 				withTimeout(10, TimeUnit.SECONDS)
 				.pollingEvery(2, TimeUnit.SECONDS).
 				ignoring(NoSuchElementException.class);
-		/*WebElement username = wait.until(new Function<WebDriver, WebElement>() {
+		WebElement username = wait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
 				return driver.findElement(By.id(""));
 			}
-		});*/
+		});
 	}
 	
 }

@@ -16,13 +16,14 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Properties properties;
 	public static FileInputStream fileInputStream;
-	String hes_url = "http://59.144.177.220:8092/gems-web/login.htm";
+	String hes_url = "";
 	String guru99 = "http://demo.guru99.com/test/simple_context_menu.html";
 	String testingurl = "http://uitestpractice.com/";
 
 	@BeforeClass
 	public void base() throws IOException, InterruptedException, FileNotFoundException {
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\chromeDriver.exe");
+		System.setProperty("webdriver.chrome.driver",".\\browser\\chromeDriver.exe");
 		driver = new ChromeDriver();
 		Thread.sleep(5000);
 		try {

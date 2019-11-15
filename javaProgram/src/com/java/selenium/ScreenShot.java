@@ -18,7 +18,7 @@ public class ScreenShot {
 
 		try {
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("d:/" + System.currentTimeMillis() + ".png"));
+			FileUtils.copyFile(file, new File("d:/" + System.currentTimeMillis() + ".png")); //("d:/image.png")
 		} catch (IOException e) {
 			System.out.println("" + e);
 			e.printStackTrace();

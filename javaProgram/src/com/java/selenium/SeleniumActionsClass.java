@@ -52,7 +52,7 @@ public class SeleniumActionsClass {
 		actions.doubleClick();
 		
 		//4. How Keys class works
-		Actions actions3= new Actions(driver);
+		Actions actions3= new Actions(driver); 
 		actions3.moveToElement(driver.findElement(By.xpath(".//*[id='dragable']")));
 		actions3.keyDown(Keys.CONTROL);
 		actions3.moveToElement(driver.findElement(By.xpath(".//*[id='dragable']")));

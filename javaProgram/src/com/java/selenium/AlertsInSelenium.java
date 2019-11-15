@@ -1,10 +1,8 @@
 package com.java.selenium;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.security.Credentials;
 import org.testng.annotations.Test;
 
 /*1. Simple alert: warning/information click OK
@@ -29,11 +27,6 @@ public class AlertsInSelenium {
 
 		Alert alert1 = new Alert() {
 			@Override
-			public void setCredentials(Credentials arg0) {
-
-			}
-
-			@Override
 			public void sendKeys(String arg0) {
 			}
 
@@ -44,10 +37,6 @@ public class AlertsInSelenium {
 
 			@Override
 			public void dismiss() {
-			}
-
-			@Override
-			public void authenticateUsing(Credentials arg0) {
 			}
 
 			@Override

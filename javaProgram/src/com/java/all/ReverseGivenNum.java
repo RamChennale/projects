@@ -4,17 +4,24 @@ import java.util.Scanner;
 
 public class ReverseGivenNum {
 
-/*		int i=12345, j=10;
-		int idiv=i/j;
-		System.out.println(idiv);
-		
-		float k=1, l=10;
-		float fdiv=k/l;
-		System.out.println(fdiv);*/
-		
-		public static int reverseNum(int num) {
+	public static void main(String[] args) {
+		System.out.println("Enter a num :");
+		Scanner scanner= new Scanner(System.in);
+		int n=scanner.nextInt();
+		int rev=0, reminder=0;
+		while(n>0) {
+			reminder=n%10;
+			n=n/10;
+			rev=rev*10+reminder;
+		}
+		System.out.println("Reverse num is : "+rev);
+	}
+}
+
+
+/*public static int reverseNum(int num) {
 			int rev=0;
-			int reminder;
+			int reminder=0;
 			while(num>0) {
 				reminder=num%10;
 				num=num/10;
@@ -31,4 +38,4 @@ public class ReverseGivenNum {
 		System.out.println("Given num is : "+num);
 		System.out.println("Reverse num is : "+reverseNum(num));
 	}
-}
+*/

@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4592" started-at="2019-09-18T07:30:25Z" finished-at="2019-09-18T07:30:30Z">
+  <suite name="Default suite" duration-ms="16" started-at="2019-11-08T06:58:30Z" finished-at="2019-11-08T06:58:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4592" started-at="2019-09-18T07:30:25Z" finished-at="2019-09-18T07:30:30Z">
-      <class name="com.java.programs.BinaryNumVerification">
-        <test-method status="PASS" signature="binaryNumVerification()[pri:0, instance:com.java.programs.BinaryNumVerification@215be6bb]" name="binaryNumVerification" duration-ms="4562" started-at="2019-09-18T07:30:25Z" finished-at="2019-09-18T07:30:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- binaryNumVerification -->
-      </class> <!-- com.java.programs.BinaryNumVerification -->
+    <test name="Default test" duration-ms="16" started-at="2019-11-08T06:58:30Z" finished-at="2019-11-08T06:58:30Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
