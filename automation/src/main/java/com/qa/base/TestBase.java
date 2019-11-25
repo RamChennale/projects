@@ -11,14 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class TestBase {
+import com.qa.interfaces.TestBaseI;
+
+public class TestBase implements TestBaseI{
 
 	public static WebDriver driver;
 	public static Properties properties;
 	private static Logger logger = Logger.getLogger(TestBase.class);
 
 	@BeforeClass
-	public void setUp() throws IOException {
+	public void initiate() throws IOException {
 		String URL;
 		properties = new Properties();
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
@@ -35,7 +37,7 @@ public class TestBase {
 	}
 
 	@AfterClass
-	public void name() {
+	public void tearDown() {
 		driver.quit();
 		logger.info("All browsers closed successfully.");
 	}

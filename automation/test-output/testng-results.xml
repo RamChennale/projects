@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19509" started-at="2019-09-04T09:01:00Z" finished-at="2019-09-04T09:01:19Z">
+  <suite name="Default suite" duration-ms="18235" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19509" started-at="2019-09-04T09:01:00Z" finished-at="2019-09-04T09:01:19Z">
-      <class name="com.qa.loginTests.Login">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.loginTests.Login@e45f292]" name="setUp" is-config="true" duration-ms="5918" started-at="2019-09-04T09:01:00Z" finished-at="2019-09-04T09:01:06Z">
+    <test name="Default test" duration-ms="18235" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:51Z">
+      <class name="com.qa.homePageTests.SearchRecord">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="setUp" is-config="true" duration-ms="11256" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:com.qa.loginTests.Login@e45f292]" name="verifyLogin" duration-ms="12878" started-at="2019-09-04T09:01:06Z" finished-at="2019-09-04T09:01:19Z">
+        <test-method status="PASS" signature="searchRecord()[pri:1, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="searchRecord" duration-ms="6070" started-at="2019-11-23T05:51:44Z" description="Searching a record" finished-at="2019-11-23T05:51:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method status="PASS" signature="name()[pri:0, instance:com.qa.loginTests.Login@e45f292]" name="name" is-config="true" duration-ms="673" started-at="2019-09-04T09:01:19Z" finished-at="2019-09-04T09:01:19Z">
+        </test-method> <!-- searchRecord -->
+        <test-method status="PASS" signature="name()[pri:0, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="name" is-config="true" duration-ms="827" started-at="2019-11-23T05:51:50Z" finished-at="2019-11-23T05:51:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- name -->
-      </class> <!-- com.qa.loginTests.Login -->
+      </class> <!-- com.qa.homePageTests.SearchRecord -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
