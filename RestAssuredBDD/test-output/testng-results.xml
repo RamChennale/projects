@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2502" started-at="2019-11-25T10:10:38Z" finished-at="2019-11-25T10:10:40Z">
+  <suite name="Default suite" duration-ms="6325" started-at="2019-11-26T09:55:08Z" finished-at="2019-11-26T09:55:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2502" started-at="2019-11-25T10:10:38Z" finished-at="2019-11-25T10:10:40Z">
-      <class name="com.qa.rest.test.PutRequest">
-        <test-method status="PASS" signature="httpPutRequest()[pri:0, instance:com.qa.rest.test.PutRequest@4cc0edeb]" name="httpPutRequest" duration-ms="2454" started-at="2019-11-25T10:10:38Z" finished-at="2019-11-25T10:10:40Z">
+    <test name="Default test" duration-ms="6325" started-at="2019-11-26T09:55:08Z" finished-at="2019-11-26T09:55:14Z">
+      <class name="com.qa.rest.OAuthentication.OAuthentication">
+        <test-method status="PASS" signature="oAuthe()[pri:0, instance:com.qa.rest.OAuthentication.OAuthentication@47c62251]" name="oAuthe" duration-ms="6251" started-at="2019-11-26T09:55:08Z" finished-at="2019-11-26T09:55:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- httpPutRequest -->
-      </class> <!-- com.qa.rest.test.PutRequest -->
+        </test-method> <!-- oAuthe -->
+      </class> <!-- com.qa.rest.OAuthentication.OAuthentication -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -25,7 +25,7 @@ public class PostRequest {
 
 		request.body(jsonObject.toJSONString());
 
-		Response response = request.post(" http://localhost:3000/posts");
+		Response response = request.post("http://localhost:3000/posts");
 		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 201);
 

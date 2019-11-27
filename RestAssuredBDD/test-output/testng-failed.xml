@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.rest.test.GetCallBDD">
+      <class name="com.qa.rest.OAuthentication.OAuthentication">
         <methods>
-          <include name="numOfCkt_2017"/>
+          <include name="oAuthe"/>
         </methods>
-      </class> <!-- com.qa.rest.test.GetCallBDD -->
+      </class> <!-- com.qa.rest.OAuthentication.OAuthentication -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
