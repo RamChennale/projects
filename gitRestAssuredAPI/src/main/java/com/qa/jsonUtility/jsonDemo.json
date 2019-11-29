@@ -1,0 +1,39 @@
+//JSON object with key value pair
+{
+	"firstName": "Ram",
+	"lastName": "Chennale",
+	"PhoneNo": 9900990099
+} 
+//JSON object with array
+{
+	"Name":"Rama",
+	"lastName":"Chennale",
+	"Deatils":["lotus","Tester",5]
+} 
+
+{"listCountries":"Based on the continent",
+	"eastContinent":"7 countries",
+	"countries":
+	[
+		{
+			"country":"India",
+				"Data"
+					{
+						"population":"1.3 billion",
+						"Name":"IND",
+						"Code":91
+						"language":"Hindi and local"
+					}
+		},
+		{
+			"country":"Nepal",
+				"Data"
+					{
+						"population":"0.3 billion",
+						"Name":"Nepal",
+						"Code":92
+						"language":"Nepali"
+					}
+		}
+	]	
+}
