@@ -1,5 +1,6 @@
 package com.qa.httpReq;
 
+//200 for OK with Body (Updated response)
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
