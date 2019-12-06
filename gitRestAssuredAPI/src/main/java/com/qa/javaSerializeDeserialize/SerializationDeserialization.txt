@@ -1,0 +1,19 @@
+Serialization:
+
+A process where you convert an Instance of a Class (Object of a class) into a Byte Stream. 
+This Byte Stream can then be stored as a file on the disk or can also be sent to another 
+computer via the network. 
+Serialization can also be used to save the sate of Object when the program shuts down or hibernates. 
+Once the state is saved on disk using Serialization.
+We can restore the state by DeSerializing the class from disk.
+
+Serializable Interface
+
+1. java.io.Serializable - It is a marker interface, it does not have any method to implement.
+2. java.io.Externalizable - but have to implement these two methods
+	2.1 readExternal(ObjectInput input)
+	2.2 writeExternal(ObjectOutput output)
+	
+
+Deserialization:
+ 

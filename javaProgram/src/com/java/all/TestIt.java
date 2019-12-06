@@ -1,8 +1,18 @@
 package com.java.all;
 
-import java.util.Scanner;
+public class TestIt implements InterfaceInJava, TestBaseInterface{
 
-public class TestIt {
+	@Override
+	public void closeBrowser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void baseIterface() {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 

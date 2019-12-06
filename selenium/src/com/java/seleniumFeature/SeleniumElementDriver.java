@@ -1,6 +1,7 @@
 package com.java.seleniumFeature;
 
-import java.awt.List;
+
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,7 +55,7 @@ public class SeleniumElementDriver {
 		
 		// What is method to find element on UI
 		driver.findElement(By.id("")).sendKeys("firstsingle");
-		List list = (List) driver.findElements(By.tagName("//a"));
+		List<WebElement> list =  driver.findElements(By.tagName("//a"));
 		
 		//What is method to find all elements on UI
 		int numEle = driver.findElements(By.tagName("//a")).size();

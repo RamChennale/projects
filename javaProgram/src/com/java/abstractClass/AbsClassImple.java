@@ -24,34 +24,28 @@ public class AbsClassImple extends AbsClass {
 
 		AbsClass absClass3 = new AbsClass() {
 			public int add(int a, int b, int c) {
-				// TODO Auto-generated method stub
 				return 0;
 			}
 
-			@Override
 			public void closeBrowser() {
-				// TODO Auto-generated method stub
 
 			}
 
-			@Override
 			public void baseInterface() {
-				// TODO Auto-generated method stub
 
 			}
 		};
 		absClass3.add(1, 1);
+		absClass3.add(1,2, 3);
 	}
 
 	@Override
 	public void closeBrowser() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void baseInterface() {
-		// TODO Auto-generated method stub
 		
 	}
 

@@ -28,6 +28,7 @@ public class WaitsInSelenium {
 
 	static WebDriver driver = new ChromeDriver();
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void typesOfWaitInSelenium() throws InterruptedException {
 		//1.Implicit wait

@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,6 +17,7 @@ import com.qa.interfaces.TestBaseI;
 public class TestBase implements TestBaseI{
 
 	public static WebDriver driver;
+	public static WebElement webElement;
 	public static Properties properties;
 	private static Logger logger = Logger.getLogger(TestBase.class);
 

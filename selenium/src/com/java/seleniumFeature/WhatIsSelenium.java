@@ -4,8 +4,8 @@ public class WhatIsSelenium {
 
 	
 	/**
-	What is Selenium. = BROWSER AUTOMATION TOOL 
-	Does Selenium support automation of pages Made in PHP and HTML. = YES
+	What is selenium. = BROWSER AUTOMATION TOOL 
+	Does selenium support automation of pages Made in PHP and HTML. = YES
 	Does selenium support automation of application made in only java.= NO, IT SUPPORTS DEVELOPEED IN ANY OTHER LANGUAG ALSO
 	Does selenium support desktop application automation = NO
 	Does selenium has execution engine. = NO,selenium have no execution engine, NEED TO USE 3RD PART TesNG OR JUNIT

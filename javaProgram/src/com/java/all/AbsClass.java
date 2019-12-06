@@ -11,11 +11,9 @@ public abstract class AbsClass {
 		AbsClass annonymousInnerClassObj= new AbsClass() {
 			@Override
 			public int add(int a, int b, int c) {
-				// TODO Auto-generated method stub
 				return 0;
 			}
 		};
-		
 		annonymousInnerClassObj.add(1, 2);
 		annonymousInnerClassObj.add(1, 2, 2);
 	}

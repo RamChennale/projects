@@ -1,8 +1,6 @@
 package com.java.seleniumFeature;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
@@ -18,8 +16,10 @@ public class WindowHandlesInSelenium {
 		driver.switchTo().window(wind);
 
 		Set<String> set = driver.getWindowHandles();
-		List<String> list = new ArrayList<>();
 		Iterator<String> iterator = set.iterator();
-
+		while (iterator.hasNext()) {
+			String string = iterator.next();
+			driver.switchTo().window(string);
+		}
 	}
 }
