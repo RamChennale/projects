@@ -1,7 +1,6 @@
-package testNGlisterner;
+package basicAnnoatation;
 
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,17 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-/*1. this is class level  implementation is good for 1 or 2 classes.
-* 2. for multiple class need to implement suit level in 'testNG.xml file after the suit tag'*/
-
-@Listeners(testNGlisterner.TestNGListener.class)   
-public class TestListener {
+public class DependsOnMethods {
 
 	public static WebDriver driver;
-	private static Logger logger = Logger.getLogger(TestListener.class);
+	private static Logger logger = Logger.getLogger(DependsOnMethods.class);
 
 	@BeforeClass
 	public void startBrowser() {
@@ -27,7 +21,7 @@ public class TestListener {
 		driver = new ChromeDriver();
 		System.out.println("==========Browser started ===============");
 	}
-
+	
 	@Test
 	public void startApp() {
 		driver.get("http://epsserver.test.com/hes.admin/login.htm");
@@ -39,15 +33,14 @@ public class TestListener {
 
 	@Test(dependsOnMethods = "startApp")
 	public void login() throws Exception {
-		driver.findElement(By.xpath(".//*[@id='username']")).sendKeys("TestAdmin");
+		driver.findElement(By.xpath(".//*[@id='username']")).sendKeys("aestAdmin");
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("testadmin");
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.findElement(By.id("login-submit")).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		logger.info("User logged in app successfully");
-		boolean status = driver.findElement(By.xpath(".//*[@id='bs-example-navbar-collapse-1']/ul/li[1]/a"))
-				.isDisplayed();
+		boolean status=driver.findElement(By.xpath(".//*[@id='bs-example-navbar-collapse-1']/ul/li[1]/a")).isDisplayed();
 		Assert.assertTrue(status);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println("======User logged in=======");
@@ -55,7 +48,7 @@ public class TestListener {
 	}
 
 	@Test(dependsOnMethods = "login")
-	public void logout() throws Exception {
+	public void logout() throws Exception{
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//*[@id='dropdownMenu1']")).click();
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
