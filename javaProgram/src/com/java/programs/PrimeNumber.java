@@ -6,13 +6,13 @@ public class PrimeNumber {
 		int n = 11;
 		System.out.println("a?b:c =>  true?correct:wrong AND false?wrong:correct");
 		System.out.println(isPrimeNumber(n) ? n + " is prime number." : n + " is not prime number.");
-		n = 12;
+		/*n = 12;
 		System.out.println(isPrimeNumber(n) ? n + " is prime number." : n + " is not prime number.");
 		n = 13;
 		System.out.println(isPrimeNumber(n) ? n + " is prime number." : n + " is not prime number.");
 		n = 14;
 		System.out.println(isPrimeNumber(n) ? n + " is prime number." : n + " is not prime number.");
-	}
+*/	}
 
 	/**
 	 * returns true if number is prime.

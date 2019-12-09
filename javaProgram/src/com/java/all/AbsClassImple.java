@@ -38,7 +38,6 @@ public class AbsClassImple extends AbsClass implements InterfaceInJava {
 
 	@Override
 	public void closeBrowser() {
-		// TODO Auto-generated method stub
 
 	}
 }

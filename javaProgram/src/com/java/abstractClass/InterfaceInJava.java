@@ -9,5 +9,5 @@ public interface InterfaceInJava {
 	public abstract void baseInterface();
 }
 
-/*The Java compiler adds public and abstract keywords before the interface method. Moreover, it adds 
- * public, static final keywords before data members.*/
+/*The Java compiler adds public abstract keywords before the interface method. Moreover, it adds 
+ * public static final keywords before data members.*/
