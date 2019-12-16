@@ -1,4 +1,4 @@
-package com.qa.loginTests;
+package com.qa.testScript;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;

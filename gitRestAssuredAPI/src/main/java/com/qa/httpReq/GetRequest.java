@@ -30,8 +30,11 @@ public class GetRequest {
 	}
 	@Test(enabled=true)
 	public void validateResp() {
+		// Step 1: Create a Request pointing to the Service
 		RestAssured.baseURI="http://restapi.demoqa.com/utilities/weather/city";
+		
 		RequestSpecification requestSpecification=	RestAssured.given();
+		// Step 2: execute request/send the Request
 		Response response= requestSpecification.get("/Hyderabad");
 		int Status_Code =response.getStatusCode();
 		System.out.println("Status Code :"+Status_Code);
@@ -40,8 +43,6 @@ public class GetRequest {
 		String status_Line=response.getStatusLine();
 		System.out.println("status Line : "+status_Line);
 		Assert.assertEquals(status_Line, "HTTP/1.1 200 OK");
-		
-		
 		System.out.println(response.asString());
 	}
 }

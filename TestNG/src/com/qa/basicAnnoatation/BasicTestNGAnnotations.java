@@ -1,4 +1,4 @@
-package basicAnnoatation;
+package com.qa.basicAnnoatation;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterGroups;
@@ -18,7 +18,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.TestInstance;
 
-import testNGlisterner.TestNGListener;
+import com.qa.testNGListerner.TestNGListener;
 
 @SuppressWarnings({ "deprecation", "unused" })
 @Listeners(TestNGListener.class)

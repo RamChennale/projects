@@ -1,5 +1,5 @@
 package com.java.abstractClass;
-
+//public final class AbsClassImple extends AbsClass
 public class AbsClassImple extends AbsClass {
 
 	public int sub(int a, int b) {

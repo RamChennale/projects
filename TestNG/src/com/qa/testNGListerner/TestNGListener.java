@@ -1,4 +1,4 @@
-package testNGlisterner;
+package com.qa.testNGListerner;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;

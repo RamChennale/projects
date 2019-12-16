@@ -1,4 +1,4 @@
-package assertion;
+package com.qa.assertion;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

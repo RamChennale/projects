@@ -1,5 +1,5 @@
 package com.java.abstractClass;
-
+//public abstract final class AbsClass implements InterfaceInJava //The class AbsClass can be either abstract or final, not both
 public abstract class AbsClass implements InterfaceInJava {
 
 	public int add(int a, int b) {

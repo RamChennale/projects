@@ -10,7 +10,8 @@ public class FindSubStringWithIndex {
 		System.out.println("Enter string to search ?");//
 		String ss=scanner.nextLine();//"to";
 		int sindex=findSubstring(is, ss);
-		System.out.println(sindex>-1 ?is+"contains substring : "+ss+" at index of "+sindex:is+" dose not contains  "+ss);
+		System.out.println(sindex>-1?ss+" : is substring at "+sindex:ss+" : is not substring.");
+		//System.out.println(sindex>-1 ?is+"contains substring : "+ss+" at index of "+sindex:is+" dose not contains  "+ss);
 	}
 	
 	public static int findSubstring(String is, String ss) {
@@ -27,11 +28,11 @@ public class FindSubStringWithIndex {
 				if(count>0) {
 					count=0;
 					i--;
-				}
-			}
-		}
+				}//if
+			}//else
+		}//for
 		return -1;
-	}
+	}//findSubstring(String is, String ss)
 }
 
 /*public static void main(String[] args) {

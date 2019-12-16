@@ -1,6 +1,6 @@
 /*TestNG run by default in alphabetical order 
 */
-package basicAnnoatation;
+package com.qa.basicAnnoatation;
 
 import org.testng.annotations.Test;
 

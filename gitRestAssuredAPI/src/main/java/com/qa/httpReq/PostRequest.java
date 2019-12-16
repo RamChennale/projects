@@ -12,6 +12,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class PostRequest {
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void postRequest() {
 		// Step 1: Create a Request pointing to the Service

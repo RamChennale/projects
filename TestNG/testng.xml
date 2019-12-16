@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<listeners>
+		<!-- <listener class-name="com.qa.testNGListerner.TestNGListener"></listener> -->
+		<listener class-name="com.qa.retryFailedTCUsingListener.AnnotationTransformer"></listener>
+	</listeners>
+	<!-- <test thread-count="5" name="Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.testNGListerner.TestNGListenerUsage" />
+		</classes>
+	</test> Test -->
 
-<suite name="TestNG_Demois_the_suite_name" parallel="tests" thread-count="2">
-<listeners>
-<listener class-name="testNGlisterner.TestNGListener"></listener>
-</listeners>
-  <test thread-count="5" name="Test">
-  <parameter name="browser" value="chrome"></parameter>
-    <classes>
-      <class name="testNGlisterner.TestListener"/>
-    </classes>
-  </test> <!-- Test -->
+	<test name="RetryMulitple">
+		<classes>
+			<class name="com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner" />
+		</classes>
+	</test>
+
+
+	<test thread-count="5" name="Test">
+		<!-- <classes>
+			<class name="com.qa.basicAnnoatation.InvocationCountAndInvocationTimeOut" />
+			<class name="com.qa.basicAnnoatation.TimeOutTest" />
+			<class name="com.qa.basicAnnoatation.TestCaseDependancy" />
+			<class name="com.qa.assertion.SoftHardAssertion" />
+			<class name="com.qa.basicAnnoatation.Priority" />
+			<class name="com.qa.basicAnnoatation.DependsOnMethods" />
+			<class name="com.qa.assertion.SimpleAssertion" />
+			<class name="com.qa.basicAnnoatation.BasicTestNGAnnotations" />
+			<class
+				name="com.qa.basicAnnoatation.ThreadPoolSizeIgnoredWithoutInvocationCount" />
+			<class name="com.qa.retryFailedTCUsingIRetryAnalyzer.TestNGFailedXML" />
+			<class name="com.qa.retryFailedTCUsingListener.TestCase" />
+			<class name="com.qa.basicAnnoatation.TestNGPriority" />
+			<class name="com.qa.testNGListerner.TestNGListenerUsage" />
+			<class name="com.qa.retryFailedTCUsingIRetryAnalyzer.TestCase" />
+		</classes> -->
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

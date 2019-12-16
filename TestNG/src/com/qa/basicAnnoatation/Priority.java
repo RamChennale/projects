@@ -1,4 +1,4 @@
-package basicAnnoatation;
+package com.qa.basicAnnoatation;
 
 import java.util.concurrent.TimeUnit;
 
