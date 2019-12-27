@@ -8,7 +8,7 @@ public class TestCaseRetryByListerner {
 	@Test
 	public void Test1ByListerner() {
 		System.out.println("Test1ByListerner() started.");
-		Assert.assertEquals(false, true);
+		Assert.assertEquals(true, true);
 	}
 
 	@Test

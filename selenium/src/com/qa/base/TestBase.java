@@ -30,7 +30,7 @@ public class TestBase implements TestBaseI{
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "/src/main/java/com/qa/config/config.properties");
+				System.getProperty("user.dir") + "/src/com/qa/config/config.properties");
 		properties.load(fis);
 		URL = properties.getProperty("url");
 		driver.navigate().to(URL);

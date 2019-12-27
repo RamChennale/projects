@@ -1,4 +1,4 @@
-package com.lotus.reports;
+/*package com.lotus.reports;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public class ExtentReportDemo2 {
+public class AdvExtentReportDemo1 {
 	ExtentReports extent;
 	ExtentTest logger;
 	WebDriver driver;
@@ -31,24 +31,22 @@ public class ExtentReportDemo2 {
 	@Test
 	public void loginTest() {
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\chromedriver.exe");
-		driver=new ChromeDriver();
+		WebDriver driver= (WebDriver) new ChromeDriver();
 		driver.get("http://www.google.com");
 		System.out.println("title is "+driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Google"));
 	}
-	// This will run after testcase and it will capture screenshot and add in report
+	// This will run after test case and it will capture screenshot and add in report
 		@AfterMethod
 		public void tearDown(ITestResult result) throws IOException
 		{
-			
 			if(result.getStatus()==ITestResult.FAILURE)
 			{
 				String temp=Utility.getScreenshot(driver);
-				
 				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 			}
-			
 			extent.flush();
 			driver.quit();
 }
 }
+*/

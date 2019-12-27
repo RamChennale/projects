@@ -9,7 +9,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public class ExtentReportDemo {
+public class AdvExtentReportDemo {
 
 	@Test
 	public void loginTest() throws IOException {
