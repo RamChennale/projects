@@ -12,7 +12,7 @@ public class RetryUsingIRetryAnalyzer implements IRetryAnalyzer {
 		// TODO Auto-generated method stub
 	
 		if (minRetryCount<=maxRetryCount) {
-			System.out.println("Following test case failing VERIFIED: "+result.getName());
+			System.out.println("Following test case failing : "+result.getName());
 			System.out.println("Retry test count : "+(minRetryCount+1));
 			minRetryCount++;
 			return true;
