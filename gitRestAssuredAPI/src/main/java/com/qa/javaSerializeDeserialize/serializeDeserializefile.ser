@@ -1,0 +1,12 @@
+SER file extension - Java serialized object
+What is ser file? How to open ser files?
+
+The ser file extension is associated with Java.
+
+The ser files contains serialized object data. Java object serialization is Java's built-in 
+mechanism for manipulating objects as streams of bytes.
+
+Object serialization provides the foundation for Java's remote method invocation (RMI) 
+capabilities that enable Java programs that are distributed over a network to invoke each
+ others so-called "remote methods." RMI is used frequently in distributed enterprise 
+ applications that are built with Java Enterprise Edition (Java EE).

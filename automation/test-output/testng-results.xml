@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18235" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:51Z">
+  <suite name="Default suite" duration-ms="34188" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:33:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18235" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:51Z">
-      <class name="com.qa.homePageTests.SearchRecord">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="setUp" is-config="true" duration-ms="11256" started-at="2019-11-23T05:51:33Z" finished-at="2019-11-23T05:51:44Z">
+    <test name="Default test" duration-ms="34188" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:33:13Z">
+      <class name="com.qa.homePageTests.CreateNewRecord">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="initiate" is-config="true" duration-ms="19664" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:32:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchRecord()[pri:1, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="searchRecord" duration-ms="6070" started-at="2019-11-23T05:51:44Z" description="Searching a record" finished-at="2019-11-23T05:51:50Z">
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="createNewRec()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="createNewRec" duration-ms="13604" started-at="2020-01-02T10:32:59Z" finished-at="2020-01-02T10:33:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchRecord -->
-        <test-method status="PASS" signature="name()[pri:0, instance:com.qa.homePageTests.SearchRecord@e45f292]" name="name" is-config="true" duration-ms="827" started-at="2019-11-23T05:51:50Z" finished-at="2019-11-23T05:51:51Z">
+        </test-method> <!-- createNewRec -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="tearDown" is-config="true" duration-ms="861" started-at="2020-01-02T10:33:12Z" finished-at="2020-01-02T10:33:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- name -->
-      </class> <!-- com.qa.homePageTests.SearchRecord -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.homePageTests.CreateNewRecord -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

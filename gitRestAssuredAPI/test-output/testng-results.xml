@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7463" started-at="2019-11-29T09:30:07Z" finished-at="2019-11-29T09:30:14Z">
+  <suite name="Default suite" duration-ms="2508" started-at="2020-01-02T07:55:12Z" finished-at="2020-01-02T07:55:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7463" started-at="2019-11-29T09:30:07Z" finished-at="2019-11-29T09:30:14Z">
-      <class name="com.qa.jsonUtility.JSONArrayToList">
-        <test-method status="PASS" signature="getReq2()[pri:0, instance:com.qa.jsonUtility.JSONArrayToList@6eebc39e]" name="getReq2" duration-ms="7386" started-at="2019-11-29T09:30:07Z" finished-at="2019-11-29T09:30:14Z">
+    <test name="Default test" duration-ms="2508" started-at="2020-01-02T07:55:12Z" finished-at="2020-01-02T07:55:14Z">
+      <class name="com.qa.BDDrestAssured.TestBasicFeatures">
+        <test-method status="PASS" signature="testLog()[pri:0, instance:com.qa.BDDrestAssured.TestBasicFeatures@31ef45e3]" name="testLog" duration-ms="2467" started-at="2020-01-02T07:55:12Z" finished-at="2020-01-02T07:55:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getReq2 -->
-      </class> <!-- com.qa.jsonUtility.JSONArrayToList -->
+        </test-method> <!-- testLog -->
+      </class> <!-- com.qa.BDDrestAssured.TestBasicFeatures -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

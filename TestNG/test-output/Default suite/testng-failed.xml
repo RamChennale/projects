@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGlisterner.TestListener">
+      <class name="com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner">
         <methods>
-          <include name="startApp"/>
-          <include name="logout"/>
-          <include name="startBrowser"/>
-          <include name="login"/>
-          <include name="closeBrowser"/>
+          <include name="Test2ByListerner"/>
+          <include name="Test1ByListerner"/>
         </methods>
-      </class> <!-- testNGlisterner.TestListener -->
+      </class> <!-- com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

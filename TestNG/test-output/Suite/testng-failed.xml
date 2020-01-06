@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.qa.retryFailedTCUsingListener.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="2" name="RetryMulitple(failed)" parallel="tests">
     <classes>
-      <class name="crossBrowserAndMultiBrowser.CrossBrowser">
+      <class name="com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner">
         <methods>
-          <include name="verifyTitle" invocation-numbers="0"/>
+          <include name="Test2ByListerner"/>
         </methods>
-      </class> <!-- crossBrowserAndMultiBrowser.CrossBrowser -->
+      </class> <!-- com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- RetryMulitple(failed) -->
 </suite> <!-- Failed suite [Suite] -->

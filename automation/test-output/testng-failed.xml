@@ -5,9 +5,9 @@
     <classes>
       <class name="com.qa.homePageTests.CreateNewRecord">
         <methods>
+          <include name="initiate"/>
           <include name="createNewRec"/>
-          <include name="setUp"/>
-          <include name="name"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.homePageTests.CreateNewRecord -->
     </classes>
