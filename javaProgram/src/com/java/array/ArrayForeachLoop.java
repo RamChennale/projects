@@ -7,11 +7,11 @@ public class ArrayForeachLoop {
 		int[] array1= {11,22,33,44,55};
 
 		for(int i:a1) {
-			System.out.println(a1[i]);
+			System.out.println(i);
 		}
 		
 		for(int j:array1) {
-			System.out.println(array1[j]);
+			System.out.println(j);
 		}
 	}
 }
