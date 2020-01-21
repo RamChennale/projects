@@ -1,0 +1,49 @@
+Serialization:
+
+A process where you convert an Instance of a Class (Object of a class) into a Byte Stream. 
+This Byte Stream can then be stored as a file on the disk or can also be sent to another 
+computer via the network. 
+Serialization can also be used to save the sate of Object when the program shuts down or hibernates. 
+Once the state is saved on disk using Serialization.
+We can restore the state by DeSerializing the class from disk.
+
+Serializable Interface
+
+1. java.io.Serializable - It is a marker interface, it does not have any method to implement.
+2. java.io.Externalizable - but have to implement these two methods
+	2.1 readExternal(ObjectInput input)
+	2.2 writeExternal(ObjectOutput output)
+	
+
+Deserialization:
+ 
+Serialization is a mechanism of converting the state of an object into a byte stream. 
+Deserialization is the reverse process where the byte stream is used to recreate the actual 
+Java object in memory. This mechanism is used to persist the object.
+
+
+Advantages of Serialization
+1. To save/persist state of an object.
+2. To travel an object across a network.
+
+SerialVersionUID
+The Serialization runtime associates a version number with each Serializable class called a 
+SerialVersionUID, which is used during Deserialization to verify that sender and reciever of 
+a serialized object have loaded classes for that object which are compatible with respect to
+ serialization. If the reciever has loaded a class for the object that has different UID than
+that of corresponding sender’s class, the Deserialization will result in an 
+"InvalidClassException". 
+A Serializable class can declare its own UID explicitly by declaring a field name.
+
+
+NOTE: 
+Only the objects of those classes can be serialized which are implementing 
+java.io.Serializable interface.
+
+1. If a parent class has implemented Serializable interface then child class doesn’t need to
+ implement it but vice-versa is not true.
+2. Only non-static data members are saved via Serialization process.
+3. Static data members and transient data members are not saved via Serialization process.
+So, if you don’t want to save value of a non-static data member then make it transient.
+4. Constructor of object is never called when an object is deserialized.
+5. Associated objects must be implementing Serializable interface.

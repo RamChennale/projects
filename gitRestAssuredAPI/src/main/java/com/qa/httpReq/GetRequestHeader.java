@@ -8,6 +8,7 @@ import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
 public class GetRequestHeader {
@@ -52,4 +53,18 @@ public class GetRequestHeader {
 		Response response = requestSpecification.get("/Hyderabad");
 		System.out.println(response.getHeaders());
 		}
+	
+	@Test(enabled = false)
+	public void headerMethods() {
+		RestAssured.baseURI="http://www.google.com";
+		RequestSpecification request= RestAssured.given();
+		Response response=request.get();
+		ResponseBody responseBody= response.getBody();
+		
+		String content_Type= response.header("Content-Type");
+		Headers headers=	response.headers();
+		response.getHeader(content_Type);
+		Headers headers2=response.getHeaders();
+		
+	}
 }

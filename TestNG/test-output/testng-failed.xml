@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <listeners>
-    <listener class-name="com.qa.retryFailedTCUsingListener.AnnotationTransformer"/>
-  </listeners>
-  <test thread-count="2" name="RetryMulitple(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner">
+      <class name="com.qa.assertion.SoftHardAssertion">
         <methods>
-          <include name="Test2ByListerner"/>
+          <include name="hardAsset"/>
+          <include name="softAsset"/>
         </methods>
-      </class> <!-- com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner -->
+      </class> <!-- com.qa.assertion.SoftHardAssertion -->
     </classes>
-  </test> <!-- RetryMulitple(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

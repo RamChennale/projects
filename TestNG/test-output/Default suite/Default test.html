@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 26 22:29:52 IST 2019</td>
+<td>Started on:</td><td>Sat Jan 18 06:46:22 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (99 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (216 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test1ByListerner()'><b>Test1ByListerner</b><br>Test class: com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+<td title='com.qa.assertion.SoftHardAssertion.hardAsset()'><b>hardAsset</b><br>Test class: com.qa.assertion.SoftHardAssertion</td>
+<td><div><pre>java.lang.AssertionError: expected [11] but found [1]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at org.testng.Assert.assertEquals(Assert.java:578)
-	at com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test1ByListerner(TestCaseRetryByListerner.java:11)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.qa.assertion.SoftHardAssertion.hardAsset(SoftHardAssertion.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,15 +109,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace923219673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace923219673'><pre>java.lang.AssertionError: expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace522764626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace522764626'><pre>java.lang.AssertionError: expected [11] but found [1]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at org.testng.Assert.assertEquals(Assert.java:578)
-	at com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test1ByListerner(TestCaseRetryByListerner.java:11)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.qa.assertion.SoftHardAssertion.hardAsset(SoftHardAssertion.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -145,17 +145,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner@3a82f6ef</td></tr>
+<td>com.qa.assertion.SoftHardAssertion@3a82f6ef</td></tr>
 <tr>
-<td title='com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test2ByListerner()'><b>Test2ByListerner</b><br>Test class: com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at org.testng.Assert.assertEquals(Assert.java:578)
-	at com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test2ByListerner(TestCaseRetryByListerner.java:17)
+<td title='com.qa.assertion.SoftHardAssertion.softAsset()'><b>softAsset</b><br>Test class: com.qa.assertion.SoftHardAssertion</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [20] but found [10]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.qa.assertion.SoftHardAssertion.softAsset(SoftHardAssertion.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -181,15 +177,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1668627309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1668627309'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at org.testng.Assert.assertEquals(Assert.java:578)
-	at com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner.Test2ByListerner(TestCaseRetryByListerner.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1465085305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1465085305'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [20] but found [10]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.qa.assertion.SoftHardAssertion.softAsset(SoftHardAssertion.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -217,7 +209,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner@3a82f6ef</td></tr>
+<td>com.qa.assertion.SoftHardAssertion@3a82f6ef</td></tr>
 </table><p>
 </body>
 </html>

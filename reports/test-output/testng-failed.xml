@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.lotus.reports.ExtentReportDemo2">
+      <class name="com.lotus.reports.AdvExtentReportDemo1">
         <methods>
+          <include name="checkResults"/>
+          <include name="teardown"/>
+          <include name="login"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.lotus.reports.ExtentReportDemo2 -->
+      </class> <!-- com.lotus.reports.AdvExtentReportDemo1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

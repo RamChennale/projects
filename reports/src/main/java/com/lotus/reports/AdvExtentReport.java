@@ -2,8 +2,9 @@ package com.lotus.reports;
 
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 
 public class AdvExtentReport {
 	
@@ -11,8 +12,8 @@ public class AdvExtentReport {
 
 	@Test
 	public void advExtentReport() {
-		ExtentReports reports= new ExtentReports(System.getProperty("user.dir"+".\\report\report.html"));
-		ExtentTest test= reports.startTest("AdvExtentReport");
+		ExtentReports reports= new ExtentReports();
+		//ExtentTest test= ((Object) reports).startTest("AdvExtentReport");
 		
 	}
 }

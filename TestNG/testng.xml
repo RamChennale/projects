@@ -15,6 +15,7 @@
 	<test name="RetryMulitple">
 		<classes>
 			<class name="com.qa.retryFailedTCUsingListener.TestCaseRetryByListerner" />
+			<method name="" ></method>
 		</classes>
 	</test>
 

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class InvocationCountAndInvocationTimeOut {
 
-	@Test(priority = 1, 
+	@Test(priority = 1, threadPoolSize=10,
 			invocationCount = 2, 
 			invocationTimeOut = 4, 
 			ignoreMissingDependencies = false, 
