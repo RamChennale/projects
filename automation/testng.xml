@@ -4,7 +4,7 @@
 	<test name="GESM Test">
 		<classes>
 			<!-- HOME -->
-			<class name="com.qa.loginTests.Login" />
+			<class name="com.qa.homePageTests.HomePageOperations" />
 			</classes>
 	</test>
 </suite>

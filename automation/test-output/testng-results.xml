@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34188" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:33:13Z">
+  <suite name="Default suite" duration-ms="28100" started-at="2020-01-21T18:07:27Z" finished-at="2020-01-21T18:07:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34188" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:33:13Z">
-      <class name="com.qa.homePageTests.CreateNewRecord">
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="initiate" is-config="true" duration-ms="19664" started-at="2020-01-02T10:32:39Z" finished-at="2020-01-02T10:32:59Z">
+    <test name="Default test" duration-ms="28100" started-at="2020-01-21T18:07:27Z" finished-at="2020-01-21T18:07:55Z">
+      <class name="com.qa.homePageTests.HomePageOperations">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="reportSetup" is-config="true" duration-ms="435" started-at="2020-01-21T18:07:27Z" finished-at="2020-01-21T18:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSetup -->
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="initiate" is-config="true" duration-ms="13463" started-at="2020-01-21T18:07:27Z" finished-at="2020-01-21T18:07:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="createNewRec()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="createNewRec" duration-ms="13604" started-at="2020-01-02T10:32:59Z" finished-at="2020-01-02T10:33:12Z">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="getMethodName" is-config="true" duration-ms="12" started-at="2020-01-21T18:07:40Z" finished-at="2020-01-21T18:07:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.homePageTests.HomePageOperations.createNewRec()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="createNewRec()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="createNewRec" duration-ms="9894" started-at="2020-01-21T18:07:40Z" finished-at="2020-01-21T18:07:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewRec -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@5f2108b5]" name="tearDown" is-config="true" duration-ms="861" started-at="2020-01-02T10:33:12Z" finished-at="2020-01-02T10:33:13Z">
+        <test-method status="PASS" signature="testCaseStatus(org.testng.ITestResult)[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="testCaseStatus" is-config="true" duration-ms="25" started-at="2020-01-21T18:07:50Z" finished-at="2020-01-21T18:07:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createNewRec status=SUCCESS method=HomePageOperations.createNewRec()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseStatus -->
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="getMethodName" is-config="true" duration-ms="1" started-at="2020-01-21T18:07:50Z" finished-at="2020-01-21T18:07:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.homePageTests.HomePageOperations.searchRec()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="searchRec()[pri:1, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="searchRec" duration-ms="2324" started-at="2020-01-21T18:07:50Z" finished-at="2020-01-21T18:07:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchRec -->
+        <test-method status="PASS" signature="testCaseStatus(org.testng.ITestResult)[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="testCaseStatus" is-config="true" duration-ms="1" started-at="2020-01-21T18:07:53Z" finished-at="2020-01-21T18:07:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchRec status=SUCCESS method=HomePageOperations.searchRec()[pri:1, instance:com.qa.homePageTests.HomePageOperations@5ce81285] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseStatus -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="tearDown" is-config="true" duration-ms="1201" started-at="2020-01-21T18:07:53Z" finished-at="2020-01-21T18:07:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.homePageTests.CreateNewRecord -->
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.qa.homePageTests.HomePageOperations@5ce81285]" name="flushReport" is-config="true" duration-ms="683" started-at="2020-01-21T18:07:54Z" finished-at="2020-01-21T18:07:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- com.qa.homePageTests.HomePageOperations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

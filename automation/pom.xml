@@ -21,8 +21,12 @@
 			<!-- <version>2.53.0</version> -->
 			<version>3.12.0</version>
 		</dependency>
-
-
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -48,5 +52,32 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.9</version>
 		</dependency>
+		<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.0.0-M4</version>
+  <type>maven-plugin</type>
+</dependency>
 	</dependencies>
+	<build>
+	<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M4</version>
+        <configuration>
+          <!--  <includes>
+            <include>com.qa.homePageTests.Login.java</include>
+          </includes>
+          <excludes>
+            <exclude>Login.java</exclude>
+            <exclude>**/TestSquare.java</exclude>
+          </excludes> -->
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+	</build>
 </project>

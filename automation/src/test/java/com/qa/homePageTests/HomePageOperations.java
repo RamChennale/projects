@@ -11,7 +11,7 @@ public class HomePageOperations extends TestBase {
 
 	private static Logger logger = Logger.getLogger(HomePageOperations.class);
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		if (logger.isInfoEnabled()) {
 			logger.info("Home page Test case excecution started.");
 		}
@@ -21,7 +21,7 @@ public class HomePageOperations extends TestBase {
 		if (logger.isInfoEnabled()) {
 			logger.info("Home page Test case excecution started.");
 		}
-	}
+	}*/
 
 	@Test(enabled = true, priority = 0)
 	public void createNewRec() {
