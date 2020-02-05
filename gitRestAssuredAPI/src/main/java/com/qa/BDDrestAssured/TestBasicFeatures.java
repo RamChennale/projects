@@ -1,29 +1,28 @@
 package com.qa.BDDrestAssured;
 
-
-
-import java.util.HashMap;
-
-import org.hamcrest.collection.HasItemInArray;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
-import io.restassured.matcher.ResponseAwareMatcher;
-import io.restassured.response.Response;
+import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.*;
 
 public class TestBasicFeatures {
 
-	private static final ResponseAwareMatcher<Response> HashMap = null;
-
 	@Test(enabled=false)
+	public void testStatusCode() {
+		given().
+		when().
+		then().log().all();
+		}
+	
+/*	@Test(enabled=false)
 	public void testStatusCode() {
 		RestAssured.given()
 		.get("http://jsonplaceholder.typicode.com/posts/")
 		.then().statusCode(200);
-		}
+		}*/
 	@Test(enabled=false)
 	public void testLog() {
-		RestAssured.given()
+		given()
 		.get("http://jsonplaceholder.typicode.com/posts/")
 		.then()
 		.statusCode(200)
@@ -32,10 +31,9 @@ public class TestBasicFeatures {
 	
 	@Test(enabled=false)
 	public void verifyData() {
-		RestAssured.given()
+		given()
 		.get("")
-		.then()
-		.body("checking data from response body", HashMap);
+		.then();
 	}
 	
 	

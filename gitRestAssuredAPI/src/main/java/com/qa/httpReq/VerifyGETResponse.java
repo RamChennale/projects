@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -44,6 +45,9 @@ public class VerifyGETResponse {
 		Response response=	request.get();
 		//3. Verify Headers
 		Headers headers =response.getHeaders();
+		for(Header headers2:headers) {
+			System.out.println(headers2.getName()+"");
+		}
 		String headerAsString=headers.toString();
 		System.out.println("=========");
 		System.out.println("COMPLETE HEADER : "+headerAsString);

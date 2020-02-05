@@ -16,10 +16,23 @@ public class DeSerializeJSONArrayToList {
 		RestAssured.baseURI="https://reqres.in/api/users?page=2";
 		RequestSpecification requestSpecification=	RestAssured.given();
 		Response response= requestSpecification.get();
+		System.out.println("========RESPONSE response.asString()===========");
 		System.out.println(response.asString());
-		System.out.println("===================");
+		System.out.println("========RESPONSE JSON variables: String page	=jsonPathEvaluater.getString(\"page\");===========");
 		
 		JsonPath jsonPathEvaluater= response.jsonPath();
+		String pageStr	=jsonPathEvaluater.getString("page");
+		int page=Integer.parseInt(pageStr);
+		String per_pageStr=jsonPathEvaluater.getString("per_page");
+		int per_page=Integer.parseInt(per_pageStr);
+		String total=jsonPathEvaluater.getString("total");
+		String total_pages=jsonPathEvaluater.getString("total_pages");
+		System.out.println("page :"+page);
+		System.out.println("per_page :"+per_page);
+		System.out.println("total :"+total);
+		System.out.println("total_pages :"+total_pages);
+		
+		System.out.println("========RESPONSE JSON Arrays: List<Integer> list=	jsonPathEvaluater.getList(\"data.id\");===========");
 		List<Integer> list=	jsonPathEvaluater.getList("data.id");
 		for(Integer id:list) {
 			System.out.println("ID : "+id);

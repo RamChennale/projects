@@ -1,5 +1,7 @@
 package com.qa.httpReq;
 
+import java.util.List;
+
 /*201 and a location header pointed to the new resource
 400 if we are not able to create an item*/
 import org.json.simple.JSONObject;
@@ -7,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -33,9 +36,17 @@ public class PostRequest {
 		Response response = request.post();
 
 		int statusCode = response.getStatusCode();
-		System.out.println(statusCode);
 		Assert.assertEquals(statusCode, 201);
 		System.out.println(" Response Body : " + response.getBody().asString());
-
+		JsonPath jsonPath=	response.jsonPath();
+		String ResParameter=jsonPath.getString("ResParameter");
+		List<String> nameList=	jsonPath.getList("data.name");
+		for(String names:nameList) {
+			System.out.println(names);
+		}
+		List<Integer> idList=	jsonPath.getList("data.id");
+		for(int i:idList) {
+			System.out.println(i);
+		}
 	}
 }

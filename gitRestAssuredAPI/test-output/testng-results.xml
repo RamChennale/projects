@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3341" started-at="2020-01-17T05:40:05Z" finished-at="2020-01-17T05:40:08Z">
+  <suite name="Default suite" duration-ms="2730" started-at="2020-01-30T23:54:15Z" finished-at="2020-01-30T23:54:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3341" started-at="2020-01-17T05:40:05Z" finished-at="2020-01-17T05:40:08Z">
-      <class name="com.qa.httpReq.VerifyGETResponse">
-        <test-method status="PASS" signature="verifyHeader()[pri:5, instance:com.qa.httpReq.VerifyGETResponse@31ef45e3]" name="verifyHeader" duration-ms="3281" started-at="2020-01-17T05:40:05Z" finished-at="2020-01-17T05:40:08Z">
+    <test name="Default test" duration-ms="2730" started-at="2020-01-30T23:54:15Z" finished-at="2020-01-30T23:54:18Z">
+      <class name="com.qa.httpReq.GetRequestHeader">
+        <test-method status="PASS" signature="headers()[pri:0, instance:com.qa.httpReq.GetRequestHeader@31ef45e3]" name="headers" duration-ms="2683" started-at="2020-01-30T23:54:15Z" finished-at="2020-01-30T23:54:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHeader -->
-      </class> <!-- com.qa.httpReq.VerifyGETResponse -->
+        </test-method> <!-- headers -->
+      </class> <!-- com.qa.httpReq.GetRequestHeader -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

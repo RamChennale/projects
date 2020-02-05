@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.utility.TestCaptureScreenshotFailedTC">
+      <class name="com.java.seleniumFeature.WebDriverInterface">
         <methods>
-          <include name="initiate"/>
-          <include name="closeBrowser"/>
-          <include name="captureScreenshotFailedTestCase"/>
-          <include name="tearDown"/>
+          <include name="webDriverFunctions"/>
         </methods>
-      </class> <!-- com.qa.utility.TestCaptureScreenshotFailedTC -->
+      </class> <!-- com.java.seleniumFeature.WebDriverInterface -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

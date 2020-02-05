@@ -1,5 +1,7 @@
 package com.qa.httpReq;
 
+import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,13 +18,24 @@ public class GetRequestJSONResBody {
 	public void getVerifyJSONResBody() {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 		RequestSpecification requestSpecification = RestAssured.given();
-
 		Response response = requestSpecification.request(Method.GET, "/Hyderabad");
-		ResponseBody responseBygetBody = response.getBody();
-		ResponseBody responseByBody = response.body();
+		String responseBygetBody = response.getBody().asString();
+		String responseByBody = response.body().asString();
 		String responseBodyString = response.getBody().asString();
 		Assert.assertEquals(responseBodyString.contains("Hyderabad"), true, "Response body contains Hyderabad");
 		System.out.println("JSON Response : " + responseBodyString);
+
+		JsonPath jsonPath = response.jsonPath();
+		String tokenInString = jsonPath.getString("token");
+		int token = Integer.parseInt(tokenInString);
+		List<Integer> id = jsonPath.getList("data.id");
+		List<String> name = jsonPath.getList("data.name");
+		for (Integer i : id) {
+			System.out.println("Id: " + i);
+		}
+		for (String names : name) {
+			System.out.println("Names: " + names);
+		}
 
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String city = jsonPathEvaluator.getString("City");

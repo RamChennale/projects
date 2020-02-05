@@ -11,7 +11,7 @@ public class Journey {
 	}
 }
 /*
- * Journey and Car objects are loosely coupled. It means Vehicle is an interface
+ * Bike and Car objects are loosely coupled. It means Vehicle is an interface
  * and we can inject any of the implemented classes at run time and we can
  * provide service to the end user.
  */

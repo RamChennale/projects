@@ -13,21 +13,17 @@ import io.restassured.specification.RequestSpecification;
 
 public class GetRequestHeader {
 
-	@Test(enabled = true)
-	public void validateHeaderResp() {
+	@Test(enabled = false)
+	public void getHeader() {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 		RequestSpecification requestSpecification = RestAssured.given();
 		Response response = requestSpecification.get("/Hyderabad");
-		/*
-		 * Content-Type, Server, Content-Encoding
-		 */
 		String content_Type= response.getHeader("Content-Type");
 		Assert.assertEquals(content_Type,"application/json");
 		String server=response.getHeader("Server");
 		Assert.assertEquals(server,"nginx");
 		String content_Encoding= response.getHeader("Content-Encoding");
 		Assert.assertEquals(content_Encoding,"gzip");
-		
 		System.out.println("content Type value : "+content_Type);
 		System.out.println("Server name : "+server);
 		System.out.println("content Encoding language : "+content_Encoding);
@@ -46,12 +42,16 @@ public class GetRequestHeader {
 		
 	}
 	
-	@Test(enabled = false)
-	public void getAllHeaders() {
+	@Test(enabled = true)
+	public void getHeaders() {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 		RequestSpecification requestSpecification = RestAssured.given();
 		Response response = requestSpecification.get("/Hyderabad");
 		System.out.println(response.getHeaders());
+		Headers headers=	response.getHeaders();
+		for(Header header:headers) {
+			System.out.println(" Name:"+header.getName()+"   Value:"+header.getValue());
+		}
 		}
 	
 	@Test(enabled = false)
@@ -59,12 +59,11 @@ public class GetRequestHeader {
 		RestAssured.baseURI="http://www.google.com";
 		RequestSpecification request= RestAssured.given();
 		Response response=request.get();
-		ResponseBody responseBody= response.getBody();
-		
+		String   responseBody= response.getBody().asString();
 		String content_Type= response.header("Content-Type");
-		Headers headers=	response.headers();
-		response.getHeader(content_Type);
-		Headers headers2=response.getHeaders();
+		response.getHeader("Content-Type");
+		Headers headersAll=	response.headers();
+		Headers headers2All=response.getHeaders();
 		
 	}
 }

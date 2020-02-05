@@ -1,0 +1,48 @@
+{
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "array",
+ 6   "title": "The Root Schema",
+ 7   "items": {
+ 8     "$id": "#/items",
+ 9     "type": "object",
+10     "title": "The Items Schema",
+11     "required": [
+12       "id",
+13       "title",
+14       "author"
+15     ],
+16     "properties": {
+17       "id": {
+18         "$id": "#/items/properties/id",
+19         "type": "integer",
+20         "title": "The Id Schema",
+21         "default": 0,
+22         "examples": [
+23           1
+24         ]
+25       },
+26       "title": {
+27         "$id": "#/items/properties/title",
+28         "type": "string",
+29         "title": "The Title Schema",
+30         "default": "",
+31         "examples": [
+32           "json-server Update"
+33         ],
+34         "pattern": "^(.*)$"
+35       },
+36       "author": {
+37         "$id": "#/items/properties/author",
+38         "type": "string",
+39         "title": "The Author Schema",
+40         "default": "",
+41         "examples": [
+42           "Ram chennale"
+43         ],
+44         "pattern": "^(.*)$"
+45       }
+46     }
+47   }
+48 }

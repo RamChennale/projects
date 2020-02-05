@@ -1,19 +1,178 @@
 package com.java.seleniumFeature;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver.Navigation;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class WebDriverInterface {
 
-	static String url="http//www.google.com";
+	public static String url="http//www.google.com";
+	public static WebDriver driver = null;
+	public static WebDriverWait webDriverWait = null;
+	public static Logger logger = Logger.getLogger(HtmlTags.class);
+	public static  Alert alert;
+	String pageTitle;
+	Object obj ;
+	String currentPageUrl;
+	String pageSource ;
+	String windowId;
+	Set<String> windowIdSet;
+
+	private WebElement username;
+	@FindBy(xpath = ".//*[@id='password']")
+	private WebElement password;
+	@FindBy(xpath = ".//*[@id='login-submit']")
+	private WebElement login;
+
+	public WebDriverInterface(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public void loginTest() {
+		username.sendKeys("TestAdmin");
+		password.sendKeys("testAdmin");
+		login.click(); //
+	}
 	
 	@Test
+	public void webDriverFunctions() {
+		driver.close();
+		driver.equals(obj);
+		WebElement element = driver.findElement(By.id("id"));
+		List<WebElement> elements = driver.findElements(By.partialLinkText("partialLinkText"));
+		driver.get(url);
+		String currentPageUrl = driver.getCurrentUrl();
+		String pageSource = driver.getPageSource();
+		String pageTitle = driver.getTitle();
+		String windowId = driver.getWindowHandle();
+		Set<String> windowIdSet = driver.getWindowHandles();
+		driver.manage();
+		driver.navigate();
+		driver.quit();
+		driver.switchTo();
+		String toString = driver.toString();
+		
+		System.out.println("0. findElements ==================");
+		WebElement idEle = driver.findElement(By.id("id_value"));
+		List<WebElement> list_El = driver.findElements(By.name("button"));
+		ArrayList<WebElement> arrayList= new ArrayList<>();
+		Iterator<WebElement> iterator2=	list_El.iterator();
+		while(iterator2.hasNext()) {
+			arrayList.add(iterator2.next());
+		}
+		WebElement element2 =arrayList.get(0);
+		
+		System.out.println("1. WINDOW handling==================");
+		String windId1 = driver.getWindowHandle();
+		driver.switchTo().window(windId1);
+
+		Set<String> windSet1 = driver.getWindowHandles();
+		Iterator<String> iterator=	windSet1.iterator();
+		while(iterator.hasNext()) {
+			String windID=	iterator.next();
+			driver.switchTo().window(windID);
+		}
+			
+		Set<String> allWin = driver.getWindowHandles();
+		String parentWindow = driver.getWindowHandle();
+		for (String childWindow : allWin) {
+			if (!childWindow.equalsIgnoreCase(parentWindow)) {
+				driver.switchTo().window(childWindow);
+				break;
+			}
+		}
+			
+		System.out.println("==================");
+		driver.manage();
+		// driver.manage().addCookie(cookie);
+		driver.manage().deleteAllCookies();
+
+		driver.manage().timeouts();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+		driver.manage().window();
+		driver.manage().window().fullscreen(); //The browser's menu bar is not visible it's like pressing F11
+		Point point = driver.manage().window().getPosition();
+		Dimension dimension = driver.manage().window().getSize();
+		driver.manage().window().maximize();
+		driver.manage().window().setPosition(point);
+		driver.manage().window().setSize(dimension);
+		System.out.println("==================");
+		Navigation navigation=	driver.navigate();
+		navigation.back();
+		navigation.forward();
+		navigation.refresh();
+		navigation.to("http://www.google.com");
+		System.out.println("==================");
+		driver.switchTo();
+		driver.switchTo().activeElement();//The WebElement with focus, or the body element if no element with focus can be detected.
+		driver.switchTo().alert();
+		alert=	driver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
+		String alertText=alert.getText();
+		alert.sendKeys("username");
+		
+		driver.switchTo().defaultContent();//This driver focused on the top window/first frame.
+		driver.switchTo().frame(1);
+		driver.switchTo().frame("nameOrId");
+		driver.switchTo().parentFrame();//This driver focused on the top window/first frame.
+		driver.switchTo().window(windId1);
+		System.out.println("==========================================================================================");
+		System.out.println("==================");
+		System.out.println("========TO accept the alert=========");
+		driver.switchTo().alert().accept();
+		System.out.println("========TO dismiss the alert =========");
+		driver.switchTo().alert().dismiss();
+		System.out.println("=======TO print alert TEXT==========");
+		alert = driver.switchTo().alert();
+		System.out.println("ALert message is  " + alert.getText());
+		System.out.println("============");
+		System.out.println("========Capture SCREENSHOT=========");
+		try {
+			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(file, new File("d:/" + System.currentTimeMillis() + ".png"));
+			File file2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(file2, new File("d:/" + System.currentTimeMillis() + ".png"));
+		} catch (IOException ioe) {
+			System.out.println(ioe);
+		}
+		System.out.println("========To submit or Click on BUTTON==========");
+		driver.findElement(By.className("")).click();
+		driver.findElement(By.className("")).submit();
+		driver.findElement(By.className("")).sendKeys(Keys.RETURN);
+		driver.findElement(By.className("")).sendKeys(Keys.ENTER);
+		System.out.println("=======To  close current TAB===========");
+		driver.close();
+		System.out.println("======To  close all TAB============");
+		driver.quit();
+		System.out.println("==================");
+	}
+	
+	@Test(enabled=false)
 	public void webDriverFunctionalaties() {
 		WebDriver driver= new ChromeDriver();
 		WebElement locator= driver.findElement(By.xpath("//input[@name='user_name']"));

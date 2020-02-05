@@ -17,12 +17,11 @@ public class PutRequest {
 		requestSpecification.header("Content-Type", "application/json");
 
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("id", "123");
 		jsonObject.put("title", "updatedTitle");
 		jsonObject.put("author", "author-Ram chennale");
 		requestSpecification.body(jsonObject.toJSONString());
 
-		Response response = requestSpecification.put(" http://localhost:3000/posts/123");
+		Response response = requestSpecification.put("http://localhost:3000/posts/123");
 		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 200);
 

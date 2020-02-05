@@ -1,11 +1,14 @@
 package com.java.seleniumFeature;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,10 +17,32 @@ import org.testng.annotations.Test;
 
 public class WebElementInterfaceSelenium {
 
+	WebDriver driver = new ChromeDriver();
+	WebElement webElement = driver.findElement(By.id("id"));
+
+	public void webElementFeatures() {
+		webElement.clear();
+		webElement.click();
+		webElement.findElement(By.id("id")).click();
+		String attribute = webElement.getAttribute("name");
+		String propertyName = webElement.getCssValue("propertyName");
+		Point point = webElement.getLocation();
+		Rectangle element = webElement.getRect();
+		webElement.getScreenshotAs(OutputType.FILE);
+		webElement.getSize();
+		webElement.getTagName();
+		webElement.getText();
+		webElement.isDisplayed();
+		webElement.isEnabled();
+		webElement.isSelected();
+		webElement.sendKeys("keysToSend");
+		webElement.submit();
+	}
+
 	@Test
 	public void webElementInterfaceSelenium() {
-		WebDriver driver = new ChromeDriver();
-		WebElement webElement = driver.findElement(By.id("id"));
+		driver = new ChromeDriver();
+		webElement = driver.findElement(By.id("id"));
 		webElement.clear();
 		webElement.click();
 		String attribute = webElement.getAttribute("attribute");
@@ -28,11 +53,10 @@ public class WebElementInterfaceSelenium {
 		String text = webElement.getText();
 		boolean isdisplayed = webElement.isDisplayed();
 		if (isdisplayed) {
-			webElement.clear();
 			webElement.sendKeys("ram");
 		}
 		boolean isenaled = webElement.isEnabled();
-		if (!isenaled) {
+		if (isenaled) {
 			webElement.click();
 		}
 		boolean isselected = webElement.isSelected();
@@ -48,7 +72,7 @@ public class WebElementInterfaceSelenium {
 		for (WebElement element : list) {
 			list2.add(element);
 		}
-
+		WebElement element = list2.get(0);
 		Select select = new Select(list2.get(0));
 		select.selectByValue("Mr");
 		WebElement element2 = list2.get(1);

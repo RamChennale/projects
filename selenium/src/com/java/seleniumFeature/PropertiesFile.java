@@ -10,10 +10,10 @@ public class PropertiesFile {
 
 	public static void main(String[] args) throws IOException {
 		Properties properties = new Properties();
-		File file = new File(System.getProperty("user.dir") + "/src/seleniumExamples/config.properties");
+		String propertiesFilePath= System.getProperty("user.dir")+"/src/seleniumExamples/config.properties";
+		File file = new File(propertiesFilePath);
 		FileInputStream fileInputStream = new FileInputStream(file);
 		properties.load(fileInputStream);
 		System.out.println(properties.getProperty("GESM_URL"));
 	}
-
 }

@@ -4,6 +4,7 @@ public class PalindromeString {
 	public static boolean isPalindrome(String inputStr) {
 		char charArr[]=inputStr.toCharArray(); //charArr ['a','a','b','a','a']
 		for(int i=0,j=charArr.length-1;i<(charArr.length/2);i++,j--) {
+			System.out.println(charArr.length);
 			if(charArr[i]!=charArr[j]) {
 				return false;
 			}
