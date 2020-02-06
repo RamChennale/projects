@@ -1,0 +1,69 @@
+--- #starts with 3 --- line
+a:
+   b:
+      -d
+      - e
+      -f
+      -   g
+      
+h:
+
+   "Hey"
+
+errors:
+      messages:
+         already_confirmed: "was already confirmed, please try signing in"
+         confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+         expired: "has expired, please request a new one"
+         not_found: "not found"
+         not_locked: "was not locked"
+         not_saved:
+            one: "1 error prohibited this %{resource} from being saved:"
+            other: "%{count} errors prohibited this %{resource} from being saved:"
+            
+            
+erro:
+      msg:
+       var: "exceptio"
+       reasou: "divde by 0"
+       status: "confirm"
+       list: [1,2,3,4,5]
+        
+        
+invoice: 34843
+date   : 2001-01-23
+bill-to: &id001
+   given  : Chris
+   family : Dumars
+   address:
+      lines: |
+            458 Walkman Dr.
+            Suite #292
+      city    : Royal Oak
+      state   : MI
+      postal  : 48046
+ship-to: *id001
+
+product:
+    - sku         : BL394D
+      quantity    : 4
+      description : Basketball
+      price       : 450.00,
+tax  : 251.42
+total: 4443.52
+comments: >
+    Late afternoon is best.
+    Backup contact is Nancy
+    Billsmer @ 338-4338.
+    
+    
+# this
+# is a multiple
+# line comment
+
+key: #comment 1
+   - value line 1
+   #comment 2
+   - value line 2
+   #comment 3
+   - value line 3

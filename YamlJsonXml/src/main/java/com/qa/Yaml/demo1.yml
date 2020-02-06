@@ -1,0 +1,184 @@
+--- # start of yaml program and #--- End of yaml program
+#  is comment of yaml program
+   no: 2626
+   name: "Ram"
+   age: 30
+   Address:
+      At Kld 
+      Bhalki
+      Bidar 
+      KA
+#is it List  ?       
+   cars :
+      - BMW
+      - Tesala
+      - Maruti
+      - TATA
+      - Dezire
+      - Geep
+      
+
+# Multi-line collections
+# Complex keys can be catered for by placing a question mark followed 
+#by single space and pipe symbol to flag the start of a complex key:
+
+   ? |
+      a complex key
+      may be multiple
+      line
+   : value for complex key
+   
+   
+# Nested collections
+#   -Driver:<br />
+#      name: Francis Black<br />
+#      age: 21<br />
+#      Driving license type:<br />
+#          - full car license<br />
+#          - racing license formula V : details<br />
+#            license id: ABC12345<br />
+#            expiry date: 2017-12-28
+   
+   
+# Dictionaries
+# Dictionaries comprise a key:value format with contents indented.
+
+   carDetails:
+      manufature: Tata
+      Model: 2020
+      Date: Jan 2020
+      Promote: Ratan Tata
+      
+
+#You can merge and mix-up collections of lists and dictionaries like this:      
+# Car information<br />
+#-Driver<br />
+#      name: Francis Black<br />
+#      age: 21<br />
+#      Driving license type:<br />
+#          - full car license<br />
+#          - racing license formula V
+      
+  
+  
+  #######################
+  ##2. Collection Types##
+  #######################
+      
+# Unordered set of key: value pairs.
+   Block style: !!map
+       Clark : Evans
+       Brian : Ingerson
+       Oren : Ben-Kiki
+       
+   Flow style: !!map { Clark: Evans, Brian: Ingerson, Oren: Ben-Kiki }
+   
+   # Explicitly typed ordered map (dictionary).
+   Bestiary: !!omap
+    - aardvark: African pig-like ant eater. Ugly.
+    - anteater: South-American ant eater. Two species.
+    - anaconda: South-American constrictor snake. Scaly.
+# Etc.
+# Flow style
+   Numbers: !!omap [ one: 1, two: 2, three : 3 ]
+   
+   
+   # Explicitly typed pairs.
+   Block tasks: !!pairs
+    - meeting: with team.
+    - meeting: with boss.
+    - break: lunch.
+    - meeting: with client.
+    
+   Flow tasks: !!pairs [ meeting: with team, meeting: with boss ]
+   
+   
+ # Explicitly typed set.
+   baseball players: !!set
+    ? Mark McGwire
+    ? Sammy Sosa
+    ? Ken Griffey
+# Flow style
+   baseball teams: !!set { Boston Red Sox, Detroit Tigers, New York Yankees }
+   
+   
+   
+   # Ordered sequence of nodes
+   Block style: !!seq
+   - Mercury # Rotates - no light/dark sides.
+   - Venus # Deadliest. Aptly named.
+   - Earth # Mostly dirt.
+   - Mars # Seems empty.
+   - Jupiter # The king.
+   - Saturn # Pretty.
+   - Uranus # Where the sun hardly shines.
+   - Neptune # Boring. No rings.
+   - Pluto # You call this a planet?
+   Flow style: !!seq [ Mercury, Venus, Earth, Mars, # Rocks
+    Jupiter, Saturn, Uranus, Neptune, # Gas
+    Pluto ] # Overrated
+    
+    ###################
+    ##3. Scalar Types##
+    ###################
+    
+    #Example 1. !!bool Examples
+   canonical: y
+   answer: NO
+   logical: True
+   option: on
+    
+    
+    #Example 1. !!float Examples
+   canonical: 6.8523015e+5
+   exponentioal: 685.230_15e+03
+   fixed: 685_230.15
+   sexagesimal: 190:20:30.15
+   negative infinity: -.inf
+   not a number: .NaN
+    
+    
+    #Example 1. !!int Examples
+   canonical: 685230
+   decimal: +685_230
+   octal: 02472256
+   hexadecimal: 0x_0A_74_AE
+   binary: 0b1010_0111_0100_1010_1110
+   sexagesimal: 190:20:30
+---   
+   #Example 1. !!merge Examples
+   - &CENTER { x: 1, y: 2 }
+   - &LEFT { x: 0, y: 2 }
+   - &BIG { r: 10 }
+   - &SMALL { r: 1 }
+# All the following maps are equal:
+   - # Explicit keys
+    x: 1
+    y: 2
+    r: 10
+    label: center/big
+   - # Merge one map
+    << : *CENTER
+    r: 10
+    label: center/big
+   - # Merge multiple maps
+    << : [ *CENTER, *BIG ]
+    label: center/big
+   - # Override
+    << : [ *BIG, *LEFT, *SMALL ]
+    x: 1
+    label: center/big
+   
+   
+   
+    #Example 1. !!str Examples
+    string: abcd
+    
+     #Example 1. !!timestamp Examples
+    canonical: 2001-12-15T02:59:43.1Z
+    valid iso8601: 2001-12-14t21:59:43.10-05:00
+    space separated: 2001-12-14 21:59:43.10 -5
+    no time zone (Z): 2001-12-15 2:59:43.10
+    date (00:00:00Z): 2002-12-14
+    
+    

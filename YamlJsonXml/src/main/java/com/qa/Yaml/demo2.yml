@@ -1,0 +1,97 @@
+#There’s another small quirk to YAML. All YAML files (regardless of their association with
+# Ansible or not) can optionally begin with --- and end with .... This is part of the YAML
+# format and indicates the start and end of a document.
+#All members of a list are lines beginning at the same indentation level starting with a
+# "- " (a dash and a space):
+
+---
+# A list of tasty fruits
+- Apple
+- Orange
+- Strawberry
+- Mango
+    
+    
+#    A dictionary is represented in a simple key: value form 
+#(the colon must be followed by a space):
+# An employee record
+- martin:
+       name: Martin D'vloper
+       job: Developer
+       skill: Elite
+
+       # Employee records dictionary with list
+-  martin:
+    name: Martin D'vloper
+    job: Developer
+    skills:
+      - python
+      - perl
+      - pascal
+-  tabitha:
+    name: Tabitha Bitumen
+    job: Developer
+    skills:
+      - lisp
+      - fortran
+      - erlang
+      
+      
+#Dictionaries and lists can also be represented in an abbreviated form if you really want
+# to:
+
+---
+## both list and dictionary need to placed togather under common name but I am getting 
+martin: {name: Martin D'vloper, job: Developer, skill: Elite} 
+martin: ['Apple', 'Orange', 'Strawberry', 'Mango'] 
+#These are called “Flow collections”.
+
+
+#a boolean value (true/false) in several forms:
+create_key: yes
+needs_agent: no
+knows_oop: True
+likes_emacs: TRUE
+uses_cvs: false
+
+
+nclude_newlines: |
+            exactly as you see
+            will appear these three
+            lines of poetry
+
+fold_newlines: >
+            this is really a
+            single line of text
+            despite appearances
+            
+            
+fold_some_newlines: >
+    a
+    b
+
+    c
+    d
+      e
+    f
+same_as: "a b\nc d\n  e\nf\n"
+
+---
+# An employee record
+name: Martin D'vloper
+job: Developer
+skill: Elite
+employed: True
+foods:
+    - Apple
+    - Orange
+    - Strawberry
+    - Mango
+languages:
+    perl: Elite
+    python: Elite
+    pascal: Lame
+education: |
+    4 GCSEs
+    3 A-Levels
+    BSc in the Internet of Things

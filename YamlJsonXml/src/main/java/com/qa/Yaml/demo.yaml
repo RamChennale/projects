@@ -1,0 +1,43 @@
+#creating object
+person:   
+   name: &nam "ram"
+   postion: "test"
+   age: 23
+   male: true
+   birtday: 1994-01-01 12:22:11 #ISO8601 
+   num: 1e+10
+   hobbies: 
+      - paly
+      - run
+      - learn
+   movies: ["jbl","aksh","list"]
+   fiends:
+      - name: "ash"
+      - age: 11
+      - {name: "ash", age: 11} 
+      -
+       name: "sac"
+       age: 12
+       desp: 
+         the 
+         yam 
+         good
+         prod
+         
+ #person . age 
+ #person . 1994-01-01          
+            
+id: *nam
+base: &base
+   var1: val1
+   
+foo:
+   <<: *base #var1
+   va2: val2
+   
+   
+#num can force to other data type
+
+age: !!float 12 #12.0
+val: !!str 2.3 # "2.3"
+ 
