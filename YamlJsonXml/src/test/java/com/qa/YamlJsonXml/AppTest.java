@@ -1,4 +1,4 @@
-package com.qa.RestAssuredBDDAutomation;
+package com.qa.YamlJsonXml;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

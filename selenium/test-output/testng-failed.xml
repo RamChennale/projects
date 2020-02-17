@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.java.seleniumFeature.WebDriverInterface">
+      <class name="com.qa.ActionsClass.clickAndHoldFunction">
         <methods>
-          <include name="webDriverFunctions"/>
+          <include name="closeAllBrowser"/>
+          <include name="intit"/>
+          <include name="clickAndHoldFun"/>
         </methods>
-      </class> <!-- com.java.seleniumFeature.WebDriverInterface -->
+      </class> <!-- com.qa.ActionsClass.clickAndHoldFunction -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

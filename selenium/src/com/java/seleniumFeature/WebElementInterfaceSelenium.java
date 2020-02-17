@@ -66,8 +66,22 @@ public class WebElementInterfaceSelenium {
 			select.selectByValue("Male");
 			select.selectByVisibleText("gender");
 		}
-
-		List<WebElement> list = driver.findElements(By.tagName("//a"));
+		
+		//1 get all link count on page
+		//2 print all link text
+		//3 search and click on contact_us link
+		
+		String contact="contact_us";
+		List<WebElement> list = driver.findElements(By.tagName("a"));
+		System.out.println("1.Total link count: "+list.size());
+		for(int i=0;i<list.size();i++) {
+			String linkText=list.get(i).getText();
+			System.out.println("2 Link Text: "+linkText);
+			if(linkText.equalsIgnoreCase(contact)) {
+				list.get(i).click();
+				System.out.println("3. clicked on contact_us");
+			}
+		}
 		List<WebElement> list2 = new ArrayList<WebElement>();
 		for (WebElement element : list) {
 			list2.add(element);

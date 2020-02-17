@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101" started-at="2020-01-23T12:13:37Z" finished-at="2020-01-23T12:13:37Z">
+  <suite name="Default suite" duration-ms="17920" started-at="2020-02-14T06:31:52Z" finished-at="2020-02-14T06:32:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="101" started-at="2020-01-23T12:13:37Z" finished-at="2020-01-23T12:13:37Z">
-      <class name="com.java.seleniumFeature.WebDriverInterface">
-        <test-method status="FAIL" signature="webDriverFunctions()[pri:0, instance:null]" name="webDriverFunctions" duration-ms="42" started-at="2020-01-23T17:43:37Z" finished-at="2020-01-23T17:43:37Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can't invoke public void com.java.seleniumFeature.WebDriverInterface.webDriverFunctions(): either make it static or add a no-args constructor to your class]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can't invoke public void com.java.seleniumFeature.WebDriverInterface.webDriverFunctions(): either make it static or add a no-args constructor to your class
-	at org.testng.internal.Utils.checkInstanceOrStatic(Utils.java:800)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:41)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test name="Default test" duration-ms="17920" started-at="2020-02-14T06:31:52Z" finished-at="2020-02-14T06:32:10Z">
+      <class name="com.qa.ActionsClass.clickAndHoldFunction">
+        <test-method status="PASS" signature="intit()[pri:0, instance:com.qa.ActionsClass.clickAndHoldFunction@8bd1b6a]" name="intit" is-config="true" duration-ms="9449" started-at="2020-02-14T12:01:52Z" finished-at="2020-02-14T12:02:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- webDriverFunctions -->
-      </class> <!-- com.java.seleniumFeature.WebDriverInterface -->
+        </test-method> <!-- intit -->
+        <test-method status="PASS" signature="clickAndHoldFun()[pri:0, instance:com.qa.ActionsClass.clickAndHoldFunction@8bd1b6a]" name="clickAndHoldFun" duration-ms="6704" started-at="2020-02-14T12:02:02Z" finished-at="2020-02-14T12:02:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAndHoldFun -->
+        <test-method status="PASS" signature="closeAllBrowser()[pri:0, instance:com.qa.ActionsClass.clickAndHoldFunction@8bd1b6a]" name="closeAllBrowser" is-config="true" duration-ms="1725" started-at="2020-02-14T12:02:08Z" finished-at="2020-02-14T12:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAllBrowser -->
+      </class> <!-- com.qa.ActionsClass.clickAndHoldFunction -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

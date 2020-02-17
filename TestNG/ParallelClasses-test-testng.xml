@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Parallel testing to run methods in Parallel in this suite -->
+<suite name="Test class Suite" parallel="classes" thread-count="2">
+	<test name="Test-method test" group-by-instances="true">
+		<classes>
+			<class name="com.qa.parallel.ParallelClassesTestOne" />
+			<class name="com.qa.parallel.ParallelClassesTestTwo" />
+		</classes>
+	</test>
+</suite>  

@@ -46,7 +46,9 @@ public class TestBase implements TestBaseI{
 				System.getProperty("user.dir") + "/src/main/java/com/qa/config/config.properties");
 		properties.load(fis);
 		URL = properties.getProperty("url");
-		driver.navigate().to(URL);
+		driver.get("https://www.google.com/"); //1st Launch browser with google  
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.navigate().to(URL);// 2nd Navigate to given URL/site on same browser 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		logger.info("Browser launched successfully.");
 	}

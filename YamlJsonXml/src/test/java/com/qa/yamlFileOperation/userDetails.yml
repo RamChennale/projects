@@ -1,0 +1,13 @@
+#user details
+---
+    name: Ram Chennale
+    age: 30
+    address: 
+        line1: BTM 
+        line2: 1st stage
+        city: Bengaluru
+        zipCode: 560001   
+    roles:
+        - Manual Tester
+        - Automation Tester
+        - API Tester

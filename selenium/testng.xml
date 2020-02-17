@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <!-- <class name="com.java.seleniumFeature.AlertsInSelenium"/>
+      <class name="com.java.seleniumFeature.JavaScriptExecutionInSelenium"/>
+      <class name="com.java.seleniumFeature.WebElementInterfaceSelenium"/>
+      <class name="com.qa.seleniumFunctionality.ActionsClass"/>
+      <class name="com.qa.seleniumFunctionality.FluentWaitDemo"/>
+      <class name="com.java.seleniumFeature.ActionClassInSelenium"/>
+      <class name="com.java.seleniumFeature.Runner"/>
+      <class name="com.qa.ActionsClass.ActionsClassFunctions"/>
+      <class name="com.java.seleniumFeature.SeleniumWindHandle"/>
+      <class name="com.java.seleniumFeature.HandleSSLUntrustedCertificates"/>
+      <class name="com.java.seleniumFeature.ActionsClassInSelenium1"/>
+      <class name="com.qa.base.TestBase"/>
+      <class name="com.java.seleniumFeature.IBaseInterface"/>
+      <class name="com.java.seleniumFeature.ScreenShot"/>
+      <class name="com.java.seleniumFeature.WindowHandlesInSelenium"/>
+      <class name="com.java.seleniumFeature.WaitsInSelenium"/>
+      <class name="com.qa.seleniumQuestions.GetLinkToLogIn"/>
+      <class name="com.java.seleniumFeature.LocatorsInSelenium"/>
+      <class name="com.java.seleniumFeature.RadioButtonSelection"/>
+      <class name="com.java.seleniumFeature.WebDriverInterface"/>
+      <class name="com.java.seleniumFeature.SelectInSelenium"/>
+      <class name="com.java.seleniumFeature.FluentWaitInSelenium"/>
+      <class name="com.qa.ActionsClass.ActionsClass"/>
+      <class name="com.qa.seleniumQuestions.GetAllLinks"/>
+      <class name="com.qa.seleniumFunctionality.SeleniumExceptionHandling"/>
+      <class name="com.java.seleniumFeature.ClickInSelenium"/>
+      <class name="com.java.seleniumFeature.FramesInSelenium1"/>
+      <class name="com.java.seleniumFeature.SeleniumActionsClass"/>
+      <class name="com.java.seleniumFeature.WindowHandling"/>
+      <class name="com.qa.utility.TestCaptureScreenshotFailedTC"/>
+      <class name="com.java.seleniumFeature.FormSubmissionByExcelData"/>
+      <class name="com.qa.seleniumQuestions.GetAllLinksCount"/>
+      <class name="com.qa.interfaces.TestBaseI"/>
+      <class name="com.java.seleniumFeature.SeleniumAlert"/>
+      <class name="com.java.seleniumFeature.FramesInSelenium"/>
+      <class name="com.qa.seleniumQuestions.GetAllLinksText"/>
+      <class name="com.java.seleniumFeature.BaseClass"/> -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
