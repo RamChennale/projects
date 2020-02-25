@@ -1,84 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel tests Test Suite" duration-ms="19453" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:45Z">
+  <suite name="test-group" duration-ms="88" started-at="2020-02-17T10:24:20Z" finished-at="2020-02-17T10:24:20Z">
     <groups>
+      <group name="test-group-two">
+        <method signature="TestGroupExample.testMethodFour()[pri:0, instance:com.qa.testNG.groups.TestGroupExample@396a51ab]" name="testMethodFour" class="com.qa.testNG.groups.TestGroupExample"/>
+      </group> <!-- test-group-two -->
     </groups>
-    <test name="Test-2" duration-ms="19452" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:45Z">
-      <class name="com.qa.parallel.ParallelMethodTest">
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="initiate" is-config="true" duration-ms="18007" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:44Z">
+    <test name="groups" duration-ms="88" started-at="2020-02-17T10:24:20Z" finished-at="2020-02-17T10:24:20Z">
+      <class name="com.qa.testNG.groups.TestGroupExample">
+        <test-method status="PASS" signature="testMethodFour()[pri:0, instance:com.qa.testNG.groups.TestGroupExample@396a51ab]" name="testMethodFour" duration-ms="27" started-at="2020-02-17T10:24:20Z" finished-at="2020-02-17T10:24:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testMethodsOne()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="testMethodsOne" duration-ms="27" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodsOne -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testMethodsTwo()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="testMethodsTwo" duration-ms="3" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodsTwo -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.parallel.ParallelMethodTest@59ec2012]" name="tearDown" is-config="true" duration-ms="1332" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.parallel.ParallelMethodTest -->
-    </test> <!-- Test-2 -->
-    <test name="Test-1" duration-ms="19453" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:45Z">
-      <class name="com.qa.parallel.ParallelTestCasesTestSuite">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="beforeTest" is-config="true" duration-ms="39" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test-one]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="initiate" is-config="true" duration-ms="18008" started-at="2020-02-17T06:28:26Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="beforeClass" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="testMethodOne" duration-ms="43" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodOne -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="afterClass" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="tearDown" is-config="true" duration-ms="1330" started-at="2020-02-17T06:28:44Z" finished-at="2020-02-17T06:28:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.qa.parallel.ParallelTestCasesTestSuite@604ed9f0]" name="afterTest" is-config="true" duration-ms="1" started-at="2020-02-17T06:28:45Z" finished-at="2020-02-17T06:28:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.qa.parallel.ParallelTestCasesTestSuite -->
-    </test> <!-- Test-1 -->
-  </suite> <!-- Parallel tests Test Suite -->
+        </test-method> <!-- testMethodFour -->
+      </class> <!-- com.qa.testNG.groups.TestGroupExample -->
+    </test> <!-- groups -->
+  </suite> <!-- test-group -->
 </testng-results>

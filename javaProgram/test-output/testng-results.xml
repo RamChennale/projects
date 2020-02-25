@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57" started-at="2020-02-12T08:19:14Z" finished-at="2020-02-12T08:19:14Z">
+  <suite name="Default suite" duration-ms="62" started-at="2020-02-19T07:07:56Z" finished-at="2020-02-19T07:07:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57" started-at="2020-02-12T08:19:14Z" finished-at="2020-02-12T08:19:14Z">
-      <class name="com.java.viredra.TestJavaString">
-        <test-method status="PASS" signature="assignmentOp()[pri:0, instance:com.java.viredra.TestJavaString@7f9a81e8]" name="assignmentOp" duration-ms="20" started-at="2020-02-12T08:19:14Z" finished-at="2020-02-12T08:19:14Z">
+    <test name="Default test" duration-ms="62" started-at="2020-02-19T07:07:56Z" finished-at="2020-02-19T07:07:56Z">
+      <class name="com.java.collectionFramework.HashtableEx">
+        <test-method status="PASS" signature="getValuesHashTable()[pri:0, instance:com.java.collectionFramework.HashtableEx@51081592]" name="getValuesHashTable" duration-ms="21" started-at="2020-02-19T07:07:56Z" finished-at="2020-02-19T07:07:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assignmentOp -->
-      </class> <!-- com.java.viredra.TestJavaString -->
+        </test-method> <!-- getValuesHashTable -->
+      </class> <!-- com.java.collectionFramework.HashtableEx -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

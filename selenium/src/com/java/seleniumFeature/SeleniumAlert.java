@@ -1,4 +1,4 @@
-package com.java.seleniumFeature;
+/*package com.java.seleniumFeature;
 
 import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
@@ -30,12 +30,12 @@ import org.testng.annotations.Test;
 
 public class SeleniumAlert {
 
-	/**
+	*//**
 	1. How to work with alert
 	2. How to work with iframe
 	3. How to work with select
 	4. How to execute java script
-	 */
+	 *//*
 	
 	@Test
 	public void seleniumAlert() {
@@ -203,3 +203,4 @@ public class SeleniumAlert {
 		return null;
 	}
 }
+*/

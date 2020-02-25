@@ -19,11 +19,11 @@ class C extends B {
 }
 
 public class CmainClass {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		C c = new C();
 		System.out.println(c.s);
-		//Class A
-		//Class B
-		//Class C
-		}
+		// Class A
+		// Class B
+		// Class C
+	}
 }

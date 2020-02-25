@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.java.viredra.TestJavaString">
+      <class name="com.java.collectionFramework.HashtableEx">
         <methods>
-          <include name="reverseString11"/>
+          <include name="hashTableEnumeration"/>
         </methods>
-      </class> <!-- com.java.viredra.TestJavaString -->
+      </class> <!-- com.java.collectionFramework.HashtableEx -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

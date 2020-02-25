@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.openqa.selenium.support.ui.Select;
 
 import com.qa.base.TestBase;

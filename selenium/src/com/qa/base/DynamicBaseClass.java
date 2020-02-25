@@ -14,14 +14,15 @@ public class DynamicBaseClass {
 	public static WebDriver driver;
 	
 	@BeforeClass
-	public void intit() {
+	public void init() {
 		System.setProperty("webdriver.chrome.driver", ".//browser//chromeDriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("https://www.google.com/");
+		driver.get("http://uitestpractice.com/");
+		//http://popuptest.com/
 	}	
 	
 	public static void NavigateToUrl(String navigationUrl) {

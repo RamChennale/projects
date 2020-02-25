@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.assertion.SoftHardAssertion">
+      <class name="com.qa.testNGfeatures.DataProviderEx1">
         <methods>
-          <include name="hardAsset"/>
-          <include name="softAsset"/>
+          <include name="name"/>
         </methods>
-      </class> <!-- com.qa.assertion.SoftHardAssertion -->
+      </class> <!-- com.qa.testNGfeatures.DataProviderEx1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

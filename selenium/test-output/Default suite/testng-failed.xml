@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.ActionsClass.clickAndHoldFunction">
+      <class name="com.qa.htmlUnitDriver.HtmlUnitHeadlessDriver">
         <methods>
-          <include name="closeAllBrowser"/>
-          <include name="intit"/>
-          <include name="clickAndHoldFun"/>
+          <include name="htmlUnitHeadlessDriver"/>
         </methods>
-      </class> <!-- com.qa.ActionsClass.clickAndHoldFunction -->
+      </class> <!-- com.qa.htmlUnitDriver.HtmlUnitHeadlessDriver -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
