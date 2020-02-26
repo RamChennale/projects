@@ -1,19 +1,20 @@
-package com.java.seleniumFeature;
+package com.qa.alert;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import com.qa.base.DynamicBaseClass;
+
 /*1. Simple alert: warning/information click OK
 2.confirmation alert: Do you want continue/delete ?
 3. Prompt alert : Asking information/input data*/
 
-public class AlertsInSelenium {
+public class AlertsInSelenium extends DynamicBaseClass{
 
 	@Test
 	public void alerts() {
-		WebDriver driver = new ChromeDriver();
 		Alert alert = driver.switchTo().alert();
 		alert.accept(); // clicking OK
 		alert.dismiss();// click on Cancel

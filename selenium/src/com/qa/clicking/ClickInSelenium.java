@@ -1,4 +1,4 @@
-package com.java.seleniumFeature;
+package com.qa.clicking;
 
 import java.awt.RenderingHints.Key;
 
@@ -8,6 +8,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
+
+import com.java.seleniumFeature.BaseClass;
 
 import bsh.commands.dir;
 
@@ -24,11 +26,11 @@ public class ClickInSelenium extends BaseClass{
 	@Test(enabled=true)
 	private void numOfWayClickingWaySelenium() {
 		WebElement locator=driver.findElement(By.xpath("//*[text()='Form']"));
-		/*locator.click();
+		locator.click();
 		locator.sendKeys(Keys.ENTER);
 		locator.sendKeys(Keys.RETURN);
 		JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
-		javascriptExecutor.executeScript("arguments[0].click()", locator);*/
+		javascriptExecutor.executeScript("arguments[0].click()", locator);
 		Actions actions= new Actions(driver);
 		actions.click(locator).perform();//OR actions.click(locator).build().perform();
 		actions.clickAndHold(locator).release().build().perform();//actions.clickAndHold(locator).release().perform();

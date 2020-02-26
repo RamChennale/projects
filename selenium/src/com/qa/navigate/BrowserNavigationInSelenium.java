@@ -1,6 +1,8 @@
-package com.java.seleniumFeature;
+package com.qa.navigate;
 
 import org.openqa.selenium.WebDriver.Navigation;
+
+import com.java.seleniumFeature.BaseClass;
 
 public class BrowserNavigationInSelenium extends BaseClass{
 

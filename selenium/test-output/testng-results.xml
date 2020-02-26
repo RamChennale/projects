@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13341" started-at="2020-02-20T09:53:03Z" finished-at="2020-02-20T09:53:16Z">
+  <suite name="Default suite" duration-ms="27421" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13341" started-at="2020-02-20T09:53:03Z" finished-at="2020-02-20T09:53:16Z">
-      <class name="com.qa.javascriptExecuter.DrawBordertoElement">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.qa.javascriptExecuter.DrawBordertoElement@1060b431]" name="init" is-config="true" duration-ms="10161" started-at="2020-02-20T09:53:03Z" finished-at="2020-02-20T09:53:13Z">
+    <test name="Default test" duration-ms="27421" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:17Z">
+      <class name="com.qa.xpath.DynamicTableXpathLoopIteration">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="init" is-config="true" duration-ms="13233" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="drawBordertoElement()[pri:0, instance:com.qa.javascriptExecuter.DrawBordertoElement@1060b431]" name="drawBordertoElement" duration-ms="2122" started-at="2020-02-20T09:53:13Z" finished-at="2020-02-20T09:53:15Z">
+        <test-method status="PASS" signature="dynamicTableXpathLoopIteration()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="dynamicTableXpathLoopIteration" duration-ms="13315" started-at="2020-02-25T09:59:03Z" finished-at="2020-02-25T09:59:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- drawBordertoElement -->
-        <test-method status="PASS" signature="closeAllBrowser()[pri:0, instance:com.qa.javascriptExecuter.DrawBordertoElement@1060b431]" name="closeAllBrowser" is-config="true" duration-ms="1002" started-at="2020-02-20T09:53:15Z" finished-at="2020-02-20T09:53:16Z">
+        </test-method> <!-- dynamicTableXpathLoopIteration -->
+        <test-method status="PASS" signature="closeAllBrowser()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="closeAllBrowser" is-config="true" duration-ms="818" started-at="2020-02-25T09:59:16Z" finished-at="2020-02-25T09:59:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAllBrowser -->
-      </class> <!-- com.qa.javascriptExecuter.DrawBordertoElement -->
+      </class> <!-- com.qa.xpath.DynamicTableXpathLoopIteration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

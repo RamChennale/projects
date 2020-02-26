@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.htmlUnitDriver.HtmlUnitHeadlessDriver">
+      <class name="com.qa.xpath.DynamicTableXpathLoopIteration">
         <methods>
-          <include name="htmlUnitHeadlessDriver"/>
+          <include name="closeAllBrowser"/>
+          <include name="init"/>
+          <include name="dynamicTableXpathLoopIteration"/>
         </methods>
-      </class> <!-- com.qa.htmlUnitDriver.HtmlUnitHeadlessDriver -->
+      </class> <!-- com.qa.xpath.DynamicTableXpathLoopIteration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

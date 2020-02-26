@@ -1,4 +1,4 @@
-package com.qa.seleniumQuestions;
+package com.qa.xpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
