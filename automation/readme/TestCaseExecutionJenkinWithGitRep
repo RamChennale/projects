@@ -1,0 +1,19 @@
+1. Download Jenkin and run by  default jenkin runs on port 8080 url:http://localhost:8080/ 
+
+Use the following command at command prompt:
+java -jar jenkins.war --httpPort=9090
+
+If you want to use https use the following command:
+java -jar jenkins.war --httpsPort=9090  
+
+2. check and add maven and TestNG plugins from Available.
+
+3. Create maven style project.
+	3.0 Source Code Management: Git
+	3.1 In Build: Provide pom.xml file path
+	3.2 In Post-build Actions: select TestNG XML report pattern 
+
+click Apply and Save
+
+4. Run/Execute Build and verify the test case result in console.
+

@@ -9,6 +9,7 @@ java -jar jenkins.war --httpsPort=9090
 2. check and add maven and TestNG plugins from Available.
 
 3. Create maven style project.
+	3.0 Source Code Management: None
 	3.1 In Build: Provide pom.xml file path
 	3.2 In Post-build Actions: select TestNG XML report pattern 
 
