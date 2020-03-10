@@ -1,4 +1,4 @@
-package com.qa.testNG.dataProviders;
+package com.qa.dataProviders;
 
 /*TestNG @DataProvider and @Test in different classes
  * 
@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 
 public class DataProviderClass {
 
-	@DataProvider(name = "inputDataProviderMethod")
+	@DataProvider(name = "inputDataProviderMethodName")
 	public static Object[][] inputData() {
 		return new Object[][] { { "abc" }, { "123" }, { "a,b" } };
 	}

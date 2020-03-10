@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 
 public class Delete {
-	static String id="123";
+	static String id="1010";
 	@BeforeClass
 	public void deletData() {
 		RestAssured.baseURI = "http://localhost:3000/";

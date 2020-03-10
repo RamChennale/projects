@@ -11,13 +11,14 @@ import org.testng.annotations.Test;
 
 public class HashtableEx {
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void hashTableDemo() {
 		Map<String, String> map= new Hashtable<>();
 		map.put("a", "Ram");
 		map.put("a", "Ram");
 		map.put("b", "RamB");
 		map.put("c", "RamC");
+		//map.put(null, "null");java.lang.NullPointerException
 		//Set<Entry<String, String>> set= map.entrySet();
 		System.out.println("Hashtable: "+map);
 		System.out.println();
@@ -38,7 +39,7 @@ public class HashtableEx {
 		System.out.println("Keys: "+keys);
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void getValuesHashTable() {
 		Map<Integer, String> hashtable= new Hashtable<>();
 		hashtable.put(1, "Ram");

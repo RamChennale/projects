@@ -4,11 +4,13 @@ public class StringLiteralDiffersNew {
 
 	public static void main(String[] args) {
 		String s = new String("ram"); // New
+		String s2 = new String("ram"); // New
 		String s1 = "ram"; // Literal
 		System.out.println("By new String(\"ram\");" + s);
 		System.out.println(" By String s1=\"ram\"" + s1);
 		System.out.println(s.hashCode());
 		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
 		/*
 		 * Why Java uses the concept of String literal? To make Java more memory
 		 * efficient **** (because no new objects are created if it exists already in

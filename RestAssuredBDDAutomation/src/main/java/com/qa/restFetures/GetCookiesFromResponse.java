@@ -47,7 +47,7 @@ public class GetCookiesFromResponse {
 	public void coonect() {
 		RestAssured.baseURI="https://jsonplaceholder.typicode.com/posts";
 		Response response= get();
-		JsonPath jsonPath= new JsonPath(response.asString());
-		System.out.println(jsonPath);
+		JsonPath jsonPath= new JsonPath(response.print());
+		System.out.println(jsonPath.getString("userId"));
 	}
 }

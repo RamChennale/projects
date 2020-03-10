@@ -2,24 +2,54 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27421" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:17Z">
+  <suite name="Default suite" duration-ms="13617" started-at="2020-03-10T06:33:59Z" finished-at="2020-03-10T06:34:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27421" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:17Z">
-      <class name="com.qa.xpath.DynamicTableXpathLoopIteration">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="init" is-config="true" duration-ms="13233" started-at="2020-02-25T09:58:50Z" finished-at="2020-02-25T09:59:03Z">
+    <test name="Default test" duration-ms="13617" started-at="2020-03-10T06:33:59Z" finished-at="2020-03-10T06:34:13Z">
+      <class name="com.qa.utility.ExtentHTMLreport">
+        <test-method status="PASS" signature="setUpReport()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="setUpReport" is-config="true" duration-ms="333" started-at="2020-03-10T06:33:59Z" finished-at="2020-03-10T06:34:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="dynamicTableXpathLoopIteration()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="dynamicTableXpathLoopIteration" duration-ms="13315" started-at="2020-02-25T09:59:03Z" finished-at="2020-02-25T09:59:16Z">
+        </test-method> <!-- setUpReport -->
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="initBrowser" is-config="true" duration-ms="10066" started-at="2020-03-10T06:34:00Z" finished-at="2020-03-10T06:34:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dynamicTableXpathLoopIteration -->
-        <test-method status="PASS" signature="closeAllBrowser()[pri:0, instance:com.qa.xpath.DynamicTableXpathLoopIteration@87f383f]" name="closeAllBrowser" is-config="true" duration-ms="818" started-at="2020-02-25T09:59:16Z" finished-at="2020-02-25T09:59:17Z">
+        </test-method> <!-- initBrowser -->
+        <test-method status="PASS" signature="getMethodTCName(java.lang.reflect.Method)[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="getMethodTCName" is-config="true" duration-ms="10" started-at="2020-03-10T06:34:10Z" finished-at="2020-03-10T06:34:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.utility.ExtentHTMLreport.testDemo()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeAllBrowser -->
-      </class> <!-- com.qa.xpath.DynamicTableXpathLoopIteration -->
+        </test-method> <!-- getMethodTCName -->
+        <test-method status="PASS" signature="testDemo()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="testDemo" duration-ms="66" started-at="2020-03-10T06:34:10Z" finished-at="2020-03-10T06:34:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDemo -->
+        <test-method status="PASS" signature="getMethodTCStatus(org.testng.ITestResult)[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="getMethodTCStatus" is-config="true" duration-ms="25" started-at="2020-03-10T06:34:10Z" finished-at="2020-03-10T06:34:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDemo status=SUCCESS method=ExtentHTMLreport.testDemo()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodTCStatus -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="tearDownBrowser" is-config="true" duration-ms="2316" started-at="2020-03-10T06:34:10Z" finished-at="2020-03-10T06:34:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method status="PASS" signature="writeReport()[pri:0, instance:com.qa.utility.ExtentHTMLreport@69b0fd6f]" name="writeReport" is-config="true" duration-ms="738" started-at="2020-03-10T06:34:12Z" finished-at="2020-03-10T06:34:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReport -->
+      </class> <!-- com.qa.utility.ExtentHTMLreport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

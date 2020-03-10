@@ -16,7 +16,7 @@ public class FindSearchElementByPageScrolling extends DynamicBaseClass {
 	}
 
 	@Test(enabled = true)
-	public void pageScrollToFindElement() throws InterruptedException {
+	public static void pageScrollToFindElement() throws InterruptedException {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		WebElement element = driver.findElement(By.xpath("//span[contains(text(),'Toggle icons')]"));
 		findElementByPageScrolling(element);

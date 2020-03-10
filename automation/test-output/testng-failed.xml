@@ -3,18 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.homePageTests.HomePageOperations">
+      <class name="com.qa.homePageTests.CreateNewRecord">
         <methods>
+          <include name="createNewRecordByTDD" invocation-numbers="0 1 2 3 4 5"/>
           <include name="flushReport"/>
           <include name="reportSetup"/>
           <include name="testCaseStatus"/>
           <include name="getMethodName"/>
           <include name="initiate"/>
-          <include name="searchRec"/>
           <include name="tearDown"/>
-          <include name="createNewRec"/>
         </methods>
-      </class> <!-- com.qa.homePageTests.HomePageOperations -->
+      </class> <!-- com.qa.homePageTests.CreateNewRecord -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -18,14 +18,19 @@ public class AnnotationRunOrder {
 	 @BeforeSuite
 	 @BeforeTest
 	 @BeforeClass
+	 
 	 @BeforeMethod
-	 test()
+	 test()@Test
 	 @AfterMethod
+	 
 	 @BeforeMethod
-	 @Test(priority = -1, dependsOnMethods = "test"
+	 testPriority()@Test(priority = -1, dependsOnMethods = "test"
 	 @AfterMethod
+	 
 	 @AfterClass
 	 @AfterTest
+	 @AfterSuite
+	 
 	 PASSED: test
 	 PASSED: testPriority*/
 	@Test
@@ -35,7 +40,7 @@ System.out.println("test()");
 
 	@Test(priority = -1, dependsOnMethods = "test")
 	public void testPriority() {
-		System.out.println("@Test(priority = -1, dependsOnMethods = \"test\"");
+		System.out.println("testPriority() @Test(priority = -1, dependsOnMethods = \"test\"");
 	}
 	@BeforeSuite
 	public void beforeSuite() {

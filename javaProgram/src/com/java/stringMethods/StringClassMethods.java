@@ -26,7 +26,24 @@ public class StringClassMethods {
 		System.out.println(string.trim());
 		System.out.println(string.valueOf(65));
 		//System.out.println(string.split("j"));
-		
+/*		a
+		4
+		ava
+		a
+		true
+		true
+		true
+		false
+		javajava
+		jAvA
+		java
+		0
+		-1
+		1
+		java
+		JAVA
+		java
+		65*/
 		s.charAt(0);
 		s.chars();
 		s.compareTo(string);

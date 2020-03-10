@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.restFetures.SchemaVerification">
+      <class name="com.qa.restFetures.PathParameter">
         <methods>
-          <include name="testJsonSchema"/>
+          <include name="pathParameter"/>
         </methods>
-      </class> <!-- com.qa.restFetures.SchemaVerification -->
+      </class> <!-- com.qa.restFetures.PathParameter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

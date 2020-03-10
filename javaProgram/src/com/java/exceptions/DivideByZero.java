@@ -15,6 +15,8 @@ public class DivideByZero {
 		} catch (CustomException ce) {
 			throw new CustomException("Enter only integer number." + ce.getMessage());
 		}
-
+finally {
+	System.out.println("MUST AND SHOULD EXECUTED");
+}
 	}
 }

@@ -7,7 +7,7 @@ public class StaticMethod {
 	}
 	public static void main(String[] args) {
 		StaticMethod obj=null;// no output- for this line
-		obj.show(); //I am static method show()- static method called
+		//obj.show(); //I am static method show()- static method called
 	}
 	
 }

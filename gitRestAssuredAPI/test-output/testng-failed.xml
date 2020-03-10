@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.jsonUtility.DeserializeJSONArrayToArray">
+      <class name="com.qa.httpReq.GetRequestJSONResBody">
         <methods>
-          <include name="deSerializeJSON_ArrayToArray"/>
+          <include name="getVerifyJSONResBody"/>
         </methods>
-      </class> <!-- com.qa.jsonUtility.DeserializeJSONArrayToArray -->
+      </class> <!-- com.qa.httpReq.GetRequestJSONResBody -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

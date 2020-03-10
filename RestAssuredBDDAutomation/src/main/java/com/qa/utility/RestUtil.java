@@ -11,7 +11,7 @@ public class RestUtil {
 	    "author": "Lotus"
 	}*/
 	public static String getId() {
-		String id="123"+RandomStringUtils.randomAlphanumeric(4);
+		String id="321"+RandomStringUtils.randomAlphanumeric(4);
 		return id;
 	}
 	public static String getTitle() {

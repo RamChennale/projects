@@ -1,4 +1,4 @@
-package com.qa.testNG.dataProviders;
+package com.qa.dataProviders;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,7 +11,8 @@ public class DataProviderEx1 {
 		return new Object[][] { {"Ram" }, {"12345"} };
 	}
 	
-	@Test(dataProvider="input data-provider")
+	//if data available in same class then specifying "dataProviderClass" is optional.
+	@Test(dataProvider="input data-provider", dataProviderClass=DataProviderEx1.class)
 	public void name(String data) {
 		System.out.println("Data provider: "+data);
 	}

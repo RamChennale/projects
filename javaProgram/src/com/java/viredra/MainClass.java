@@ -4,10 +4,10 @@ class X {
 	static int x = 1234;
 
 	static class Y {
-		static int y = x++;
+		static int y = x++; //if ++x then 1235
 
 		static class Z {
-			static int z = y++;
+			static int z = y++; //if ++y then 1236
 		}
 	}
 }

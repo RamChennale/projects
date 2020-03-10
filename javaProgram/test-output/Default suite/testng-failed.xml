@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.java.collectionFramework.HashtableEx">
+      <class name="com.java.collectionFramework.FindDuplicate">
         <methods>
-          <include name="hashTableEnumeration"/>
+          <include name="findDuplicate"/>
         </methods>
-      </class> <!-- com.java.collectionFramework.HashtableEx -->
+      </class> <!-- com.java.collectionFramework.FindDuplicate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

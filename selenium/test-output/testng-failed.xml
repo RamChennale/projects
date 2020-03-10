@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.xpath.DynamicTableXpathLoopIteration">
+      <class name="com.java.seleniumFeature.FindBrokenLink">
         <methods>
           <include name="closeAllBrowser"/>
           <include name="init"/>
-          <include name="dynamicTableXpathLoopIteration"/>
+          <include name="findBrokenLink_allhref"/>
         </methods>
-      </class> <!-- com.qa.xpath.DynamicTableXpathLoopIteration -->
+      </class> <!-- com.java.seleniumFeature.FindBrokenLink -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

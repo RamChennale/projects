@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4018" started-at="2020-02-13T10:00:16Z" finished-at="2020-02-13T10:00:21Z">
+  <suite name="Default suite" duration-ms="5110" started-at="2020-03-02T05:12:16Z" finished-at="2020-03-02T05:12:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4018" started-at="2020-02-13T10:00:16Z" finished-at="2020-02-13T10:00:21Z">
+    <test name="Default test" duration-ms="5110" started-at="2020-03-02T05:12:16Z" finished-at="2020-03-02T05:12:21Z">
       <class name="com.qa.restFetures.QueryParameter1">
-        <test-method status="PASS" signature="queryParameter()[pri:0, instance:com.qa.restFetures.QueryParameter1@598067a5]" name="queryParameter" duration-ms="3947" started-at="2020-02-13T10:00:17Z" finished-at="2020-02-13T10:00:20Z">
+        <test-method status="PASS" signature="queryParameter()[pri:0, instance:com.qa.restFetures.QueryParameter1@598067a5]" name="queryParameter" duration-ms="5003" started-at="2020-03-02T05:12:16Z" finished-at="2020-03-02T05:12:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryParameter -->

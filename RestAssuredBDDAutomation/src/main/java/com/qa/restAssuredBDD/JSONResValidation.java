@@ -32,7 +32,7 @@ public class JSONResValidation {
 		.log().all();
 	}
 	
-	/*to verify multiple fields: need to access by JSON object/array by . o perator access 
+	/*to verify multiple fields: need to access by JSON variables&array by . operator access 
 	.body("result.city", equalTo("HyderabadBengaluruChennai"))*/
 	
 	@Test(enabled=false)
@@ -56,13 +56,4 @@ public class JSONResValidation {
 			.log().everything();
 	}
 
-	//To set a parameter and headers
-	@Test(enabled=false)
-	public void setParameter() {
-		given()
-		.param("name", "Ram")
-		.header("Myheader","INDIAN");
-	}
-	
-	
 }

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -24,11 +25,14 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.interfaces.TestBaseI;
+import com.qa.utility.WebEventListener;
 
 public class TestBase implements TestBaseI{
 
 	public static WebDriver driver;
 	public static Properties properties;
+	public static EventFiringWebDriver eventFiringWebDriver;
+	public static WebEventListener webEventListener;
 	private static Logger logger = Logger.getLogger(TestBase.class);
 	public static ExtentHtmlReporter extentHtmlReporter;
 	public static ExtentReports extentReports;
@@ -41,6 +45,13 @@ public class TestBase implements TestBaseI{
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
 		logger.info("Browser loaded successfully");
 		driver = new ChromeDriver();
+		
+		eventFiringWebDriver= new EventFiringWebDriver(driver);
+		webEventListener=new WebEventListener();
+		eventFiringWebDriver.register(webEventListener);
+		driver=eventFiringWebDriver;
+		
+		
 		driver.manage().window().maximize();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "/src/main/java/com/qa/config/config.properties");

@@ -52,32 +52,29 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.9</version>
 		</dependency>
+		<!-- surefire dependency used to generate guid from Jenkins -->
 		<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>3.0.0-M4</version>
-  <type>maven-plugin</type>
-</dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.0.0-M4</version>
+			<type>maven-plugin</type>
+		</dependency>
 	</dependencies>
 	<build>
-	<plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M4</version>
-        <configuration>
-          <!--  <includes>
-            <include>com.qa.homePageTests.Login.java</include>
-          </includes>
-          <excludes>
-            <exclude>Login.java</exclude>
-            <exclude>**/TestSquare.java</exclude>
-          </excludes> -->
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-</plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<!-- <includes> <include>com.qa.homePageTests.Login.java</include> </includes> 
+						<excludes> <exclude>Login.java</exclude> <exclude>**/TestSquare.java</exclude> 
+						</excludes> -->
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
