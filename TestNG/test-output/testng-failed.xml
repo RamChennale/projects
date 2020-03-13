@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chromedriver"/>
+  <listeners>
+    <listener class-name="com.qa.retryListenerIAnnotationTransformer.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="2" name="RetryMulitpleTestCases(failed)" parallel="tests">
     <classes>
-      <class name="com.qa.dataProviders.ExcelSheetDataProvider">
+      <class name="com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner">
         <methods>
-          <include name="getData"/>
+          <include name="Test2"/>
         </methods>
-      </class> <!-- com.qa.dataProviders.ExcelSheetDataProvider -->
+      </class> <!-- com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- RetryMulitpleTestCases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

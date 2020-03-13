@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
-import com.qa.homePages.SearchRecordLocators;
+import com.qa.pages.SearchRecordLocators;
 
 public class SearchRecord extends TestBase{
 

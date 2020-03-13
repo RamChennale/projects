@@ -26,6 +26,7 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.interfaces.TestBaseI;
 import com.qa.utility.WebEventListener;
+import com.qa.utility.GetFailedTestCaseScreenshot;
 
 public class TestBase implements TestBaseI{
 
@@ -36,7 +37,7 @@ public class TestBase implements TestBaseI{
 	private static Logger logger = Logger.getLogger(TestBase.class);
 	public static ExtentHtmlReporter extentHtmlReporter;
 	public static ExtentReports extentReports;
-	public static ExtentTest testInfo;
+	public static ExtentTest extentTest;
 	
 	@BeforeClass
 	public void initiate() throws IOException {
@@ -80,18 +81,20 @@ public class TestBase implements TestBaseI{
 	@BeforeMethod
 	public void getMethodName(Method method) {
 		String methodName=method.getName();
-		testInfo=extentReports.createTest(methodName);
+		extentTest=extentReports.createTest(methodName);
 	}
 	
 	@AfterMethod
-	public void testCaseStatus(ITestResult result) {
+	public void testCaseStatus(ITestResult result) throws IOException {
 		if(result.getStatus()==ITestResult.SUCCESS) {
-			testInfo.log(Status.PASS,"Test case name is : "+result.getName()+" passed.");
+			extentTest.log(Status.PASS,"Test case name is : "+result.getName()+" passed.");
 		}else if(result.getStatus()==ITestResult.FAILURE) {
-			testInfo.log(Status.FAIL, "Test case name is : "+result.getName()+"failed");
-			testInfo.log(Status.FAIL, "Test case name is : "+result.getThrowable()+"failed");
+			extentTest.log(Status.FAIL, "Test case name is : "+result.getName()+"failed");
+			extentTest.log(Status.FAIL, "Test case name is : "+result.getThrowable()+"failed");
+			String imagePath =GetFailedTestCaseScreenshot.getScreenshot(driver, result.getName());
+			extentTest.addScreenCaptureFromPath(imagePath);
 		}else if (result.getStatus()==ITestResult.SKIP) {
-			testInfo.log(Status.SKIP, "Test case name is : "+result.getName()+"skipped");
+			extentTest.log(Status.SKIP, "Test case name is : "+result.getName()+"skipped");
 		}
 	}
 	

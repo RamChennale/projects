@@ -19,7 +19,8 @@ public class DynamicBaseClass {
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("http://uitestpractice.com/");
+		driver.get("https://www.comm100.com/platform/livechat/personalization/live-chat-window/");
+		//driver.get("http://uitestpractice.com/");
 		//http://popuptest.com/
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

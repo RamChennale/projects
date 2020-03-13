@@ -5,12 +5,12 @@
     <classes>
       <class name="com.qa.homePageTests.CreateNewRecord">
         <methods>
-          <include name="createNewRecordByTDD" invocation-numbers="0 1 2 3 4 5"/>
           <include name="flushReport"/>
           <include name="reportSetup"/>
           <include name="testCaseStatus"/>
           <include name="getMethodName"/>
           <include name="initiate"/>
+          <include name="createNewRecord"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.homePageTests.CreateNewRecord -->

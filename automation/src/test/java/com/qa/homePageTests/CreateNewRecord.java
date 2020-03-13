@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
-import com.qa.homePages.CreateNewRecordLocators;
+import com.qa.pages.CreateNewRecordLocators;
 import com.qa.utility.DataProviderUtility;
 
 public class CreateNewRecord extends TestBase {

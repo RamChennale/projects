@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Automated Test" verbose="1" >
+  <test name="Regression Test" >
+    <classes>
+       <class name="com.eaglebiz.test.EagleBiz_TestRunner" />
+    </classes>
+  </test>
+</suite>

@@ -3,7 +3,7 @@ package com.qa.homePageTests;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
-import com.qa.homePages.DragDropActionLocators;
+import com.qa.pages.DragDropActionLocators;
 
 public class DragDropAction extends TestBase{
 

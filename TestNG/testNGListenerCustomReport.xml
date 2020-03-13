@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Parallel testing to run test case in Parallel in this suite -->
+<suite name="Suite" parallel="tests" thread-count="2">
+	<!-- This parameter will be passed to every test in this suite -->
+	<parameter name="browser" value="chromedriver"></parameter>
+	<listeners>
+		<listener class-name="com.qa.testNGListerner.TestNGListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<!-- This parameter will be passed this test only -->
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.testNGListerner.TestNGListenerUsage" />
+		</classes>
+	</test>
+</suite>

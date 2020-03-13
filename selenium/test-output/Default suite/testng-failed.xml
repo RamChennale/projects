@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.java.seleniumFeature.FindBrokenLink">
+      <class name="com.qa.popUps.ModelPopUpChatPopUp">
         <methods>
           <include name="closeAllBrowser"/>
           <include name="init"/>
-          <include name="findBrokenLink_allhref"/>
+          <include name="modelorChatPopUp"/>
         </methods>
-      </class> <!-- com.java.seleniumFeature.FindBrokenLink -->
+      </class> <!-- com.qa.popUps.ModelPopUpChatPopUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

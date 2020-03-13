@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.qa.homePages.CreateNewRecordLocators;
+import com.qa.pages.CreateNewRecordLocators;
 
 public class DataProviderUtilityReader {
 	
