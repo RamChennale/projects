@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.retryIRetryAnalyzer.TestCaseRetryByIRetryAnalyzer">
+      <class name="com.qa.screenshot.byListerner.GetScreenshot">
         <methods>
-          <include name="test"/>
+          <include name="failedTC1"/>
+          <include name="failedTC2"/>
+          <include name="setUp"/>
+          <include name="tearDownBrowser"/>
+          <include name="failedTC5"/>
+          <include name="failedTC3"/>
+          <include name="failedTC4"/>
         </methods>
-      </class> <!-- com.qa.retryIRetryAnalyzer.TestCaseRetryByIRetryAnalyzer -->
+      </class> <!-- com.qa.screenshot.byListerner.GetScreenshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

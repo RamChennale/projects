@@ -1,5 +1,9 @@
 package com.qa.seleniumExceptions;
-
+/*Ajax call: 
+ * while running TC selenium creates UNIQUE IDENTIFIER ID for each element if the page
+or request or form etc the specific section specially ajax calls got refreshed then selenium 
+created UNIQUE IDENTIFIER ID will be changed a driver unable to find the element wich throws 
+'StaleElementReferenceException'*/
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -11,14 +15,16 @@ public class StaleElementReferenceExceptionInSelenium extends DynamicBaseClass {
 	@Test
 	public void staleElementExceptionInSelenium() throws InterruptedException {
 		WebElement home = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
-		driver.navigate().refresh();
+		//home id=0.8560160784291442-1
+		driver.navigate().refresh();// gives- StaleElementReferenceException because elements id changed 
+		WebElement home1 = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
+		//home1 id=0.978332607842922-1
 		/*
-		 * Indicates that a reference to an element is now "stale" --- the element no
-		 * longer appears on the DOM of the page.
-		 * 
-		 * 
 		 * org.openqa.selenium.StaleElementReferenceException: stale element reference:
 		 * element is not attached to the page document
+		 * 
+		 * Note: Indicates that a reference to an element is now "stale" --- the element no
+		 * longer appears on the DOM of the page.
 		 */
 		home.click();
 	}

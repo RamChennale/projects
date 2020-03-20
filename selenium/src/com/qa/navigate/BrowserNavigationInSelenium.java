@@ -1,19 +1,22 @@
 package com.qa.navigate;
 
-import org.openqa.selenium.WebDriver.Navigation;
+import org.testng.annotations.Test;
 
-import com.java.seleniumFeature.BaseClass;
+import com.qa.base.DynamicBaseClass;
 
-public class BrowserNavigationInSelenium extends BaseClass{
+public class BrowserNavigationInSelenium extends DynamicBaseClass{
 
-	public void navigationInSelenium() {
-		Navigation navigation=	driver.navigate();
-		navigation.back();
-		navigation.forward();
-		navigation.to("url");
-		driver.navigate().to("www.google.com");
-		driver.navigate().refresh();
-		driver.navigate().forward();
+	@Test
+	public void browserNavigation() {
+		String initialTitle=	driver.getTitle();
+		System.out.println("Initial Title : "+initialTitle);
+		driver.navigate().to("https://news.google.com/");
+		String afterNavidating= driver.getTitle();
+		System.out.println("After Navidating : "+afterNavidating);
 		driver.navigate().back();
+		System.out.println(driver.getTitle());
+		driver.navigate().forward();
+		System.out.println(driver.getTitle());
+		driver.navigate().refresh();
 	}
 }

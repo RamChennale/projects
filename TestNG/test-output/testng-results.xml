@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="1" ignored="0" total="4" passed="1">
+<testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="126" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
+  <suite name="Default suite" duration-ms="66792" started-at="2020-03-14T08:50:34Z" finished-at="2020-03-14T08:51:41Z">
     <groups>
     </groups>
-    <test name="RetryMulitpleTestCases" duration-ms="126" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
-      <class name="com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner">
-        <test-method status="PASS" signature="Test1()[pri:0, instance:com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner@4f933fd1]" name="Test1" duration-ms="36" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
+    <test name="Default test" duration-ms="66792" started-at="2020-03-14T08:50:34Z" finished-at="2020-03-14T08:51:41Z">
+      <class name="com.qa.screenshot.byListerner.GetScreenshot">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="setUp" is-config="true" duration-ms="15020" started-at="2020-03-14T08:50:34Z" finished-at="2020-03-14T08:50:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test1 -->
-        <test-method status="SKIP" signature="Test2()[pri:0, instance:com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner@4f933fd1]" name="Test2" duration-ms="11" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="failedTC1()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="failedTC1" duration-ms="40" started-at="2020-03-14T08:50:49Z" finished-at="2020-03-14T08:50:49Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -20,11 +20,9 @@
               <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner.Test2(TestCaseRetryByListerner.java:17)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.qa.screenshot.byListerner.GetScreenshot.failedTC1(GetScreenshot.java:19)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -38,20 +36,33 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test2 -->
-        <test-method status="SKIP" signature="Test2()[pri:0, instance:com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner@4f933fd1]" name="Test2" duration-ms="2" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
+        </test-method> <!-- failedTC1 -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="tearDownBrowser" is-config="true" duration-ms="1935" started-at="2020-03-14T08:50:50Z" finished-at="2020-03-14T08:50:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="setUp" is-config="true" duration-ms="8872" started-at="2020-03-14T08:50:52Z" finished-at="2020-03-14T08:51:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="failedTC2()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="failedTC2" duration-ms="2" started-at="2020-03-14T08:51:01Z" finished-at="2020-03-14T08:51:01Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -60,38 +71,49 @@ at java.lang.Thread.run(Thread.java:745)
               <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner.Test2(TestCaseRetryByListerner.java:17)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.qa.screenshot.byListerner.GetScreenshot.failedTC2(GetScreenshot.java:23)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test2 -->
-        <test-method status="FAIL" signature="Test2()[pri:0, instance:com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner@4f933fd1]" name="Test2" duration-ms="2" started-at="2020-03-12T09:02:57Z" finished-at="2020-03-12T09:02:57Z">
+        </test-method> <!-- failedTC2 -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="tearDownBrowser" is-config="true" duration-ms="1851" started-at="2020-03-14T08:51:02Z" finished-at="2020-03-14T08:51:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="setUp" is-config="true" duration-ms="9866" started-at="2020-03-14T08:51:03Z" finished-at="2020-03-14T08:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="failedTC3()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="failedTC3" duration-ms="4" started-at="2020-03-14T08:51:13Z" finished-at="2020-03-14T08:51:13Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -100,38 +122,147 @@ at java.lang.Thread.run(Thread.java:745)
               <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner.Test2(TestCaseRetryByListerner.java:17)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.qa.screenshot.byListerner.GetScreenshot.failedTC3(GetScreenshot.java:27)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test2 -->
-      </class> <!-- com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner -->
-    </test> <!-- RetryMulitpleTestCases -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- failedTC3 -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="tearDownBrowser" is-config="true" duration-ms="1376" started-at="2020-03-14T08:51:14Z" finished-at="2020-03-14T08:51:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="setUp" is-config="true" duration-ms="9057" started-at="2020-03-14T08:51:15Z" finished-at="2020-03-14T08:51:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="failedTC4()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="failedTC4" duration-ms="2" started-at="2020-03-14T08:51:24Z" finished-at="2020-03-14T08:51:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.qa.screenshot.byListerner.GetScreenshot.failedTC4(GetScreenshot.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedTC4 -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="tearDownBrowser" is-config="true" duration-ms="2374" started-at="2020-03-14T08:51:25Z" finished-at="2020-03-14T08:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="setUp" is-config="true" duration-ms="11206" started-at="2020-03-14T08:51:28Z" finished-at="2020-03-14T08:51:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="failedTC5()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="failedTC5" duration-ms="22" started-at="2020-03-14T08:51:39Z" finished-at="2020-03-14T08:51:39Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.qa.screenshot.byListerner.GetScreenshot.failedTC5(GetScreenshot.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedTC5 -->
+        <test-method status="PASS" signature="tearDownBrowser()[pri:0, instance:com.qa.screenshot.byListerner.GetScreenshot@cb5822]" name="tearDownBrowser" is-config="true" duration-ms="1327" started-at="2020-03-14T08:51:39Z" finished-at="2020-03-14T08:51:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+      </class> <!-- com.qa.screenshot.byListerner.GetScreenshot -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

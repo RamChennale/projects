@@ -63,9 +63,10 @@
   <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-xml/9.4.20.v20190813/jetty-xml-9.4.20.v20190813.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/websocket/websocket-common/9.4.20.v20190813/websocket-common-9.4.20.v20190813.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/websocket/websocket-api/9.4.20.v20190813/websocket-api-9.4.20.v20190813.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar" sourcepath="M2_REPO/com/aventstack/extentreports/3.0.0/extentreports-3.0.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mongodb/bson/3.3.0/bson-3.3.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1.jar"/>
 </classpath>

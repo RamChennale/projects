@@ -11,7 +11,7 @@ public class ModelPopUpChatPopUp extends DynamicBaseClass{
 
 	@Test
 	public void modelorChatPopUp() throws InterruptedException{
-		//DynamicBaseClass.NavigateToUrl("https://www.comm100.com/platform/livechat/personalization/live-chat-window/");
+		DynamicBaseClass.NavigateToUrl("https://www.comm100.com/platform/livechat/personalization/live-chat-window/");
 		Thread.sleep(3000);
 		WebElement frameElement= driver.findElement(By.id("chat_window_container"));
 /*		frameElement=driver.findElement(By.xpath("//iframe[@id='chat_window_container']"));
@@ -19,7 +19,7 @@ public class ModelPopUpChatPopUp extends DynamicBaseClass{
 		 String name=""; 
 */			
 		String id="chat_window_container";
-		driver.switchTo().frame(id);
+		driver.switchTo().frame(frameElement);
 		
 		Actions actions= new Actions(driver);
 		actions.moveToElement(driver.findElement(By.xpath("//div[@id='main']"))).build().perform();

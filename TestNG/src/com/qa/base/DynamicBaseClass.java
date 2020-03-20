@@ -1,7 +1,12 @@
 package com.qa.base;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,5 +40,15 @@ public class DynamicBaseClass {
 	@AfterClass
 	public void closeAllBrowser() {
 		driver.quit();
+	}
+	
+	public static void failedTCscreenshot() {
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(source, new File("/Screenshot/"+System.currentTimeMillis()+".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

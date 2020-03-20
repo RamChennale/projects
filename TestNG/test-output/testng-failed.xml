@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="browser" value="chromedriver"/>
-  <listeners>
-    <listener class-name="com.qa.retryListenerIAnnotationTransformer.AnnotationTransformer"/>
-  </listeners>
-  <test thread-count="2" name="RetryMulitpleTestCases(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner">
+      <class name="com.qa.screenshot.byListerner.GetScreenshot">
         <methods>
-          <include name="Test2"/>
+          <include name="failedTC1"/>
+          <include name="failedTC2"/>
+          <include name="setUp"/>
+          <include name="tearDownBrowser"/>
+          <include name="failedTC5"/>
+          <include name="failedTC3"/>
+          <include name="failedTC4"/>
         </methods>
-      </class> <!-- com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner -->
+      </class> <!-- com.qa.screenshot.byListerner.GetScreenshot -->
     </classes>
-  </test> <!-- RetryMulitpleTestCases(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.popUps.ModelPopUpChatPopUp">
+      <class name="com.qa.utility.GetAllFrames">
         <methods>
           <include name="closeAllBrowser"/>
+          <include name="getAllFramesName"/>
           <include name="init"/>
-          <include name="modelorChatPopUp"/>
         </methods>
-      </class> <!-- com.qa.popUps.ModelPopUpChatPopUp -->
+      </class> <!-- com.qa.utility.GetAllFrames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

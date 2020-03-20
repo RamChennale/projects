@@ -3,9 +3,12 @@ package com.java.loops;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.testng.annotations.Test;
+
 public class ForEachLoop {
 
-	public static void main(String[] args) {
+	@Test(enabled=false)
+	public  void forEachLoop() {
 
 		List<Integer> list = new ArrayList<Integer>();
 		int n = 10;
@@ -34,6 +37,14 @@ public class ForEachLoop {
 			for(int x2:x1) {
 				System.out.println(x2);
 			}
+		}
+	}
+	
+	@Test(enabled=true)
+	public void forEachIncrement() {
+		int num[]= {1,2,3,4,5,6,7,8,9,10};
+		for(int i:num) { //it can  only iterate over an array or an instance of java.lang.Iterable
+			System.out.println(i);
 		}
 	}
 }

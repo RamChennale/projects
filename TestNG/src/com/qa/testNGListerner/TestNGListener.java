@@ -4,6 +4,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.qa.base.DynamicBaseClass;
+
 public class TestNGListener implements ITestListener{
 
 	@Override
@@ -19,6 +21,7 @@ public class TestNGListener implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test case failed and test case details are : "+result.getName());
+		DynamicBaseClass.failedTCscreenshot();
 	}
 
 	@Override
