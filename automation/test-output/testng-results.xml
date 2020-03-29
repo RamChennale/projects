@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26054" started-at="2020-03-12T06:04:56Z" finished-at="2020-03-12T06:05:22Z">
+  <suite started-at="2020-03-21T19:35:48Z" name="Default suite" finished-at="2020-03-21T19:36:42Z" duration-ms="53526">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26054" started-at="2020-03-12T06:04:56Z" finished-at="2020-03-12T06:05:22Z">
+    <test started-at="2020-03-21T19:35:48Z" name="Default test" finished-at="2020-03-21T19:36:42Z" duration-ms="53526">
       <class name="com.qa.homePageTests.CreateNewRecord">
-        <test-method status="PASS" signature="reportSetup()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="reportSetup" is-config="true" duration-ms="331" started-at="2020-03-12T06:04:56Z" finished-at="2020-03-12T06:04:56Z">
+        <test-method is-config="true" signature="reportSetup()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:35:48Z" name="reportSetup" finished-at="2020-03-21T19:35:49Z" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportSetup -->
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="initiate" is-config="true" duration-ms="12600" started-at="2020-03-12T06:04:56Z" finished-at="2020-03-12T06:05:08Z">
+        <test-method is-config="true" signature="initiate()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:35:49Z" name="initiate" finished-at="2020-03-21T19:36:24Z" duration-ms="35439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="getMethodName" is-config="true" duration-ms="9" started-at="2020-03-12T06:05:09Z" finished-at="2020-03-12T06:05:09Z">
+        <test-method is-config="true" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:36:24Z" name="getMethodName" finished-at="2020-03-21T19:36:24Z" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,26 +26,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMethodName -->
-        <test-method status="PASS" signature="createNewRecord()[pri:2, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="createNewRecord" duration-ms="11444" started-at="2020-03-12T06:05:09Z" finished-at="2020-03-12T06:05:20Z">
+        <test-method signature="createNewRecord()[pri:2, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:36:24Z" name="createNewRecord" finished-at="2020-03-21T19:36:39Z" duration-ms="14415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewRecord -->
-        <test-method status="PASS" signature="testCaseStatus(org.testng.ITestResult)[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="testCaseStatus" is-config="true" duration-ms="23" started-at="2020-03-12T06:05:20Z" finished-at="2020-03-12T06:05:20Z">
+        <test-method is-config="true" signature="testCaseStatus(org.testng.ITestResult)[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:36:39Z" name="testCaseStatus" finished-at="2020-03-21T19:36:39Z" duration-ms="105" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewRecord status=SUCCESS method=CreateNewRecord.createNewRecord()[pri:2, instance:com.qa.homePageTests.CreateNewRecord@614ddd49] output={null}]]]>
+                <![CDATA[[TestResult name=createNewRecord status=SUCCESS method=CreateNewRecord.createNewRecord()[pri:2, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseStatus -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="tearDown" is-config="true" duration-ms="742" started-at="2020-03-12T06:05:20Z" finished-at="2020-03-12T06:05:21Z">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:36:39Z" name="tearDown" finished-at="2020-03-21T19:36:41Z" duration-ms="2025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@614ddd49]" name="flushReport" is-config="true" duration-ms="824" started-at="2020-03-12T06:05:21Z" finished-at="2020-03-12T06:05:22Z">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.qa.homePageTests.CreateNewRecord@7dc19a70]" started-at="2020-03-21T19:36:41Z" name="flushReport" finished-at="2020-03-21T19:36:42Z" duration-ms="820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->

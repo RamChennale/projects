@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -15,7 +16,7 @@ public class DynamicBaseClass {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	
-	@BeforeClass
+	@BeforeClass 
 	public void init() {
 		System.setProperty("webdriver.chrome.driver", ".//Driver//chromeDriver.exe");
 		driver= new ChromeDriver();
@@ -29,6 +30,9 @@ public class DynamicBaseClass {
 	
 	public static void NavigateToUrl(String navigationUrl) {
 		driver.navigate().to(navigationUrl);
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	public static void closeBrowser() {
@@ -37,6 +41,8 @@ public class DynamicBaseClass {
 	
 	@AfterClass
 	public void closeAllBrowser() {
-		driver.quit();
+		if(driver!=null) {
+			driver.quit();
+		}
 	}
 }

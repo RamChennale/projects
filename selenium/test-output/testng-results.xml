@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25915" started-at="2020-03-18T06:41:58Z" finished-at="2020-03-18T06:42:24Z">
+  <suite started-at="2020-03-28T07:43:36Z" name="Default suite" finished-at="2020-03-28T07:44:16Z" duration-ms="39377">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25915" started-at="2020-03-18T06:41:58Z" finished-at="2020-03-18T06:42:24Z">
-      <class name="com.qa.utility.GetAllFrames">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.qa.utility.GetAllFrames@462d5aee]" name="init" is-config="true" duration-ms="12402" started-at="2020-03-18T06:41:58Z" finished-at="2020-03-18T06:42:11Z">
+    <test started-at="2020-03-28T07:43:36Z" name="Default test" finished-at="2020-03-28T07:44:16Z" duration-ms="39377">
+      <class name="com.qa.driverManager.ChromWebDriverManager">
+        <test-method signature="chromWebDriverManager()[pri:0, instance:com.qa.driverManager.ChromWebDriverManager@4b520ea8]" started-at="2020-03-28T07:43:36Z" name="chromWebDriverManager" finished-at="2020-03-28T07:44:16Z" duration-ms="39283" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="getAllFramesName()[pri:0, instance:com.qa.utility.GetAllFrames@462d5aee]" name="getAllFramesName" duration-ms="12726" started-at="2020-03-18T06:42:11Z" finished-at="2020-03-18T06:42:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllFramesName -->
-        <test-method status="PASS" signature="closeAllBrowser()[pri:0, instance:com.qa.utility.GetAllFrames@462d5aee]" name="closeAllBrowser" is-config="true" duration-ms="741" started-at="2020-03-18T06:42:23Z" finished-at="2020-03-18T06:42:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeAllBrowser -->
-      </class> <!-- com.qa.utility.GetAllFrames -->
+        </test-method> <!-- chromWebDriverManager -->
+      </class> <!-- com.qa.driverManager.ChromWebDriverManager -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
