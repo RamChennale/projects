@@ -31,6 +31,8 @@ import com.qa.utility.GetFailedTestCaseScreenshot;
 public class TestBase implements TestBaseI{
 
 	public static WebDriver driver;
+	public static FileInputStream fileInputStream;
+	public static String URL;
 	public static Properties properties;
 	public static EventFiringWebDriver eventFiringWebDriver;
 	public static WebEventListener webEventListener;
@@ -41,27 +43,24 @@ public class TestBase implements TestBaseI{
 	
 	@BeforeClass
 	public void initiate() throws IOException {
-		String URL;
 		properties = new Properties();
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
-		logger.info("Browser loaded successfully");
 		driver = new ChromeDriver();
+		logger.info("Browser loaded successfully");
 		
 		eventFiringWebDriver= new EventFiringWebDriver(driver);
 		webEventListener=new WebEventListener();
 		eventFiringWebDriver.register(webEventListener);
 		driver=eventFiringWebDriver;
 		
-		
 		driver.manage().window().maximize();
-		FileInputStream fis = new FileInputStream(
+		fileInputStream  = new FileInputStream(
 				System.getProperty("user.dir") + "/src/main/java/com/qa/config/config.properties");
-		properties.load(fis);
+		properties.load(fileInputStream);
 		URL = properties.getProperty("url");
 		driver.get("https://www.google.com/"); //1st Launch browser with google  
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.navigate().to(URL);// 2nd Navigate to given URL/site on same browser 
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		logger.info("Browser launched successfully.");
 	}
 
@@ -79,13 +78,13 @@ public class TestBase implements TestBaseI{
 	}
 	
 	@BeforeMethod
-	public void getMethodName(Method method) {
-		String methodName=method.getName();
-		extentTest=extentReports.createTest(methodName);
+	public void getTestCaseName(Method method) {
+		String testCaseName=method.getName();
+		extentTest=extentReports.createTest(testCaseName);
 	}
 	
 	@AfterMethod
-	public void testCaseStatus(ITestResult result) throws IOException {
+	public void getTestCaseResult(ITestResult result) throws IOException {
 		if(result.getStatus()==ITestResult.SUCCESS) {
 			extentTest.log(Status.PASS,"Test case name is : "+result.getName()+" passed.");
 		}else if(result.getStatus()==ITestResult.FAILURE) {
