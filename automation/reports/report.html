@@ -40,7 +40,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a>
-				<span class='suite-start-time'>22-Mar-2020, 1:05:48 am</span>
+				<span class='suite-start-time'>14-Jul-2020, 11:17:58 PM</span>
 			</a>
 			<a>
 				<span>v3.0.0</span>
@@ -125,10 +125,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> test(s) passed</span>
+					<span><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>1</span> test(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -140,10 +140,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> step(s) passed</span>
+					<span><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>2</span> step(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -159,17 +159,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>createNewRecord</span>
-						<span class='test-time'>22-Mar-2020, 1:06:24 am</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>searchRec</span>
+						<span class='test-time'>14-Jul-2020, 11:18:17 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>22-Mar-2020, 1:06:24 am</span>
-	<span class='label end-time'>22-Mar-2020, 1:06:41 am</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+571ms</span>
+	<span class='label start-time'>14-Jul-2020, 11:18:17 PM</span>
+	<span class='label end-time'>14-Jul-2020, 11:18:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+795ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -181,14 +181,32 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:06:39 am</td>
-					<td class='step-details'>Test case name is : createNewRecord passed.</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:18:37 PM</td>
+					<td class='step-details'>Test case name is : searchRecfailed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:18:37 PM</td>
+					<td class='step-details'>Test case name is : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='Search_Data']"}
+  (Session info: chrome=83.0.4103.116)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-Q0AM94O', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\pari\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62974}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 83.0.4103.116, webStorageEnabled: true}
+Session ID: f6ea2b6cda3ecd9dc713422773c8e230
+*** Element info: {Using=xpath, value=//input[@id='Search_Data']}failed</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\pari\git\projects\automationtest-output/20201814111837searchRec.png' width='25%' src='C:\Users\pari\git\projects\automationtest-output/20201814111837searchRec.png'></li>
+							</ul>
 					</div>
 				</li>
 			</ul>
@@ -229,25 +247,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>22-Mar-2020, 1:05:48 am</div>
+					<div class='panel-lead'>14-Jul-2020, 11:17:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>22-Mar-2020, 1:06:41 am</div>
+			 		<div class='panel-lead'>14-Jul-2020, 11:18:39 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>52,641ms</div>
+					<div class='panel-lead'>40,960ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -261,7 +279,7 @@
 						</tr>
 						<tr>
 							<td>User Name</td>
-							<td>DELL PC</td>
+							<td>pari</td>
 						</tr>
 						<tr>
 							<td>OS</td>
@@ -269,11 +287,11 @@
 						</tr>
 						<tr>
 							<td>Java Version</td>
-							<td>13.0.2</td>
+							<td>12</td>
 						</tr>
 						<tr>
 							<td>Host Name</td>
-							<td>DESKTOP-TQ4UPAI</td>
+							<td>DESKTOP-Q0AM94O</td>
 						</tr>
 						<tr>
 							<td>OS</td>
@@ -299,16 +317,16 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				unknownParent: 0,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,

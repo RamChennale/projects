@@ -11,7 +11,7 @@ public class HomePageOperations02 extends TestBase {
 
 	private static Logger logger = Logger.getLogger(HomePageOperations02.class);
 
-	@Test(enabled = true, priority = 0)
+	@Test(enabled = false, priority = 0)
 	public void createNewRec() {
 		new PageFactory();
 		PageFactory.initElements(driver, HomePageLocators.class).createRecord();
