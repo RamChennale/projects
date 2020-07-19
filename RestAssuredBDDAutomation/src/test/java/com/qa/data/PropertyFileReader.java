@@ -1,8 +1,9 @@
 package com.qa.data;
 
 import java.io.File;
+
+import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 /**
  * This class will read the properties.yaml/config.properties file
@@ -10,7 +11,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
  */
 public class PropertyFileReader {
 	public static PropertyFilePojo getPropertyData() {
-		ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
+		ObjectMapper objectMapper = new ObjectMapper(new JsonFactory());
 		PropertyFilePojo property = null;
 		try {
 			File file = new File(".\\resource\\properties.yaml");

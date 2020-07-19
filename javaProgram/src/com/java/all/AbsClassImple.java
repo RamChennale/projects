@@ -31,12 +31,10 @@ public class AbsClassImple extends AbsClass implements InterfaceInJava {
 		absClass3.add(1, 1, 1);
 	}
 
-	@Override
 	public void baseIterface() {
 
 	}
 
-	@Override
 	public void closeBrowser() {
 
 	}

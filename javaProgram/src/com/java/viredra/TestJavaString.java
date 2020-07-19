@@ -1,6 +1,5 @@
 package com.java.viredra;
 
-import org.apache.log4j.net.SyslogAppender;
 import org.testng.annotations.Test;
 
 public class TestJavaString {

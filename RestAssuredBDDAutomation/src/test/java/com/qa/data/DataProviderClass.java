@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.testng.annotations.DataProvider;
+import org.yaml.snakeyaml.Yaml;
 
-import com.fasterxml.jackson.dataformat.yaml.snakeyaml.Yaml;
 import com.qa.yamldata.AllTestData;
 import com.qa.yamldata.TestType;
 
