@@ -66,6 +66,15 @@
 			<version>3.0.0-M4</version>
 			<type>maven-plugin</type>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.6.2</version>
+</dependency>
+		
+		
 	</dependencies>
 	<build>
 		<plugins>
@@ -82,6 +91,19 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			
+			 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+                <target>10</target>
+                <source>10</source>
+                <release>10</release>
+            </configuration>
+
+        </plugin>
+
 		</plugins>
 	</build>
 </project>
