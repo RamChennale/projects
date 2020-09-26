@@ -28,7 +28,7 @@ public class DynamicBaseClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}	
 	
-	public static void NavigateToUrl(String navigationUrl) {
+	public static void navigateToUrl(String navigationUrl) {
 		driver.navigate().to(navigationUrl);
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);

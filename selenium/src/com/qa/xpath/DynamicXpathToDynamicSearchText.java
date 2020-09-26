@@ -12,7 +12,7 @@ public class DynamicXpathToDynamicSearchText extends DynamicBaseClass {
 
 	@Test
 	public void dynamicXpathToDynamicSearchText() {
-		DynamicBaseClass.NavigateToUrl("https://www.google.com/");
+		DynamicBaseClass.navigateToUrl("https://www.google.com/");
 		WebElement googleSearch = driver.findElement(By.xpath("//input[@name='q']"));
 		googleSearch.sendKeys("test");
 		List<WebElement> searchResultList = driver

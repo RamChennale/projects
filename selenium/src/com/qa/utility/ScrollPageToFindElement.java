@@ -13,7 +13,7 @@ public class ScrollPageToFindElement {
 		js.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
 
-/*	public static void pageScrollToFindElement(WebDriver driver) throws InterruptedException {
+	/*	public static void pageScrollToFindElement(WebDriver driver) throws InterruptedException {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		WebElement element = driver.findElement(By.xpath("//span[contains(text(),'Toggle icons')]"));
 		findElementByPageScrolling(driver, element);
