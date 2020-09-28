@@ -45,7 +45,7 @@ public class SendEmailSSLWithAttachment {
  
 					protected PasswordAuthentication getPasswordAuthentication() {
  
-					return new PasswordAuthentication("rchennale@gmail.com", "hackmygmailpassword@1");
+					return new PasswordAuthentication("rchennale@gmail.com", "***********");// "email" and "password"
  
 					}
  
