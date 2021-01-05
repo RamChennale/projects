@@ -50,6 +50,7 @@ public class SeleniumActionsClass {
 		//3. How to do double click
 		actions2.moveToElement(driver.findElement(By.id("id"))).doubleClick();
 		actions.doubleClick();
+		actions.doubleClick(target).build().perform();
 		
 		//4. How Keys class works
 		Actions actions3= new Actions(driver); 

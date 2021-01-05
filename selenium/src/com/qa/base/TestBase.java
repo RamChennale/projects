@@ -14,6 +14,8 @@ import org.testng.annotations.BeforeClass;
 
 import com.qa.interfaces.TestBaseI;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase implements TestBaseI{
 
 	public static WebDriver driver;
@@ -25,8 +27,9 @@ public class TestBase implements TestBaseI{
 	public void initiate() throws IOException {
 		String URL;
 		properties = new Properties();
-		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
-		logger.info("Browser loaded successfully");
+		//Download the web driver executable
+		WebDriverManager.chromedriver().setup();
+		//Create a instance of your web driver - chrome
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		FileInputStream fis = new FileInputStream(

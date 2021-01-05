@@ -6,6 +6,8 @@ import static org.hamcrest.Matchers.*;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public class GetRequest {
 	static {
@@ -16,14 +18,15 @@ public class GetRequest {
 	@Test(enabled=true)
 	public void verifyStatusCode() {
 		
-		given().
+	Response res=	(Response) given().
 		when().
 		then()
-			.statusCode(200);
-			
+		.response();
+//			.statusCode(200);
+			System.out.println(res.getContentType());
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void verifyStatusLine() {
 		given()
 		.when()
@@ -32,7 +35,7 @@ public class GetRequest {
 			.statusLine("HTTP/1.1 200 OK");
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void verifyHeader() {
 		given()
 		.when()
@@ -46,7 +49,7 @@ public class GetRequest {
 			.header("Cache-Control", "max-age=0");
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void verifyBodyParam() {
 		given()
 		.when()

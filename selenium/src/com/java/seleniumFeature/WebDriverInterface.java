@@ -120,12 +120,14 @@ public class WebDriverInterface {
 		driver.manage().window().maximize();
 		driver.manage().window().setPosition(point);
 		driver.manage().window().setSize(dimension);
+		
 		System.out.println("==================");
 		Navigation navigation=	driver.navigate();
 		navigation.back();
 		navigation.forward();
 		navigation.refresh();
 		navigation.to("http://www.google.com");
+		
 		System.out.println("==================");
 		driver.switchTo();
 		driver.switchTo().activeElement();//The WebElement with focus, or the body element if no element with focus can be detected.
@@ -141,6 +143,7 @@ public class WebDriverInterface {
 		driver.switchTo().frame("nameOrId");
 		driver.switchTo().parentFrame();//This driver focused on the top window/first frame.
 		driver.switchTo().window(windId1);
+		
 		System.out.println("==========================================================================================");
 		System.out.println("==================");
 		System.out.println("========TO accept the alert=========");
@@ -151,6 +154,7 @@ public class WebDriverInterface {
 		alert = driver.switchTo().alert();
 		System.out.println("ALert message is  " + alert.getText());
 		System.out.println("============");
+		
 		System.out.println("========Capture SCREENSHOT=========");
 		try {
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -160,15 +164,19 @@ public class WebDriverInterface {
 		} catch (IOException ioe) {
 			System.out.println(ioe);
 		}
+		
 		System.out.println("========To submit or Click on BUTTON==========");
 		driver.findElement(By.className("")).click();
 		driver.findElement(By.className("")).submit();
 		driver.findElement(By.className("")).sendKeys(Keys.RETURN);
 		driver.findElement(By.className("")).sendKeys(Keys.ENTER);
+		
 		System.out.println("=======To  close current TAB===========");
 		driver.close();
+		
 		System.out.println("======To  close all TAB============");
 		driver.quit();
+		
 		System.out.println("==================");
 	}
 	
