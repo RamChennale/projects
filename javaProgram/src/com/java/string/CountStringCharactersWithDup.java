@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class DuplicateCharactersInString {
+public class CountStringCharactersWithDup {
 	public void countDuplicateChar(String str) {
 		// Create a HashMap
 		Map<Character, Integer> map = new HashMap<>();
@@ -38,7 +38,7 @@ public class DuplicateCharactersInString {
 
 	public static void main(String[] args) {
 
-		DuplicateCharactersInString duplicate = new DuplicateCharactersInString();
+		CountStringCharactersWithDup duplicate = new CountStringCharactersWithDup();
 		duplicate.countDuplicateChar("Ram Chennale");
 	}
 }
