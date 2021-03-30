@@ -6,13 +6,24 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
-import io.restassured.http.Method;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
 public class GetRequestHeader {
 
+	
+	@Test(enabled = true)
+	public void getHder() {
+		RestAssured.baseURI = "https://reqres.in/api/users?page=2";
+		RequestSpecification requestSpecification = RestAssured.given();
+		Response response = requestSpecification.get();
+		System.out.println(response.getHeaders());
+		Headers headers=	response.getHeaders();
+		for(Header header:headers) {
+			System.out.println(" Name:"+header.getName()+"   Value:"+header.getValue());
+		}
+		}
+	
 	@Test(enabled = false)
 	public void getHeader() {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
@@ -42,7 +53,7 @@ public class GetRequestHeader {
 		
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getHeaders() {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 		RequestSpecification requestSpecification = RestAssured.given();

@@ -16,7 +16,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class GetPassingQueryParameter {
 
-	@Test
+	@Test(enabled = true)
 	public void passingQueryParameterGetReq() {
 		RestAssured.baseURI = "https://samples.openweathermap.org/data/2.5/";
 		RequestSpecification request = RestAssured.given();

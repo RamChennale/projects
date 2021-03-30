@@ -12,7 +12,7 @@ public class DatePickerSetAttributeJS extends DynamicBaseClass {
 
 	@Test
 	public void datePickerSetAttributeJS() throws Exception {
-		DynamicBaseClass.NavigateToUrl("https://www.spicejet.com/");
+		DynamicBaseClass.navigateToUrl("https://www.spicejet.com/");
 		WebElement elementDatePicker = driver.findElement(By.xpath("//input[@id='ctl00_mainContent_view_date1']"));
 		Thread.sleep(5000);
 		elementDatePicker.click();

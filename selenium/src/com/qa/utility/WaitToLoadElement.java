@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.rupeelog.base.TestBase;
 
-public class WaitToLoadElement extends TestBase{
+public class WaitToLoadElement extends TestBaseWealthWeb{
 	
 	static WebDriverWait webDriverWait= new WebDriverWait(driver, 20);
 	

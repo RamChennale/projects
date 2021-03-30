@@ -28,9 +28,5 @@ public class ReverseGivenString {
 		for(int i=strChar.length-1; i>=0; i--) {
 			System.out.print(strChar[i]);
 		}
-		
-	/*	for(int i=10-1; i>=1; i--){
-            System.out.println("The value of i is: "+i);
-       }*/
 	}
 }

@@ -20,7 +20,7 @@ public class FindBrokenLink extends DynamicBaseClass{
 
 	@Test(enabled=false)
 	public void findBrokenLink_allhref() throws MalformedURLException, IOException {
-		DynamicBaseClass.NavigateToUrl("https://www.facebook.com/");
+		DynamicBaseClass.navigateToUrl("https://www.facebook.com/");
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 
@@ -57,7 +57,7 @@ public class FindBrokenLink extends DynamicBaseClass{
 	
 	@Test(enabled=true)
 	public void findBrokenLink_Onlyhref() throws MalformedURLException, IOException {
-		DynamicBaseClass.NavigateToUrl("https://www.facebook.com/");
+		DynamicBaseClass.navigateToUrl("https://www.facebook.com/");
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 

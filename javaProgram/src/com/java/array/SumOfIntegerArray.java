@@ -1,11 +1,9 @@
 package com.java.array;
 
-
 public class SumOfIntegerArray {
 
 	public static int sum(int num[]) {
 		int sum = 0;
-
 		for (int i = 0; i < num.length; i++) {
 			sum = sum + num[i];
 		}
@@ -19,5 +17,4 @@ public class SumOfIntegerArray {
 		SumOfIntegerArray s = new SumOfIntegerArray();
 		System.out.println(s.sum(arr));
 	}
-
 }

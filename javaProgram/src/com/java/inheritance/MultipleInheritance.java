@@ -29,18 +29,21 @@ class MultipleInheritanceByInterface implements InterfaceA, InterfaceB {
 	@Override // AMBIGUITY problem second way solution: by calling method
 				// "InterfaceA.super.test()" WRT corresponding interface method
 	public void test() {
-		InterfaceA.super.test();
+		// without calling any specific test() will not execute any method
+		// if commented this-> "InterfaceA.super.test();" nothing will execute
+		InterfaceA.super.test();  
 	}
 }
 
 public class MultipleInheritance {
 	public static void main(String[] args) {
 		InterfaceA interfaceA = new MultipleInheritanceByInterface();
-		interfaceA.abc();
-		interfaceA.test();
-		/*
-		 * InterfaceB interfaceB= new MultipleInheritanceByInterface();
-		 * interfaceB.test(); // Output - test() in InterfaceA
-		 */
+		interfaceA.abc();//abc()
+		interfaceA.test(); //test() in InterfaceA
+		
+		  InterfaceB interfaceB= new MultipleInheritanceByInterface();
+		  interfaceB.test(); // Output - test() in InterfaceA
 	}
 }
+
+

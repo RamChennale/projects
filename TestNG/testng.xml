@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<!-- Parallel tesing to run test case in Parallel in this suite -->
-<suite name="Suite" parallel="tests" thread-count="2">
-	<test thread-count="5" name="Test">
-
-		<classes>
-			<class name="com.qa.basicAnnoatation.InvocationCountAndInvocationTimeOut" />
-			<class name="com.qa.basicAnnoatation.TimeOutTest" />
-			<class name="com.qa.basicAnnoatation.TestCaseDependancy" />
-			<class name="com.qa.assertion.SoftHardAssertion" />
-			<class name="com.qa.basicAnnoatation.Priority" />
-			<class name="com.qa.basicAnnoatation.DependsOnMethods" />
-			<class name="com.qa.assertion.SimpleAssertion" />
-			<class name="com.qa.basicAnnoatation.BasicTestNGAnnotations" />
-			<class
-				name="com.qa.basicAnnoatation.ThreadPoolSizeIgnoredWithoutInvocationCount" />
-			<class name="com.qa.retryFailedTCUsingIRetryAnalyzer.TestNGFailedXML" />
-			<class name="com.qa.retryFailedTCUsingListener.TestCase" />
-			<class name="com.qa.basicAnnoatation.TestNGPriority" />
-			<class name="com.qa.testNGListerner.TestNGListenerUsage" />
-			<class name="com.qa.retryFailedTCUsingIRetryAnalyzer.TestCase" />
-		</classes>
-	</test> <!-- Test -->
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.qa.retryIRetryAnalyzer.TestCaseRetryByIRetryAnalyzer"/>
+      <class name="com.qa.assertion.SoftHardAssertion"/>
+      <class name="com.qa.basicAnnoatation.AnnotationRunOrder"/>
+      <class name="com.qa.basicAnnoatation.Priority"/>
+      <class name="com.qa.assertion.SimpleAssertion"/>
+      <class name="com.qa.screenshot.byListerner.TestBaseScreenshot"/>
+      <class name="com.qa.basicAnnoatation.BasicTestNGAnnotations"/>
+      <class name="com.qa.base.TestBase"/>
+      <class name="com.qa.parallel.ParallelMethodTest"/>
+      <class name="com.qa.testNG.groups.TestGroupExample"/>
+      <class name="com.qa.basicAnnoatation.TestNGPriority"/>
+      <class name="com.qa.parallel.ParallelTestCasesTestSuite"/>
+      <class name="com.qa.parallel.ParallelClassesTestTwo"/>
+      <class name="com.qa.retryIRetryAnalyzer.TestNGFailedXML"/>
+      <class name="com.qa.parallel.ParallelClassesTestOne"/>
+      <class name="com.qa.basicAnnoatation.InvocationCountAndInvocationTimeOut"/>
+      <class name="com.qa.basicAnnoatation.TimeOutTest"/>
+      <class name="com.qa.basicAnnoatation.TestCaseDependancy"/>
+      <class name="com.qa.dataProviders.ExcelSheetDataProvider"/>
+      <class name="com.qa.basicAnnoatation.TestCasesExeSequenceOrder"/>
+      <class name="com.qa.basicAnnoatation.DependsOnMethods"/>
+      <class name="com.qa.basicAnnoatation.ThreadPoolSizeIgnoredWithoutInvocationCount"/>
+      <class name="com.qa.dataProviders.DataReceiverClass"/>
+      <class name="com.qa.screenshot.byListerner.GetScreenshot"/>
+      <class name="com.qa.retryListenerIAnnotationTransformer.TestCaseRetryByListerner"/>
+      <class name="com.qa.dataProviders.DataProviderEx1"/>
+      <class name="com.qa.interfaces.TestBaseI"/>
+      <class name="com.qa.testNGListerner.TestNGListenerUsage"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->

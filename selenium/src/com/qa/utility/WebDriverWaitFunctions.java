@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.rupeelog.base.TestBase;
 
-public class WebDriverWaitFunctions extends TestBase{
+public class WebDriverWaitFunctions extends TestBaseWealthWeb{
 	
 	static WebDriverWait webDriverWait= new WebDriverWait(driver, 20);
 	

@@ -50,4 +50,30 @@ public class SeleniumWaits extends DynamicBaseClass {
 							until(ExpectedConditions.presenceOfElementLocated(By.id("id")));
 		element3.click();
 	}
+	
+	Wait<WebDriver> fluentWait = new FluentWait<>(driver)
+            .ignoring(StaleElementReferenceException.class)
+            .pollingEvery(500, TimeUnit.MILLISECONDS)
+            .withTimeout(10, TimeUnit.SECONDS)
+            .withMessage("not found");
+    WebElement element4 = fluentWait.until(webDriver -> webDriver.findElement(By.xpath("//tbody/tr[1]/td[1]/input[1]")));
+
+	/*
+	 * Wait<WebDriver> wait = new FluentWait<WebDriver>(driver) .withTimeout(30,
+	 * TimeUnit.SECONDS) .pollingEvery(5, TimeUnit.SECONDS)
+	 * .ignoring(NoSuchElementException.class)
+	 * .ignoring(StaleElementReferenceException.class);
+	 * 
+	 * WebElement foo = wait.until(new Function<WebDriver, WebElement>() { public
+	 * WebElement apply(WebDriver driver) { return
+	 * driver.findElement(By.xpath("//tbody/tr[1]/td[1]/input[1]")); } });
+	 * 
+	 * foo.click();
+	 */
+		/*
+		 * ElementWait.isElementVisible(cOutSEQCheckBox);
+		 * if(cOutSEQCheckBox.isSelected())
+		 * System.out.println("Check box already selected"); else {
+		 * cOutSEQCheckBox.click(); }
+		 */
 }

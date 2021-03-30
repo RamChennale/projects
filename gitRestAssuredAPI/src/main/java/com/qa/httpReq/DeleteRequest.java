@@ -34,6 +34,5 @@ public class DeleteRequest {
 		int status_code=response.getStatusCode();
 		Assert.assertEquals(status_code, 204);
 		System.out.println("status code is : "+status_code);
-		
 	}
 }

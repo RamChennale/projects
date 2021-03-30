@@ -46,7 +46,7 @@ public class XpathInSelenium extends DynamicBaseClass{
 	
 	@Test
 	public void XpathTypes() {
-		DynamicBaseClass.NavigateToUrl(url);
+		DynamicBaseClass.navigateToUrl(url);
 		WebElement containsXpathText=driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
 		WebElement  containsXpathid=driver.findElement(By.xpath("//input[(contains(@id,'FirstName'))]"));
 		WebElement  Starts_withXpath=driver.findElement(By.xpath("//input[starts-with(@id,'FirstName')]"));

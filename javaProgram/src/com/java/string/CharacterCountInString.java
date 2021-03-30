@@ -13,7 +13,7 @@ public class CharacterCountInString {
 		System.out.println("The num of characters : "+count);*/
 	
 		int count=0;
-		String str="The who hey";
+		String str="The who  hey";
 		for(int i=0;i<str.length();i++) {
 			if(str.charAt(i)!=' ') {
 				count++;

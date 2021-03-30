@@ -12,14 +12,14 @@ public class FirstNonRepeatedCharacterInString {
 	public static Character firstNonRepeatedCharacter(String inputString) {
 		Map<Character, Integer> map= new LinkedHashMap<Character,Integer>();
 		char array[]=inputString.toCharArray();
-		char ch;
-		for(Character ch1:array) {
-			if(map.containsKey(ch1)) {
-				map.put(ch1, map.get(ch1)+1);
-			}else {
-				map.put(ch1, 1);
-			}
-		}
+		
+		  for(Character ch1:array) {
+			  if(map.containsKey(ch1)) {
+				  map.put(ch1,  map.get(ch1)+1);
+				  }else { 
+					  map.put(ch1, 1); 
+				 } 
+			  }
 		
 		for(Character character:array) {
 			if(map.get(character)==1)

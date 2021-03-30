@@ -28,7 +28,7 @@ public class GetRequest {
 		Response response= requestSpecification.get("/Hyderabad");
 		System.out.println(response.asString());
 	}
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void validateResp() {
 		// Step 1: Create a Request pointing to the Service
 		RestAssured.baseURI="http://restapi.demoqa.com/utilities/weather/city";
@@ -43,6 +43,14 @@ public class GetRequest {
 		String status_Line=response.getStatusLine();
 		System.out.println("status Line : "+status_Line);
 		Assert.assertEquals(status_Line, "HTTP/1.1 200 OK");
+		System.out.println(response.asString());
+	}
+	
+	@Test(enabled=true)
+	public void getRequest() {
+		RestAssured.baseURI="https://reqres.in/api/users?page=2";
+		RequestSpecification requestSpecification=	RestAssured.given();
+		Response response= requestSpecification.get();
 		System.out.println(response.asString());
 	}
 }

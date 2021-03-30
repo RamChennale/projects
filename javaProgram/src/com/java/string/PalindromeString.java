@@ -14,10 +14,12 @@ public class PalindromeString {
 	
 	public static void main(String[] args) {
 		
-	String inputStr="aabaa"; 
+	String inputStr="aabaaq"; 
 	System.out.println(isPalindrome(inputStr)?inputStr+" : String is panlindrome ":inputStr+" : String is not paliandrom");
 	
-	
+	}
+}
+
 		
 	/*String originalString="rams";
 	String temp=originalString;
@@ -52,5 +54,3 @@ public class PalindromeString {
 	for(int i=charArr.length-1;i>=0;i--) {
 		System.out.print(charArr[i]);
 	}*/
-	}
-}

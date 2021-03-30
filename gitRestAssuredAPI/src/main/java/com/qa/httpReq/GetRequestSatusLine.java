@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -12,9 +11,9 @@ public class GetRequestSatusLine {
 
 	@Test(enabled = true)
 	public void validateResp() {
-		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
+		RestAssured.baseURI = "https://reqres.in/api/users?page=2";
 		RequestSpecification requestSpecification = RestAssured.given();
-		Response response = requestSpecification.get("/Hyderabad");
+		Response response = requestSpecification.get();
 
 		String status_Line = response.getStatusLine();
 		System.out.println("status Line : " + status_Line);
