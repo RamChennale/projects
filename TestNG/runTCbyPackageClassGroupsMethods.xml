@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test">
+  
+<!-- 1st ways RunByPackage : running only single method (test case) from each
+		<packages>
+			<package name="com.rupeelog.breadcrumbTests.*" />
+		</packages> 
+-->
+		
+<!-- 3rd Way RunByGroups:running only single method (test case) from each
+<groups>
+	<run>
+		<include name="AccountingBCTest"></include>
+		<include name="AdminAccessControlBCTests"></include>
+	</run>
+</groups>
+-->	
+	
+    <classes>
+    
+<!-- 2nd way RunByMethods: executing included methods  RUNNING CORRECTLY all specified methods == VERIFIED VALID 
+     <class name="com.rupeelog.breadcrumbTests.AccountingBCTest">
+      <methods>
+				<include name="corpusCashInOut" />
+				<include name="corpusInOutUpload" />
+				<include name="corpusStockInOut" />
+	  </methods>
+	</class>	
+    <class name="com.rupeelog.breadcrumbTests.AdminAccessControlBCTests">
+        <methods>
+				<include name="assignResource" />
+				<include name="changeEmployeePassword" />
+				<include name="changePassword" />
+	  </methods>
+	  </class> 
+-->	  
+	  
+<!--3rd 	  
+	  <class name="com.rupeelog.breadcrumbTests.AccountingBCTest"></class>
+	  <class name="com.rupeelog.breadcrumbTests.AdminAccessControlBCTests"></class>
+-->	
+	  
+	  
+  <!--	4th way RunByClass: running only single method (test case) from each class.  
+	  <class name="com.rupeelog.breadcrumbTests.AccountingBCTest"/>
+	  <class name="com.rupeelog.breadcrumbTests.AdminAccessControlBCTests"/>
+ -->      
+    </classes>
+  </test> 
+</suite>

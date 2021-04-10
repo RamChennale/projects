@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105" started-at="2020-03-17T08:36:06Z" finished-at="2020-03-17T08:36:06Z">
+  <suite started-at="2021-02-24T17:49:10Z" name="Default suite" finished-at="2021-02-24T17:49:10Z" duration-ms="72">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105" started-at="2020-03-17T08:36:06Z" finished-at="2020-03-17T08:36:06Z">
-      <class name="com.java.loops.ForEachLoop">
-        <test-method status="PASS" signature="forEachIncrement()[pri:0, instance:com.java.loops.ForEachLoop@51081592]" name="forEachIncrement" duration-ms="37" started-at="2020-03-17T08:36:06Z" finished-at="2020-03-17T08:36:06Z">
+    <test started-at="2021-02-24T17:49:10Z" name="Default test" finished-at="2021-02-24T17:49:10Z" duration-ms="72">
+      <class name="com.java.collectionFramework.HashMapEx">
+        <test-method signature="hashMapEx()[pri:0, instance:com.java.collectionFramework.HashMapEx@482cd91f]" started-at="2021-02-24T17:49:10Z" name="hashMapEx" finished-at="2021-02-24T17:49:10Z" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forEachIncrement -->
-      </class> <!-- com.java.loops.ForEachLoop -->
+        </test-method> <!-- hashMapEx -->
+      </class> <!-- com.java.collectionFramework.HashMapEx -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

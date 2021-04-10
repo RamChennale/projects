@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.webdriver.basics.BasicLocatorTest">
+      <class name="com.qa.xpath.DynamicTableRowCountXpath">
         <methods>
-          <include name="initiate"/>
-          <include name="tearDown"/>
-          <include name="locatorBasicTest"/>
+          <include name="closeAllBrowser"/>
+          <include name="init"/>
+          <include name="dynamicTableColCountXpath"/>
         </methods>
-      </class> <!-- com.qa.webdriver.basics.BasicLocatorTest -->
+      </class> <!-- com.qa.xpath.DynamicTableRowCountXpath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
