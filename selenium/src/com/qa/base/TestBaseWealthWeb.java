@@ -32,7 +32,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.rupeelog.utilty.WaitToLoadElement;
+import com.qa.utility.WaitToLoadElement;
 
 import io.github.bonigarcia.wdm.OperatingSystem;// need to add
 import io.github.bonigarcia.wdm.WebDriverManager;// need to add

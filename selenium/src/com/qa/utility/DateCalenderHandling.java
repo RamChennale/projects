@@ -15,7 +15,7 @@ public class DateCalenderHandling extends DynamicBaseClass {//
 	@Test
 	public void dateCalenderHandling() {
 
-		DynamicBaseClass.NavigateToUrl("https://jqueryui.com/datepicker/");
+		DynamicBaseClass.navigateToUrl("https://jqueryui.com/datepicker/");
 		String date = "01-February-2020";
 		String[] dateArray = date.split("-");
 

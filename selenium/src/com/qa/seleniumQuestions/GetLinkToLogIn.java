@@ -14,7 +14,7 @@ public class GetLinkToLogIn extends DynamicBaseClass{
 	
 	@Test(enabled=true)
 	public void getLinkToLogIn() throws InterruptedException{
-		DynamicBaseClass.NavigateToUrl("https://www.twitter.com");
+		DynamicBaseClass.navigateToUrl("https://www.twitter.com");
 		List<WebElement> list=driver.findElements(By.tagName("a"));
 		for(int i=0; i<list.size();i++) {
 			String linkText=list.get(i).getText();

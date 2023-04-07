@@ -12,7 +12,7 @@ public class GetAllLinks extends DynamicBaseClass{
 
 	@Test(enabled=true)
 	public void getAllLinks() {
-		DynamicBaseClass.NavigateToUrl("https://www.twitter.com");
+		DynamicBaseClass.navigateToUrl("https://www.twitter.com");
 		List<WebElement> list=driver.findElements(By.tagName("a"));
 		System.out.println("Num of links: "+list.size());
 	}

@@ -13,7 +13,7 @@ public class GetAllFrames extends DynamicBaseClass{
 
 	@Test
 	public void getAllFramesName() {
-		DynamicBaseClass.NavigateToUrl("http://the-internet.herokuapp.com/nested_frames");
+		DynamicBaseClass.navigateToUrl("http://the-internet.herokuapp.com/nested_frames");
 		System.out.println("************************* Home page frames ************************* ");
 		List<WebElement> listOfHomepageFrames= driver.findElements(By.tagName("frame"));
 		System.out.println("Num of home page frames: "+listOfHomepageFrames.size());

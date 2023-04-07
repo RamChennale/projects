@@ -15,7 +15,7 @@ public class clickAndHoldFunction extends DynamicBaseClass{
 	@Test(enabled=true)
 	public void clickAndHoldFun() {
 		actions= new Actions(driver);
-		DynamicBaseClass.NavigateToUrl(url);
+		DynamicBaseClass.navigateToUrl(url);
 		WebElement from=driver.findElement(By.xpath("//div[@id='draggable']"));
 		WebElement to= driver.findElement(By.xpath("//div[@id='droppable']"));
 		actions.clickAndHold(from).moveToElement(to).release().build().perform();

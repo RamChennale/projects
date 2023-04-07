@@ -30,7 +30,7 @@ public class PDFfileReader extends DynamicBaseClass {
 
 	@Test(enabled = false, priority = 2)
 	public void readPDFPageWise() throws IOException, MalformedURLException {
-		DynamicBaseClass.NavigateToUrl("http://www.africau.edu/images/default/sample.pdf");
+		DynamicBaseClass.navigateToUrl("http://www.africau.edu/images/default/sample.pdf");
 		String currentUrl= driver.getCurrentUrl();
 		URL url = new URL(currentUrl);
 		BufferedInputStream bufferedInputStream = new BufferedInputStream(url.openStream());

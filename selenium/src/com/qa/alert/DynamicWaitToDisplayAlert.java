@@ -10,7 +10,7 @@ public class DynamicWaitToDisplayAlert extends DynamicBaseClass {
 
 	@Test
 	public void dynamicWaitToDisplayAlert() {
-		DynamicBaseClass.NavigateToUrl("http://only-testing-blog.blogspot.com/2014/01/new-testing.html");
+		DynamicBaseClass.navigateToUrl("http://only-testing-blog.blogspot.com/2014/01/new-testing.html");
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
 		webDriverWait.until(ExpectedConditions.alertIsPresent());
 		/*

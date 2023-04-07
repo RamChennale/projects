@@ -12,7 +12,7 @@ public class DropDownBootStrapWithoutSelectClass extends DynamicBaseClass{
 
 	@Test
 	public void bootStrapDropDownNoSelectClass() {
-		DynamicBaseClass.NavigateToUrl("https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp");
+		DynamicBaseClass.navigateToUrl("https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp");
 		WebElement dropDownButton= driver.findElement(By.xpath("//button[@id='menu1']"));
 		dropDownButton.click();
 		List<WebElement> dropDownlist= driver.findElements(By.xpath("//div[@class='dropdown open']//ul//li"));

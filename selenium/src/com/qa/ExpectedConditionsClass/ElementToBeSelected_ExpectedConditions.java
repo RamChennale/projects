@@ -18,7 +18,7 @@ public class ElementToBeSelected_ExpectedConditions extends DynamicBaseClass{
 
 	@Test(enabled=false)
 	public void elementToBeSelectedUsingByLocator() {
-		DynamicBaseClass.NavigateToUrl("http://the-internet.herokuapp.com/checkboxes");
+		DynamicBaseClass.navigateToUrl("http://the-internet.herokuapp.com/checkboxes");
 		wait= new WebDriverWait(driver, 10, 600);
 		boolean isSelected	=wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//div[@class='row']//input[2]")));
 		if(isSelected) {
@@ -30,7 +30,7 @@ public class ElementToBeSelected_ExpectedConditions extends DynamicBaseClass{
 	
 	@Test(enabled=true)
 	public void elementToBeSelectedUsingWebElement() {
-		DynamicBaseClass.NavigateToUrl("http://the-internet.herokuapp.com/checkboxes");
+		DynamicBaseClass.navigateToUrl("http://the-internet.herokuapp.com/checkboxes");
 		wait= new WebDriverWait(driver, 10, 600);////div[@class='row']//input[1]
 		boolean isSelected	=wait.until(ExpectedConditions.elementToBeSelected(driver.findElement(By.xpath("//div[@class='row']//input[1]"))));
 		if(isSelected) {
