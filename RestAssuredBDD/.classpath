@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar" sourcepath="M2_REPO/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/io/rest-assured/rest-assured/4.0.0/rest-assured-4.0.0.jar" sourcepath="M2_REPO/io/rest-assured/rest-assured/4.0.0/rest-assured-4.0.0-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy/2.5.6/groovy-2.5.6.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy/2.5.6/groovy-2.5.6-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/codehaus/groovy/groovy-xml/2.5.6/groovy-xml-2.5.6.jar" sourcepath="M2_REPO/org/codehaus/groovy/groovy-xml/2.5.6/groovy-xml-2.5.6-sources.jar"/>
@@ -29,13 +39,15 @@
 	<classpathentry kind="var" path="M2_REPO/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/github/scribejava/scribejava-apis/2.5.3/scribejava-apis-2.5.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/github/scribejava/scribejava-core/2.5.3/scribejava-core-2.5.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ram/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" sourcepath="C:/Users/Ram/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1-sources.jar">
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.vaadin.external.google"/>
-			<attribute name="maven.artifactId" value="android-json"/>
-			<attribute name="maven.version" value="0.0.20131108.vaadin1"/>
-			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
