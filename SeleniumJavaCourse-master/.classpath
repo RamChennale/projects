@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Documents/selenium-java-3/client-combined-3.2.0-nodeps.jar"/>
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Documents/selenium-java-3/lib/cglib-nodep-3.2.4.jar"/>
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Documents/selenium-java-3/lib/commons-codec-1.10.jar"/>
@@ -49,24 +58,13 @@
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Downloads/poi-3.17-beta1/lib/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Downloads/poi-3.17-beta1/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="/Users/naveenkhunteta/Downloads/htmlunit-driver-2.27-with-dependencies.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ramchennale/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar" sourcepath="C:/Users/ramchennale/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-api"/>
-			<attribute name="maven.version" value="3.141.59"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ramchennale/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
-			<attribute name="maven.version" value="3.141.59"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="D:/jar/selenium jar diff versions-2.52.0/selenium-server-standalone-2.53.0.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/BDDcucumber"/>
+	<classpathentry kind="var" path="M2_REPO/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

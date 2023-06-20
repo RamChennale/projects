@@ -46,5 +46,24 @@
 	<classpathentry exported="true" kind="var" path="M2_REPO/io/cucumber/datatable/3.3.1/datatable-3.3.1.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/io/cucumber/docstring/6.2.2/docstring-6.2.2.jar"/>
 	<classpathentry exported="true" kind="var" path="M2_REPO/io/cucumber/html-formatter/7.0.0/html-formatter-7.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Ram/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0.jar" sourcepath="C:/Users/Ram/.m2/repository/io/cucumber/cucumber-java/7.11.0/cucumber-java-7.11.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.cucumber"/>
+			<attribute name="maven.artifactId" value="cucumber-java"/>
+			<attribute name="maven.version" value="7.11.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Ram/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar" sourcepath="C:/Users/Ram/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="info.cukes"/>
+			<attribute name="maven.artifactId" value="cucumber-core"/>
+			<attribute name="maven.version" value="1.2.5"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

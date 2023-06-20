@@ -3,25 +3,31 @@ package com.qa.stdSeleniumUtility;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.gargoylesoftware.htmlunit.util.Cookie;
+import com.google.common.base.Function;
 import com.qa.stdBrowser.WebDriverManager;
 import com.qa.stdDataBaseUtility.DataBaseRowsTo;
 import com.qa.stdReports.Report;
+import com.qa.stdUtility.CaptureScreenshot;
 import com.qa.stdUtility.ExceptionHandler;
 import com.qa.stdUtility.GlobalVaribales;
 import com.qa.stdUtility.Reporter;
@@ -1045,20 +1051,376 @@ public final void  deSelectAllOption(Select select) {
 }
 	
 	
+//get all select option from drop down 
+
+public final List<WebElement>  getSelectOption(Select select) {
+	
+	String status = "FAIL";
+	List<WebElement> options = null;
+	
+	try {
+		options = select.getOptions();
+		status = "PASS";
+		takeScreenShotEveryAction();
+	} catch (Exception e) {
+		ExceptionHandler.handleException(e);
+	} finally {
+		Report.printOperation("get all options");
+		Report.printStatus(status);
+	}
+	
+	return options;
+}
+	
+//get all selected option from drop down 
+
+public final List<WebElement>  getSelectedOption(Select select) {
+	
+	String status = "FAIL";
+	List<WebElement> options = null;
+	
+	try {
+		options = select.getAllSelectedOptions();
+		status = "PASS";
+		takeScreenShotEveryAction();
+	} catch (Exception e) {
+		ExceptionHandler.handleException(e);
+	} finally {
+		Report.printOperation("get all selected options");
+		Report.printStatus(status);
+	}
+	
+	return options;
+}
+	
+// take a screenshot
+
+public final void  takeScreenShot() {
+	
+	String status = "FAIL";
+	
+	try {
+		CaptureScreenshot.screenCapture();
+		status = "PASS";
+
+	} catch (Exception e) {
+		ExceptionHandler.handleException(e);
+	} finally {
+		Report.printOperation("TakeScreenshot");
+		Report.printStatus(status);
+	}
+}
 	
 	
+//take screenshot for entire window 
+
+public final void  captureEntireScreenShot() {
 	
+	String status = "FAIL";
 	
+	try {
+		CaptureScreenshot.captureEntireScreenshot();
+		status = "PASS";
+
+	} catch (Exception e) {
+		ExceptionHandler.handleException(e);
+	} finally {
+		Report.printOperation("TakeScreenshot");
+		Report.printStatus(status);
+	}
+}
 	
+	// wait to load page
+
+public final boolean waitToLoadPage() {
 	
+	String status = "FAIL";
+	JavascriptExecutor js = (JavascriptExecutor) WebDriverManager.getDriver();
+	boolean isPageLoaded = false;
 	
+	try {
+		while (isPageLoaded == false) {
+			isPageLoaded = js.executeScript("return document.readyState").toString().equals("complete");
+			status = "PASS";
+		}
+
+	} catch (Exception e) {
+		ExceptionHandler.handleException(e);
+	} finally {
+		Report.printOperation("wait for To Load Page");
+		Report.printStatus(status);
+	}
+	return isPageLoaded;
+}
+
+
+//wait for For JavaSccript Elements
+
+public List<WebElement> waitForJSElements(String dataBaseKey) {
 	
+	int timeLpas = 0;
+	String status = "FAIL";
+	List<WebElement> jsElements = null;
 	
+	while (status.equals("FAIL") && timeLpas <GlobalVaribales.waitTime) {
+		try {
+			jsElements = (List<WebElement>) getElements(dataBaseKey);
+			
+			if (jsElements.size() == 0) {
+				status = "FAIL";
+			}else {
+				status = "PASS";
+			}
+		} catch (Exception e) {
+			status = "FAIL";
+		}
+		pause(2000);
+		++timeLpas;
+	}
+		Report.printOperation("wait for Javascript element");
+		Report.printStatus(status);
+	return jsElements;
+}
+
+
+//wait for For JavaSccript Element
+
+public WebElement waitForJSElement(String dataBaseKey) {
 	
+	int timeLpas = 0;
+	String status = "FAIL";
+	WebElement jsElement = null;
 	
+	while (status.equals("FAIL") && timeLpas <GlobalVaribales.waitTime) {
+		try {
+			jsElement = (WebElement) getElement(dataBaseKey);
+			
+			if (jsElement.size() == 0) {
+				status = "FAIL";
+			}else {
+				status = "PASS";
+			}
+		} catch (Exception e) {
+			status = "FAIL";
+		}
+		pause(2000);
+		++timeLpas;
+	}
+		Report.printOperation("wait for Javascript element");
+		Report.printStatus(status);
+	return jsElement;
+}
+
 	
+//fluent wait for For WebElement
+
+public WebElement fluentWaitForWebElement(String key) {
 	
+	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(WebDriverManager.getDriver())
+			.withTimeout(Duration.ofSeconds(90)).pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
+	return wait.until(new Function<WebDriver, WebElement>() {
+		
+		public WebElement apply(WebDriver driver) {
+			WebElement element = null;
+			getElement(key);
+			
+			String valueType = getValueType(key, listOfElements);
+			String value = getValue(key, listOfElements);
+			
+			if(element == null) {
+				throw new NullPointerException();
+			}else {
+				return element;
+			}
+		}
+
+	});
+}
+
+
+
+//fluent wait for For function
+
+public WebElement fluentWaitForFunction(String key, Function<WebDriver, WebElement> function) {
 	
+	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(WebDriverManager.getDriver())
+			.withTimeout(Duration.ofSeconds(90)).pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
+	return wait.until(function); 
+}
+
+
+//fluent wait for For WebElements
+
+public List<WebElement> fluentWaitForWebElements(String key) {
 	
+	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(WebDriverManager.getDriver())
+			.withTimeout(Duration.ofSeconds(90)).pollingEvery(Duration.ofMillis(500)).ignoring(Exception.class);
+	
+	return wait.until(new Function<WebDriver, List<WebElement>>() {
+		
+		public List<WebElement> apply(WebDriver driver) {
+			Element element = new Element(driver); // Element class need to create
+			String valueType = getValueType(key, listOfElements);
+			String value = getValue(key, listOfElements);
+			return element.getElements(valueType, value);
+		}
+
+	});
+}
+
+//static wait 
+
+public static void pause(long milliSec) {
+	try {
+		Thread.sleep(milliSec);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+}
+
+// verify WebElement present/available in DOM
+
+
+public final boolean  isPresentWebElement(String dataBaseKey) {
+	
+	boolean isPresent = false;
+	String status = "FAIL";
+	String valueType = "undefined";
+	String value = "undefined";
+	
+	try {
+		valueType = getValueType(dataBaseKey, listOfElements);
+		value = getValue(dataBaseKey, listOfElements);		
+		WebDriverManager.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Element element = new Element(WebDriverManager.getDriver());
+		element.getElement(valueType, value);
+		WebDriverManager.getDriver().manage().timeouts().implicitlyWait(GlobalVaribales.waitTime,TimeUnit.SECONDS);
+		isPresent = true;
+		status = "PASS";
+		takeScreenShotEveryAction();
+	} catch (Exception e) {
+		status = "PASS";
+	} finally {
+		Report.printOperation("is Present");
+		Report.printKey(dataBaseKey);
+		Report.printValue(value);
+		Report.printValueType(valueType);
+		Report.printStatus(status);
+	}
+	return isPresent;
+}
+
+//verify javascript WebElement present/available in DOM
+
+
+public final boolean  isPresentJavaScriptWebElement(String dataBaseKey) {
+	
+	boolean isPresent = false;
+	String status = "FAIL";
+	String valueType = "undefined";
+	String value = "undefined";
+	
+	try {
+		valueType = getValueType(dataBaseKey, listOfElements);
+		value = getValue(dataBaseKey, listOfElements);		
+		JavascriptExecutor js= (JavascriptExecutor) WebDriverManager.getDriver();
+		js.executeScript(value);
+		isPresent = true;
+		status = "PASS";
+		takeScreenShotEveryAction();
+	} catch (Exception e) {
+		status = "PASS";
+	} finally {
+		Report.printOperation("is Present");
+		Report.printKey(dataBaseKey);
+		Report.printValue(value);
+		Report.printValueType(valueType);
+		Report.printStatus(status);
+	}
+	return isPresent;
+}
+	
+//verify WebElement present/available in DOM for Dynamic Xpath
+
+
+public final boolean  isPresentWebElementXpath(String locator, String value) {
+	
+	boolean isPresent = false;
+	String status = "FAIL";
+	
+	try {
+		WebDriverManager.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Element element = new Element(WebDriverManager.getDriver());
+		element.getElement(locator, value);
+		WebDriverManager.getDriver().manage().timeouts().implicitlyWait(GlobalVaribales.waitTime,TimeUnit.SECONDS);
+
+		isPresent = true;
+		status = "PASS";
+		takeScreenShotEveryAction();
+	} catch (Exception e) {
+		status = "PASS";
+	} finally {
+		Report.printOperation("is Present");
+		Report.printValue(value);
+		Report.printValueType(locator);
+		Report.printStatus(status);
+	}
+	return isPresent;
+}
+
+
+//get WebElement by javascriptExecutor 
+
+public final Object  getWebElementByJavascriptExecutor(String dataBaseKey) {
+	
+	Object object = null;
+	String valueType = getValueType(dataBaseKey, listOfElements);
+	String value = getValue(dataBaseKey, listOfElements);		;
+
+	JavascriptExecutor js = (JavascriptExecutor) WebDriverManager.getDriver();
+	String status = "FAIL";
+	
+	try {
+		Thread.sleep(1000);
+		object = js.executeScript(value);
+		status = "PASS";
+	} catch (Exception e) {
+		status = "PASS";
+	} finally {
+		Report.printOperation("get element by JS");
+		Report.printValue(value);
+		Report.printValueType(valueType);
+		Report.printStatus(status);
+	}
+	return object;
+}
+
+
+//get WebElement by using driver.findElement() 
+
+public final Object  getWebElementByJavascriptExecutor(String dataBaseKey) {
+	
+	Object object = null;
+	String valueType = getValueType(dataBaseKey, listOfElements);
+	String value = getValue(dataBaseKey, listOfElements);		;
+
+	JavascriptExecutor js = (JavascriptExecutor) WebDriverManager.getDriver();
+	String status = "FAIL";
+	
+	try {
+		Thread.sleep(1000);
+		object = js.executeScript(value);
+		status = "PASS";
+	} catch (Exception e) {
+		status = "PASS";
+	} finally {
+		Report.printOperation("get element by JS");
+		Report.printValue(value);
+		Report.printValueType(valueType);
+		Report.printStatus(status);
+	}
+	return object;
+}
+
 	
 }

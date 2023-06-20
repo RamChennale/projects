@@ -28,7 +28,7 @@ public class AllPhotosTestCases {
 
 		// group all photos as per album id
 		Stream<SinglePhoto> streamOfPhotos = allSinglePhotos.stream();
-		Map<String, List<SinglePhoto>> mapOfAlbums = streamOfPhotos
+		Map<Object, List<Object>> mapOfAlbums = streamOfPhotos
 				.collect(Collectors.groupingBy(x -> ((SinglePhoto) x).getAlbumId()));
 		Assert.assertEquals(mapOfAlbums.size(), 100);
 	}

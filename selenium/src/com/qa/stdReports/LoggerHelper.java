@@ -36,7 +36,8 @@ public class LoggerHelper {
 		
 		PropertiesConfiguration config;
 		try {
-			config = new PropertiesConfiguration("log4j.properties");
+			//config = new PropertiesConfiguration("log4j.properties");
+			config = new PropertiesConfiguration();
 			config.setProperty("logFolder", LoggerHelper.logPath);
 			config.setProperty("logLevel", logLevel);
 			config.save();

@@ -71,5 +71,15 @@
 	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.72/jcommander-1.72.jar" sourcepath="M2_REPO/com/beust/jcommander/1.72/jcommander-1.72-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar" sourcepath="M2_REPO/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ram/.m2/repository/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10.jar" sourcepath="C:/Users/Ram/.m2/repository/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Ram/.m2/repository/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="org.apache.httpcomponents"/>
+			<attribute name="maven.artifactId" value="httpclient"/>
+			<attribute name="maven.version" value="4.5.10"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
