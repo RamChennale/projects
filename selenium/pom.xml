@@ -110,5 +110,10 @@
 </dependency>
 
 
+		<dependency>
+			<groupId>com.qa</groupId>
+			<artifactId>automation</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

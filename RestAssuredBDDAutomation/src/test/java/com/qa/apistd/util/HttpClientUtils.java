@@ -211,7 +211,7 @@ public class HttpClientUtils implements RequestBuilder, RetriveResponse, Respons
 		}
 		return httpClientUtils;
 	}
-
+/*// commented becuase of import issue
 	@Override
 	public RequestBuilder setJWTcertificates(String path, String password) {
 		// TODO Auto-generated method stub
@@ -236,7 +236,7 @@ public class HttpClientUtils implements RequestBuilder, RetriveResponse, Respons
 		}
 		return httpClientUtils;
 	}
-
+*/
 	@Override
 	public RequestBuilder setProxy(String host, int port) {
 		// TODO Auto-generated method stub
@@ -249,8 +249,8 @@ public class HttpClientUtils implements RequestBuilder, RetriveResponse, Respons
 	public RetriveResponse executeRequest(HttpMethodTypes types) {
 		// TODO Auto-generated method stub
 		try {
-			URI uri = uriBuilder.build();
-			
+			//URI uri = uriBuilder.build();
+			URI uri = uriBuilder.convertToURI(types);
 			if(!headers.isEmpty()) {
 				httpClientBuilder.setDefaultHeaders(headers);
 			}
@@ -376,6 +376,12 @@ public class HttpClientUtils implements RequestBuilder, RetriveResponse, Respons
 	public String asString() {
 		// TODO Auto-generated method stub
 		return bodyAsString;
+	}
+
+	@Override
+	public RequestBuilder setJWTcertificates(String path, String password) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

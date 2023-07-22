@@ -40,8 +40,9 @@ public class LoggerHelper {
 			config = new PropertiesConfiguration();
 			config.setProperty("logFolder", LoggerHelper.logPath);
 			config.setProperty("logLevel", logLevel);
-			config.save();
-		} catch (ConfigurationException e) {
+			//config.save(); //commented due to error  
+			config.getClass();
+		} catch (Exception e) { //ConfigurationException
 			e.printStackTrace();
 			Assert.fail();
 		}
