@@ -16,6 +16,6 @@ public class AutoITForWindPopUp extends DynamicBaseClass {
 		driver.findElement(By.xpath("//input[@id=1]")).click();
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("C:\\Users\\ramchennale\\git\\projects\\selenium\\src\\com\\qa\\autoIt\\FileUploadScript.exe");
-		Thread.sleep(5000);
+		Thread.sleep(5000);;;;
 	}
 }
