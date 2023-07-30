@@ -44,7 +44,7 @@ public class TestBase implements TestBaseI{
 	@BeforeClass
 	public void initiate() throws IOException {
 		properties = new Properties();
-		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".\\projects\\automation\\browser\\ChromeDriver.exe");
 		driver = new ChromeDriver();
 		logger.info("Browser loaded successfully");
 		
