@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="GESM" parallel="classes" thread-count="3"> <!-- Suite -->
-	<test name="GESM Test">
-		<classes>
-			<!-- HOME -->
-			<class name="com.qa.homePageTests.HomePageOperations" />
-			</classes>
-	</test>
-</suite>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.qa.homePageTests.SearchRecord"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
