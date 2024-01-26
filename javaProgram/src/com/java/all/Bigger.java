@@ -11,6 +11,9 @@ public class Bigger {
 		System.out.println("Enter Second Number");
 		int b = sc.nextInt();
 
+		int large = a>b?a:b;
+		System.out.println("Find large without if() condition by : ternary operator - large = a>b?a:b ****" + large);
+		
 		if ((a > b) && (a - b) >= 2) {
 			System.out.println(a);
 		} else if ((b > a) && (b - a) >= 2) {
