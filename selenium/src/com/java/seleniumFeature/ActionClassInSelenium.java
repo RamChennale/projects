@@ -1,9 +1,10 @@
-package com.java.seleniumFeature;
+package src.com.java.seleniumFeature;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -39,5 +40,10 @@ public class ActionClassInSelenium {
 		actions.dragAndDrop(source, target);
 		actions.moveToElement(target).build().perform();
 
+		/**
+		 * Interface representing a single user-interaction action.
+		 *
+		 */
+		Action actionInterface; // having  void perform(); // function
 	}
 }
