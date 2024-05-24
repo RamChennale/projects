@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.qa.base.TestBase;
 import com.qa.pages.LoginPage;
 
-
 public class LoginTC01 extends TestBase{
 
 private static Logger logger = Logger.getLogger(LoginTC01.class);
