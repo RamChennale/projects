@@ -26,6 +26,9 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.interfaces.TestBaseI;
 import com.qa.utility.WebEventListener;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import com.qa.utility.GetFailedTestCaseScreenshot;
 
 public class TestBase implements TestBaseI{
@@ -44,8 +47,15 @@ public class TestBase implements TestBaseI{
 	@BeforeClass
 	public void initiate() throws IOException {
 		properties = new Properties();
+/*		
 		System.setProperty("webdriver.chrome.driver", ".\\browser\\ChromeDriver.exe");
 		driver = new ChromeDriver();
+		
+		*/
+		
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
+		
 		logger.info("Browser loaded successfully");
 		
 		eventFiringWebDriver= new EventFiringWebDriver(driver);

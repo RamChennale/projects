@@ -16,10 +16,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
+import com.qa.base.TestBase;
 
 
-public class LoginPage {
+public class LoginPage extends TestBase{
 
 	private static Logger logger = Logger.getLogger(LoginPage.class);
 	String fileName = ".\\data\\inputdata.xlsx";
@@ -30,17 +31,15 @@ public class LoginPage {
 	WebDriver driver = null;
 	WebDriverWait wait;
 
-	@FindBy(id = "username")
+	@FindBy(id = "user-name")
 	public WebElement username;
-	@FindBy(how=How.ID, using="username")
+	@FindBy(how=How.ID, using="user-name")
 	public WebElement uname;
 	@FindBy(id = "password")
 	private WebElement password;
-	@FindBy(id = "login-submit")
+	@FindBy(id = "login-button")
 	private WebElement login;
-	@FindBy(id = "gisspan")
-	public WebElement verifyGISVIEW;
-
+	
 	public LoginPage(WebDriver localDriver) {
 		this.driver = localDriver;
 	}
@@ -66,10 +65,6 @@ public class LoginPage {
 			login.submit();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			logger.info("SIGN IN LOCATOR IS ENABLED SUCCESSFULLY : " + siginState);
-			String assertTest = verifyGISVIEW.getText();
-			Assert.assertEquals("GIS View", assertTest, "TestCase verified " + assertTest);
-			System.out.println("GEMS title is : " + assertTest);
-			logger.info("User login successfully verified : " + assertTest);
 		} catch (FileNotFoundException fnfe) {
 			logger.info("File dose not exist to read data" + fnfe);
 		} catch (IOException ioe) {

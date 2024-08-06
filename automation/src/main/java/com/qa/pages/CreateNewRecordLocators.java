@@ -11,9 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 
-import com.qa.base.TestBase;
 import com.qa.utility.DataProviderUtility;
-
+import  com.qa.base.TestBase;
 public class CreateNewRecordLocators extends TestBase {
 
 	private Logger logger = Logger.getLogger(HomePageLocators.class);
