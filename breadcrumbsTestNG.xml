@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  
+<!-- 1st ways:Running only one test method from a each class class 
+		<packages>
+			<package name="com.rupeelog.breadcrumbTests.*" />
+		</packages> 
+-->
+		
+<!-- 3rd :Running only one test method from a each class class 
+<groups>
+	<run>
+		<include name="AccountingBCTest"></include>
+		<include name="AdminAccessControlBCTests"></include>
+	</run>
+</groups>
+-->	
+	
+    <classes>
+<!--3rd 	  
+	  <class name="com.rupeelog.breadcrumbTests.AccountingBCTest"></class>
+	  <class name="com.rupeelog.breadcrumbTests.AdminAccessControlBCTests"></class>
+-->	
+    
+<!-- 2nd way executing included methods  RUNNING CORRECTLY all specified methods == VERIFIED VALID -->	 
+     <class name="com.rupeelog.breadcrumbTests.AccountingBCTest">
+      <methods>
+      			<include name="corpusCashInOut"/>
+				<include name="corpusInOutUpload"/>
+				<include name="corpusStockInOut"/>
+				<include name="managedAccTxnUpload"/>
+				<include name="manualVoucher"/>
+				<include name="voucherUpload"/>
+	  </methods>
+	</class>	
+ 
+    <class name="com.rupeelog.breadcrumbTests.AdminAccessControlBCTests">
+        <methods>
+				<include name="assignResource" />
+				<include name="changeEmployeePassword" />
+				<include name="changePassword" />
+				<include name="changPasswordKyph" />
+				<include name="role" />
+				<include name="userRoleAccess" />
+	  </methods>
+	  </class> 
+  
+	  <class name="com.rupeelog.breadcrumbTests.AdminCOBBCTests">
+	  	<methods>
+	  		<include name="bseAof"></include>
+	  		<include name="bseStarFatca"></include>
+	  		<include name="bseStarUCC"></include>
+	  		<include name="documentUpload"></include>
+	  		<include name="documentVerification"></include>
+	  		<include name="family"></include>
+	  		<include name="familyComments"></include>
+	  		<include name="investmentAccount"></include>
+	  		<include name="kYPH"></include>
+	  		<include name="portfolio"></include>
+	  		<include name="viewKyphDocuments"></include>
+	  	</methods>
+	  </class>
+	
+	  <class name="com.rupeelog.breadcrumbTests.AdminDeleteReportSchedulerBCTests">
+	  	<methods>
+	  		<include name="assignResource"></include>
+	  	</methods>
+	  </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminDocRepositoryBCTests">
+      	<methods>
+      		<include name="docRepository"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminManualTxnAdjustmentsBCTests">
+      	<methods>
+      		<include name="commodityFutureTxnDelete"></include>
+      		<include name="currencyFutureTxnDelete"></include>
+      		<include name="futureTxnDelete"></include>
+      		<include name="generateNav"></include>
+      		<include name="rerunCommodityFutureM2M"></include>
+      		<include name="rerunCurrencyFutureM2M"></include>
+      		<include name="rerunCurrencyOptionAutoExpiry"></include>
+      		<include name="rerunDPMSTWRR"></include>
+      		<include name="rerunEquitydividend"></include>
+      		<include name="rerunEquityDMA"></include>
+      		<include name="rerunEquitySplitBonus"></include>
+      		<include name="rerunFutureM2M"></include>
+      		<include name="rerunRealisedGain"></include>
+      		<include name="runMFfifofoliowise"></include>
+      		<include name="updateKYCStatus"></include>
+      		<include name="voucherDelete"></include>
+      		<include name="xirr"></include>
+      		<include name="xirrSinceInception"></include>
+      	</methods>
+      </class>
+  
+  
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminMappingsBCTests">
+      	<methods>
+      		<include name="clientBankMapping"></include>
+      		<include name="clientDematMapping"></include>
+      		<include name="clientIPSMapping"></include>
+      		<include name="familyBenchmarkmapping"></include>
+      		<include name="familyRMMapping"></include>
+      		<include name="familyRMMappingsUpload"></include>
+      	</methods>
+      </class>
+
+
+      <class name="com.rupeelog.breadcrumbTests.AdminOrganizationBCTests">
+      	<methods>
+      		<include name="employee"></include>
+      		<include name="employeeReportingMapping"></include>
+      		<include name="linkedEmployee"></include>
+      		<include name="reportingOrganizationTree"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminPasswordBCTests">
+      	<methods>
+      		<include name="mfExchangePassword"></include>
+      		<include name="rtaEmailPassword"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminPingRefreshBCTests">
+      	<methods>
+      		<include name="pingRefresh"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminSystemLockBCTests">
+      	<methods>
+      		<include name="systemLock"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.AdminTenantPaymentExpiryBCTests">
+      	<methods>
+      		<include name="tenantPaymentExpiry"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.DiscPMSClientManagementBCTests">
+      	<methods>
+      		<include name="corpusOutRequestView"></include>
+      		<include name="freezePortfolio"></include>
+ 			<include name="negativeList"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.DiscPMSModelPortfolioBCTests">
+      	<methods>
+      		<include name="compositionUpload"></include>
+      		<include name="modelPortfolioScheme"></include>
+      		<include name="schemeAlternateList"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.DiscPMSOrdersBCTests">
+      	<methods>
+      		<include name="generateVariance"></include>
+      		<include name="varianceforAccountingPortfolio"></include>
+      		<include name="prepareOrders"></include>
+      		<include name="prepareAlternativeInvestOrders"></include>
+      		<include name="placeOrders"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.FinancialPlanningBCTests">
+ 		<methods>
+ 			<include name="additionalInvestmentPlanning"></include>
+ 			<include name="assetSubClassToGoalLinkage"></include>
+ 			<include name="financialAdvisorComments"></include>
+ 			<include name="generatePlan"></include>
+ 			
+ 			<include name="insurancePlanningNew"></include>
+ 			<include name="redemptionPlan"></include>
+ 			<include name="reportingCategoryGoalLink"></include>
+ 		</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.FinplanInputBCTests">
+      	<methods>
+      		<include name="expense"></include>
+      		<include name="goal"></include>
+      		<include name="income"></include>
+      		<include name="riskQuestionnaireKyph"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.FPAdminBCTests">
+      	<methods>
+      		<include name="assetSubClassGrowthEstimate"></include>
+      		<include name="fpSystemParam"></include>
+      		<include name="houseRecoAssetSubclass"></include>
+      		<include name="instrumentGrowthEstimate"></include>
+      		<include name="insurancePolicy"></include>
+      		<include name="insuranceProvider"></include>
+      		<include name="modelPortfolioFP"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.HeldAwayTxnBCTests">
+      	<methods>
+      		<include name="custodianSettleCash"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.InstrumentInstrumentDebtBCTests">
+      	<methods>
+      		<include name="insDebtInstrument"></include>
+      		<include name="marketValues"></include>
+      	</methods>
+      </class>
+      
+      <class name="com.rupeelog.breadcrumbTests.InstrumentInstrumentDerivativesBCTests">
+      	<methods>
+      		<include name="spanMargin"></include>
+      		<include name="spanMarginView"></include>
+      		<include name="futurePrice"></include>
+      		<include name="OptionsPrice"></include>
+      		<include name="optionsScript"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.InstrumentInstrumentEquityBCTests">
+      	<methods>
+      		<include name="buyback"></include>
+      		<include name="caBonusSplit"></include>
+      		<include name="caDividend"></include>
+      		<include name="caMergerDeMerger"></include>
+      		<include name="closingPrices"></include>
+      		<include name="delisting"></include>
+      		<include name="IPOFPO"></include>
+      		<include name="openOffer"></include>
+      		<include name="rightsIssue"></include>
+      		<include name="scrip"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.InstrumentInstrumentMAccBCTests">
+      	<methods>
+      		<include name="managedAccountFund"></include>
+      		<include name="managedAccountMarketvalue"></include>
+      		<include name="managedAccountScheme"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.InstrumentInstrumentMFBCTests">
+      	<methods>
+      		<include name="caMerger"></include>
+      		<include name="mutualFundNAVs"></include>
+      		<include name="mutualFundNFO"></include>
+      		<include name="mutualFundScheme"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.InvestmentBCTests">
+      	<methods>
+      		<include name="committedInvestment"></include>
+      		<exclude name="committedInvestmentNew"></exclude>
+      		<include name="fdAndRD"></include>
+      		<include name="insurance"></include>
+      		<include name="liability"></include>
+      		<include name="realEstateandOthers"></include>
+      		<include name="realEstateMarketPrice"></include>
+      		<include name="transactionUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterAssetMasterBCTests">
+      	<methods>
+      		<include name="assetCombo"></include>
+      		<include name="houseRecommendation"></include>
+      		<include name="investmentStrategy"></include>
+      		<include name="investmentHorizon"></include>
+      		<include name="marketCap"></include>
+      		<include name="risk"></include>
+      		<include name="riskIPSMapping"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterBankDPBrokerBCTests">
+      	<methods>
+      		<include name="bankAccountType"></include>
+      		<include name="bankMaster"></include>
+      		<include name="branchBank"></include>
+      		<include name="broker"></include>
+      		<include name="brokerBank"></include>
+      		<include name="brokerDemat"></include>
+      		<include name="dpMaster"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterCOBMasterBCTests">
+      	<methods>
+      		<include name="legalStatus"></include>
+      		<include name="ccupation"></include>
+      		<include name="residentialStatus"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterCommonMasterBCTests">
+      	<methods>
+      		<include name="caliberSchedulerNotification"></include>
+      		<include name="emailCreden"></include>
+      		<include name="indicesBenchmarkValues"></include>
+      		<include name="organisationOrdermode"></include>
+      		<include name="orgnBSEEnable"></include>
+      		<include name="smsCreden"></include>
+      		<include name="standardRemarks"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterManagedAccountBCTests">
+      	<methods>
+      		<include name="legalStatus"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterMutualFundBCTests">
+      	<methods>
+      		<include name="assetManagementCompany"></include>
+      		<include name="mfClassification"></include>
+      		<include name="mfFundManager"></include>
+      		<include name="registrarRTA"></include>
+      		<include name="rtaTxnTypeMapping"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterOrganizationMasterBCTests">
+      	<methods>
+      		<include name="branch"></include>
+      		<include name="branchCategory"></include>
+      		<include name="cluster"></include>
+      		<include name="counterParty"></include>
+      		<include name="department"></include>
+      		<include name="designation"></include>
+      		<include name="employeeCertificate"></include>
+      		<include name="organization"></include>
+      		<include name="region"></include>
+      		<include name="zone"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.MasterSystemMasterBCTests">
+      	<methods>
+      		<include name="arn"></include>
+      		<include name="autoJobLog"></include>
+      		<include name="autoJobSetUp"></include>
+      		<include name="city"></include>
+      		<include name="country"></include>
+      		<include name="glAccountMapping"></include>
+      		<include name="gstMaster"></include>
+      		<include name="state"></include>
+      		<include name="taxTypeRate"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OperationsUploadsBCTests">
+      	<methods>
+      		<include name="documentDownload"></include>
+      		<include name="documentUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OrderDebtBCTests">
+      	<methods>
+      		<include name="buySellWithRisk"></include>
+      		<include name="buySellWithoutRisk"></include>
+      		<include name="ipo"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OrderFundPayoutOrderBCTests">
+      	<methods>
+      		<include name="fundPayoutOrder"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OrderManagedAccountsBCTests">
+      	<methods>
+      		<include name="maBuySellWithRisk"></include>
+      		<exclude name="maBuySellWithRiskNew"></exclude>
+      		<include name="maBuySellWithoutRisk"></include>
+      		<include name="maIPO"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OrderMutualFundBCTests">
+      	<methods>
+      		<include name="buySell1"></include>
+      		<include name="buySellSwitchCart1A"></include>
+      		<include name="systematicPlanCart1B"></include>
+      		<include name="mandate"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.OrderPreOrderEquityBCTests">
+      	<methods>
+      		<include name="preOrderEquity"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessAutoRequestBCTest">
+      	<methods>
+      		<include name="autoRequest"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessBankBCTest">
+      	<methods>
+      		<include name="bankStatementRecon"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessBrokerBCTests">
+      	<methods>
+      		<include name="brokerLedgerTxnNotValidated"></include>
+      		<include name="fetchBrokerLedgerBalance"></include>
+      		<include name="fetchBrokerLedgerTxns"></include>
+      		<include name="fetchBrokerStockBalance"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessCommodityBCTest">
+      	<methods>
+      		<include name="commodityTxnNotValidated"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessConfirmationBCTests">
+      	<methods>
+      		<include name="recommendation"></include>
+      		<include name="recommendationNew"></include>
+      		<include name="validateVouchers"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessCurrencyBCTest">
+      	<methods>
+      		<include name="ProcessCurrencyBCTest"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessDebtBCTest">
+      	<methods>
+      		<include name="debtPrice"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessDeleteErrorTxnsBCTest">
+      	<methods>
+      		<include name="ProcessDeleteErrorTxnsBCTest"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessDerivativeBCTest">
+      	<methods>
+      		<include name="derivativeErrorTxnExec"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessEODDashboardBCTests">
+      	<methods>
+      		<include name="eodProcessDashboard"></include>
+      		<include name="processDashboard"></include>
+      		<include name="runEodProcess"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessEquityBCTests">
+      	<methods>
+      		<include name="equityErrorTxnExec"></include>
+      		<include name="fetchPricesforEquityMasters"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessFileProcessDashboardBCTests">
+      	<methods>
+      		<include name="fileProcessDashBoard"></include>
+      		<include name="processedFileDownload"></include>
+      		<include name="runFileProcess"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessIndicesBenchmaBCTest">
+      	<methods>
+      		<include name="debtPrice"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessManagedAccounttxnBCTest">
+      	<methods>
+      		<include name="maFolioChange"></include>
+      		<include name="managedAccountMarketValue"></include>
+      		<exclude name="orderMatching"></exclude>
+      		<include name="vcfCommittedInvestmentUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessMutualFundBCTest">
+      	<methods>
+      		<include name="aumUploadRTA"></include>
+      		<include name="folioMapped"></include>
+      		<include name="folioUnmapped"></include>
+      		<include name="masterPullBSEStar"></include>
+      		<include name="mfFolioChange"></include>
+      		<include name="mffolioPortfolioShift"></include>
+      		<include name="mfRTACorpusNotValidated"></include>
+      		<include name="mfTransactionNotValidated"></include>
+      		<include name="transactionOrderMatching"></include>
+      		<include name="transactionUploadRTA"></include>
+      		<include name="uploadAmfiNAV"></include>
+      		<include name="validateSIPErrorEntries"></include>
+      		<include name="validateWbr9Error"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ProcessUploadProcessBCTest">
+      	<methods>
+      		<include name="generalUpload"></include>
+      		
+      		<include name="revalidate"></include>
+      		<include name="specificUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.ReportsBCTests">
+      	<methods>
+      		<include name="adhocReports"></include>
+      		<include name="bulkSMS"></include>
+      		<include name="chartAnalytics"></include>
+      		<include name="dailySalesReports"></include>
+      		<include name="debitCreditNote"></include>
+      		<include name="kyphEmail"></include>
+      		<include name="largeReportExecute"></include>
+      		<include name="multiReportDownloadEmail"></include>
+      		<exclude name="multiReportGeneration"></exclude>
+      		<include name="pushNotification"></include>
+      		<include name="reportingServer"></include>
+      		<include name="rmReports"></include>
+      		<include name="txnSearch"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSClientFeesBCTests">
+      	<methods>
+      		<include name="postingDayMaster1"></include>
+      		<include name="feesPostingFrequencyMaster2"></include>
+      		<include name="feesRulesUpload3"></include>
+      		<include name="calculateFees4"></include>
+      		<include name="calculatedFeesDetails5"></include>
+      		<include name="feePosting6"></include>
+      		<include name="integFeesCreateRule7a"></include>
+      		<include name="integFeesCalculate7b"></include>
+      		<include name="integFeesPostFees7c"></include>
+      	
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSMFRevenueBCTests">
+      	<methods>
+      		<include name="mfRateCardUpload1a"></include>
+      		<include name="mfRateCardExceptionUpload1b"></include>
+      		<include name="mfFeesCalculation2a"></include>
+      		<include name="mfFeesExceptionCalculation2b"></include>
+      		<include name="rtaRevenueFiles3"></include>
+      		<include name="trailForecasting4"></include>
+      		<include name="amcCommissionReceipt5"></include>
+      		<include name="revTypeMaster"></include>
+      		<include name="rtaRevTypeMapping"></include>
+      		<include name="sipRateCardUpload"></include>
+      		<include name="switchRateCardUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSNonMFRevenueBCTests">
+      <methods>
+      	<include name="nonMFRateCardUpload1"></include>
+      </methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSOtherRevenueBCTests">
+      	<methods>
+      		<include name="brokerage"></include>
+      		<include name="brokerageValidate"></include>
+      		<include name="revenueMiscUpload"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSRimsMiscBCTests">
+      	<methods>
+      		<include name="expenseSalaryUpload"></include>
+      		<include name="internationalAUM"></include>
+      		<include name="KRABasedTarget"></include>
+      		<include name="serviceRMRMLinkage"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSRimsUpdateBCTests">
+      	<methods>
+      		<include name="familywiseSplitMaster"></include>
+      		<include name="mfRateCardDelete"></include>
+      		<include name="miscCaln"></include>
+      		<include name="rimsTxnDelete"></include>
+      		<include name="rmWiseRevSplitB"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.RIMSRimsUploadBCTests">
+     	<methods>
+     		<include name="uploadProcess"></include>
+     	</methods> 
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.SettlementDebtBCTests">
+      	<methods>
+      		<include name="debtSettleCash"></include>
+      		<include name="debtSettleStock"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.SettlementEquityBCTests">
+      	<methods>
+      		<include name="equitySettleCash"></include>
+      		<include name="equitySettleStock"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.SettlementManagedAccountBCTests">
+      	<methods>
+      		<include name="maSettleCash"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.SettlementMutualFundBCTests">
+        <methods>
+      		<include name="mutualFundSettleCash"></include>
+      		<include name="mutualFundSettleStock"></include>
+      	</methods>
+      </class>
+      <class name="com.rupeelog.breadcrumbTests.SettlementOptionsDerivativeBCTests">
+      	<methods>
+      		<include name="custodianSettleCash"></include>
+      	</methods>
+      </class>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

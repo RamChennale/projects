@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<!-- 1st ways:Running only one test method from a each class class -->
+		<packages>
+		 <!--<package name="com.rupeelog.loginTest.*"></package>
+			 <package name="com.rupeelog.accountingTest.*"></package>
+			<package name="com.rupeelog.adminCOBTest.*"></package>
+			<package name="com.rupeelog.adminManualTxnAdjustmentsTests.*"></package>
+			<package name="com.rupeelog.instrumentIMATests.*"></package>
+			<package name="com.rupeelog.orderMATests.*"></package> 
+			 <package name="com.rupeelog.breadcrumbTests.*" ></package>  -->
+			  <package name="com.rupeelog.breadcrumbTests.*" ></package> 
+			 <package name="com.rupeelog.loginTest.*"></package>
+		</packages>
+		<classes>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
