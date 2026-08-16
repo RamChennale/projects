@@ -1,23 +1,4 @@
-package com.qa.base;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+package com.qa.utility;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -25,11 +6,19 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.interfaces.TestBaseI;
-import com.qa.utility.WebEventListener;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
-import com.qa.utility.GetFailedTestCaseScreenshot;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class TestBase implements TestBaseI{
 

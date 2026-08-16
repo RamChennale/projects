@@ -1,6 +1,6 @@
 package com.qa.PyramidandPattern;
 
-import org.testng.annotations.Test;
+
 
 public class HalfPyramidTriangleIncNum {
 

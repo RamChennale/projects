@@ -3,11 +3,11 @@ package com.java.loops;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class ForEachLoop {
 
-	@Test(enabled=false)
+
 	public  void forEachLoop() {
 
 		List<Integer> list = new ArrayList<Integer>();
